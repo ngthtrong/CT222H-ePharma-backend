@@ -6,7 +6,6 @@ public class CategoryRequest {
     private String parentId;
     private String description;
 
-    // Getters & Setters
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 

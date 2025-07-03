@@ -11,8 +11,8 @@ public class Category {
     private String id;
     private String name;
     private String slug;
-    private String parentId; // nếu là con, sẽ lưu id cha
-    private List<String> childrenIds; // id các con, nếu muốn dễ lấy cây
+    private String parentId;
+    private List<String> childrenIds;
     private String description;
 
     public Category() {}
@@ -23,8 +23,6 @@ public class Category {
         this.parentId = parentId;
         this.description = description;
     }
-
-    // Getters & Setters
 
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
