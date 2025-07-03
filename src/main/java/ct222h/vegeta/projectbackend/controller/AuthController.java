@@ -1,5 +1,6 @@
 package ct222h.vegeta.projectbackend.controller;
 
+import ct222h.vegeta.projectbackend.dto.response.ApiResponse;
 import ct222h.vegeta.projectbackend.dto.request.*;
 import ct222h.vegeta.projectbackend.dto.response.*;
 import ct222h.vegeta.projectbackend.service.AuthService;

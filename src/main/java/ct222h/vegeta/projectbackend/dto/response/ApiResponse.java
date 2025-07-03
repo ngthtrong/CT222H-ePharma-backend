@@ -1,4 +1,4 @@
-package ct222h.vegeta.projectbackend.dto;
+package ct222h.vegeta.projectbackend.dto.response;
 
 public class ApiResponse<T> {
     private boolean success;
