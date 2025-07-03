@@ -1,4 +1,4 @@
-package ct222h.vegeta.projectbackend.dto.response;
+package ct222h.vegeta.projectbackend.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
