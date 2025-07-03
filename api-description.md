@@ -1,4 +1,4 @@
----
+
 
 # Tài liệu API cho dự án WellVerse
 
@@ -19,8 +19,11 @@
     -   `403 Forbidden`: Không có quyền truy cập tài nguyên.
     -   `404 Not Found`: Không tìm thấy tài nguyên.
     -   `500 Internal Server Error`: Lỗi từ phía server.
+-   **Mã trạng thái HTTP (Status Codes)**:
+    -   []: Thêm cách thức tạo tài khoản Admin trong quá trình đăng ký người dùng.
+    -   []: Chuẩn hóa/log các lỗi trả về từ API để dễ dàng xử lý ở frontend.
 
----
+
 
 ## 2. API Xác thực (Authentication)
 
@@ -146,4 +149,3 @@ Các API này thuộc GĐ 2 nhưng có thể được phát triển song song n�
 | [ ] | **GĐ 2** | `POST` | `/notifications/:id/read` | `USER` | Đánh dấu một thông báo là đã đọc. |
 
 ---
-
