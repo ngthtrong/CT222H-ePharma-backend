@@ -2,6 +2,7 @@ package ct222h.vegeta.projectbackend.controller;
 
 import ct222h.vegeta.projectbackend.model.User;
 import ct222h.vegeta.projectbackend.service.UserService;
+import ct222h.vegeta.projectbackend.dto.request.UserCreateRequest;
 import ct222h.vegeta.projectbackend.dto.response.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
