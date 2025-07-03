@@ -2,7 +2,7 @@ package ct222h.vegeta.projectbackend.service;
 
 import ct222h.vegeta.projectbackend.model.User;
 import ct222h.vegeta.projectbackend.repository.UserRepository;
-import ct222h.vegeta.projectbackend.dto.UserCreateRequest;
+import ct222h.vegeta.projectbackend.dto.request.UserCreateRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
