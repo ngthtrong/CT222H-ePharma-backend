@@ -4,7 +4,11 @@
 
 ## 1. Quy ước chung
 
--   **Base URL**: Tất cả các API sẽ có tiền tố là `/api/v1`. Ví dụ: `/api/v1/products`.
+# API Documentation - Project Back End
+
+## Thông tin cơ bản
+-   **Framework**: Spring Boot 3.5.3
+-   **Base URL**:  `http://localhost:8081`, Tất cả các API sẽ có tiền tố là `/api/v1`. Ví dụ: `/api/v1/products`.
 -   **Định dạng dữ liệu**: Tất cả request body và response body đều ở định dạng `JSON`.
 -   **Xác thực**: Các API yêu cầu xác thực sẽ cần một `Authorization` header chứa `Bearer Token` (JWT) sau khi người dùng đăng nhập.
 -   **Phân quyền**:

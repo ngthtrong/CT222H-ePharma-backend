@@ -29,10 +29,28 @@ public class AuthService {
         user.setFullName(request.getFullName());
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
+        
+        // Set optional fields if provided
+        if (request.getPhoneNumber() != null) {
+            user.setPhoneNumber(request.getPhoneNumber());
+        }
+        if (request.getAddresses() != null) {
+            user.setAddresses(request.getAddresses());
+        }
 
         userRepository.save(user);
 
-        return new UserResponse(user.getId(), user.getFullName(), user.getEmail(), user.getRole());
+        return new UserResponse(
+                user.getId(), 
+                user.getFullName(), 
+                user.getEmail(), 
+                user.getPhoneNumber(),
+                user.getRole(),
+                user.getAuthProvider(),
+                user.getAddresses(),
+                user.getCreatedAt(),
+                user.getUpdatedAt()
+        );
     }
 
     public LoginResponse login(LoginRequest request) {
@@ -44,7 +62,17 @@ public class AuthService {
         }
 
         String token = jwtUtil.generateToken(user.getId(), user.getEmail(), user.getRole());
-        UserResponse userResponse = new UserResponse(user.getId(), user.getFullName(), user.getEmail(), user.getRole());
+        UserResponse userResponse = new UserResponse(
+                user.getId(), 
+                user.getFullName(), 
+                user.getEmail(), 
+                user.getPhoneNumber(),
+                user.getRole(),
+                user.getAuthProvider(),
+                user.getAddresses(),
+                user.getCreatedAt(),
+                user.getUpdatedAt()
+        );
 
         return new LoginResponse(token, userResponse);
     }
