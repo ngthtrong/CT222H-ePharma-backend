@@ -1,15 +1,34 @@
 package ct222h.vegeta.projectbackend.dto.response;
 
-import java.util.List;
-
 public class CategoryResponse {
     private String id;
     private String name;
     private String slug;
-    private String parentId;
-    private List<String> childrenIds;
     private String description;
+    private String parentCategoryId;
+    private String parentCategoryName;
 
+    public CategoryResponse() {}
+
+    public CategoryResponse(String id, String name, String slug, String description, String parentCategoryId, String parentCategoryName) {
+        this.id = id;
+        this.name = name;
+        this.slug = slug;
+        this.description = description;
+        this.parentCategoryId = parentCategoryId;
+        this.parentCategoryName = parentCategoryName;
+    }
+
+    // Basic constructor
+    public CategoryResponse(String id, String name, String slug, String description, String parentCategoryId) {
+        this.id = id;
+        this.name = name;
+        this.slug = slug;
+        this.description = description;
+        this.parentCategoryId = parentCategoryId;
+    }
+
+    // Getters and Setters
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
@@ -19,12 +38,12 @@ public class CategoryResponse {
     public String getSlug() { return slug; }
     public void setSlug(String slug) { this.slug = slug; }
 
-    public String getParentId() { return parentId; }
-    public void setParentId(String parentId) { this.parentId = parentId; }
-
-    public List<String> getChildrenIds() { return childrenIds; }
-    public void setChildrenIds(List<String> childrenIds) { this.childrenIds = childrenIds; }
-
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+
+    public String getParentCategoryId() { return parentCategoryId; }
+    public void setParentCategoryId(String parentCategoryId) { this.parentCategoryId = parentCategoryId; }
+
+    public String getParentCategoryName() { return parentCategoryName; }
+    public void setParentCategoryName(String parentCategoryName) { this.parentCategoryName = parentCategoryName; }
 }
