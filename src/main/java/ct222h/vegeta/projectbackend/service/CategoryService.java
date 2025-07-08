@@ -23,6 +23,18 @@ public class CategoryService {
         return categoryRepository.findBySlugIgnoreCase(slug);
     }
 
+    public Optional<Category> getCategoryById(String id) {
+        return categoryRepository.findById(id);
+    }
+
+    public List<Category> getCategoryChildren(String parentId) {
+        return categoryRepository.findByParentCategoryId(parentId);
+    }
+
+    public List<Category> getRootCategories() {
+        return categoryRepository.findByParentCategoryIdIsNull();
+    }
+
     public Category createCategory(Category category) {
         return categoryRepository.save(category);
     }

@@ -3,25 +3,22 @@ package ct222h.vegeta.projectbackend.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.List;
-
 @Document(collection = "categories")
 public class Category {
     @Id
     private String id;
     private String name;
     private String slug;
-    private String parentId;
-    private List<String> childrenIds;
     private String description;
+    private String parentCategoryId;
 
     public Category() {}
 
-    public Category(String name, String slug, String parentId, String description) {
+    public Category(String name, String slug, String description, String parentCategoryId) {
         this.name = name;
         this.slug = slug;
-        this.parentId = parentId;
         this.description = description;
+        this.parentCategoryId = parentCategoryId;
     }
 
     public String getId() { return id; }
@@ -33,12 +30,9 @@ public class Category {
     public String getSlug() { return slug; }
     public void setSlug(String slug) { this.slug = slug; }
 
-    public String getParentId() { return parentId; }
-    public void setParentId(String parentId) { this.parentId = parentId; }
-
-    public List<String> getChildrenIds() { return childrenIds; }
-    public void setChildrenIds(List<String> childrenIds) { this.childrenIds = childrenIds; }
-
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+
+    public String getParentCategoryId() { return parentCategoryId; }
+    public void setParentCategoryId(String parentCategoryId) { this.parentCategoryId = parentCategoryId; }
 }
