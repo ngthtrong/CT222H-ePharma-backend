@@ -23,6 +23,7 @@ public class User {
 
     // Nested classes for embedded documents
     public static class Address {
+        private String id;
         private Boolean isDefault;
         private String recipientName;
         private String phoneNumber;
@@ -31,7 +32,9 @@ public class User {
         private String city;
 
         // Constructors
-        public Address() {}
+        public Address() {
+            this.id = java.util.UUID.randomUUID().toString();
+        }
 
         public Address(Boolean isDefault, String recipientName, String phoneNumber, String street, String ward, String city) {
             this.isDefault = isDefault;
@@ -43,8 +46,22 @@ public class User {
         }
 
         // Getters and Setters
-        public Boolean getIsDefault() { return isDefault; }
-        public void setIsDefault(Boolean isDefault) { this.isDefault = isDefault; }
+//        public Boolean getIsDefault() { return isDefault; }
+//        public void setIsDefault(Boolean isDefault) { this.isDefault = isDefault; }
+
+        public String getId() {
+            return id;
+        }
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public Boolean getIsDefault() {
+            return isDefault;
+        }
+        public void setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+        }
 
         public String getRecipientName() { return recipientName; }
         public void setRecipientName(String recipientName) { this.recipientName = recipientName; }
