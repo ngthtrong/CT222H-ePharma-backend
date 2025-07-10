@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 public class UserResponse {
-    private String userId;
+    private String id;
     private String fullName;
     private String email;
     private String phoneNumber;
@@ -16,8 +16,10 @@ public class UserResponse {
     private Date createdAt;
     private Date updatedAt;
 
-    public UserResponse(String userId, String fullName, String email, String phoneNumber, String role, String authProvider, List<User.Address> addresses, Date createdAt, Date updatedAt) {
-        this.userId = userId;
+    public UserResponse(String id, String fullName, String email, String phoneNumber,
+                        String role, String authProvider, List<User.Address> addresses,
+                        Date createdAt, Date updatedAt) {
+        this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -28,39 +30,77 @@ public class UserResponse {
         this.updatedAt = updatedAt;
     }
 
-    // Constructor cơ bản (backward compatibility)
-    public UserResponse(String userId, String fullName, String email, String role) {
-        this.userId = userId;
+    // Getters, setters
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
         this.role = role;
     }
 
-    // Getters and Setters
-    public String getUserId() { return userId; }
-    public void setUserId(String userId) { this.userId = userId; }
+    public String getAuthProvider() {
+        return authProvider;
+    }
 
-    public String getFullName() { return fullName; }
-    public void setFullName(String fullName) { this.fullName = fullName; }
+    public void setAuthProvider(String authProvider) {
+        this.authProvider = authProvider;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public List<User.Address> getAddresses() {
+        return addresses;
+    }
 
-    public String getPhoneNumber() { return phoneNumber; }
-    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+    public void setAddresses(List<User.Address> addresses) {
+        this.addresses = addresses;
+    }
 
-    public String getRole() { return role; }
-    public void setRole(String role) { this.role = role; }
+    public Date getCreatedAt() {
+        return createdAt;
+    }
 
-    public String getAuthProvider() { return authProvider; }
-    public void setAuthProvider(String authProvider) { this.authProvider = authProvider; }
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
 
-    public List<User.Address> getAddresses() { return addresses; }
-    public void setAddresses(List<User.Address> addresses) { this.addresses = addresses; }
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
 
-    public Date getCreatedAt() { return createdAt; }
-    public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; }
-
-    public Date getUpdatedAt() { return updatedAt; }
-    public void setUpdatedAt(Date updatedAt) { this.updatedAt = updatedAt; }
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }
