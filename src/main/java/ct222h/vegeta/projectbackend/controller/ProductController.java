@@ -1,5 +1,6 @@
 package ct222h.vegeta.projectbackend.controller;
 
+import ct222h.vegeta.projectbackend.constants.ProductConstants;
 import ct222h.vegeta.projectbackend.dto.request.ProductRequest;
 import ct222h.vegeta.projectbackend.dto.response.ApiResponse;
 import ct222h.vegeta.projectbackend.dto.response.ProductResponse;
@@ -28,6 +29,8 @@ public class ProductController {
         this.categoryService = categoryService;
     }
 
+    // PUBLIC ENDPOINTS
+
     @GetMapping("/products")
     public ResponseEntity<ApiResponse<List<ProductResponse>>> getAllProducts() {
         List<Product> products = productService.getAllProducts();
@@ -35,7 +38,7 @@ public class ProductController {
                 .map(this::convertToProductResponse)
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(new ApiResponse<>(true, "Lấy danh sách sản phẩm thành công", responses));
+        return ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_GET_PRODUCTS, responses));
     }
 
     @GetMapping("/products/search")
@@ -44,15 +47,15 @@ public class ProductController {
         List<ProductResponse> responses = products.stream()
                 .map(this::convertToProductResponse)
                 .collect(Collectors.toList());
-        return ResponseEntity.ok(new ApiResponse<>(true, "Tìm kiếm sản phẩm thành công", responses));
+        return ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_SEARCH_PRODUCTS, responses));
     }
 
     @GetMapping("/products/{slug}")
     public ResponseEntity<ApiResponse<ProductResponse>> getProductBySlug(@PathVariable String slug) {
         Optional<Product> product = productService.getProductBySlug(slug);
         return product
-                .map(p -> ResponseEntity.ok(new ApiResponse<>(true, "Lấy sản phẩm thành công", convertToProductResponse(p))))
-                .orElseGet(() -> ResponseEntity.status(404).body(new ApiResponse<>(false, "Không tìm thấy sản phẩm", null)));
+                .map(p -> ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_GET_PRODUCT, convertToProductResponse(p))))
+                .orElseGet(() -> ResponseEntity.status(404).body(new ApiResponse<>(false, ProductConstants.ERROR_PRODUCT_NOT_FOUND, null)));
     }
 
     @GetMapping("/products/{id}/related")
@@ -61,29 +64,61 @@ public class ProductController {
             @RequestParam(required = false) String brand,
             @RequestParam(required = false) BigDecimal minPrice,
             @RequestParam(required = false) BigDecimal maxPrice,
-            @RequestParam(required = false) Boolean inStock
-    ) {
+            @RequestParam(required = false) Boolean inStock) {
+        
         List<Product> products = productService.getRelatedProducts(id);
-
-        List<Product> filtered = products.stream()
-                .filter(p -> brand == null || (p.getBrand() != null && p.getBrand().equalsIgnoreCase(brand)))
-                .filter(p -> minPrice == null || (p.getPrice() != null && p.getPrice().compareTo(minPrice) >= 0))
-                .filter(p -> maxPrice == null || (p.getPrice() != null && p.getPrice().compareTo(maxPrice) <= 0))
-                .filter(p -> inStock == null || (inStock ? p.getStockQuantity() > 0 : true))
-                .toList();
-
-        List<ProductResponse> responses = filtered.stream()
+        List<Product> filteredProducts = applyProductFilters(products, brand, minPrice, maxPrice, inStock);
+        
+        List<ProductResponse> responses = filteredProducts.stream()
                 .map(this::convertToProductResponse)
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(new ApiResponse<>(true, "Lấy danh sách sản phẩm liên quan thành công", responses));
+        return ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_GET_RELATED_PRODUCTS, responses));
+    }
+
+    // ADMIN ENDPOINTS
+
+    @GetMapping("/admin/products")
+    public ResponseEntity<ApiResponse<List<ProductResponse>>> getAllProductsWithFilters(
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) String brand,
+            @RequestParam(required = false) BigDecimal minPrice,
+            @RequestParam(required = false) BigDecimal maxPrice,
+            @RequestParam(required = false) Boolean inStock,
+            @RequestParam(required = false) Boolean published,
+            @RequestParam(required = false) String search) {
+        
+        List<Product> products;
+        
+        if (search != null && !search.trim().isEmpty()) {
+            // Search functionality
+            products = productService.searchProducts(search.trim());
+        } else {
+            // Filter functionality
+            products = productService.getAllProductsWithFilters(category, brand, minPrice, maxPrice, inStock, published);
+        }
+        
+        List<ProductResponse> responses = products.stream()
+                .map(this::convertToProductResponse)
+                .collect(Collectors.toList());
+
+        String message = search != null ? "Tìm kiếm sản phẩm thành công" : "Lấy danh sách sản phẩm với filter thành công";
+        return ResponseEntity.ok(new ApiResponse<>(true, message, responses));
+    }
+
+    @GetMapping("/admin/products/{id}")
+    public ResponseEntity<ApiResponse<ProductResponse>> getProductByIdAdmin(@PathVariable String id) {
+        Optional<Product> product = productService.getProductById(id);
+        return product
+                .map(p -> ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_GET_PRODUCT, convertToProductResponse(p))))
+                .orElseGet(() -> ResponseEntity.status(404).body(new ApiResponse<>(false, ProductConstants.ERROR_PRODUCT_NOT_FOUND, null)));
     }
 
     @PostMapping("/admin/products")
     public ResponseEntity<ApiResponse<ProductResponse>> createProduct(@Valid @RequestBody ProductRequest request) {
         Product product = convertToProduct(request);
         Product created = productService.createProduct(product);
-        return ResponseEntity.status(201).body(new ApiResponse<>(true, "Tạo sản phẩm thành công", convertToProductResponse(created)));
+        return ResponseEntity.status(201).body(new ApiResponse<>(true, ProductConstants.SUCCESS_CREATE_PRODUCT, convertToProductResponse(created)));
     }
 
     @PutMapping("/admin/products/{id}")
@@ -91,13 +126,40 @@ public class ProductController {
         Product product = convertToProduct(request);
         product.setId(id);
         Product updated = productService.updateProduct(id, product);
-        return ResponseEntity.ok(new ApiResponse<>(true, "Cập nhật sản phẩm thành công", convertToProductResponse(updated)));
+        return ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_UPDATE_PRODUCT, convertToProductResponse(updated)));
     }
 
     @DeleteMapping("/admin/products/{id}")
     public ResponseEntity<ApiResponse<Void>> deleteProduct(@PathVariable String id) {
         productService.deleteProduct(id);
-        return ResponseEntity.ok(new ApiResponse<>(true, "Xóa sản phẩm thành công", null));
+        return ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_DELETE_PRODUCT, null));
+    }
+
+    // HELPER METHODS
+
+    private List<Product> applyProductFilters(List<Product> products, String brand, BigDecimal minPrice, BigDecimal maxPrice, Boolean inStock) {
+        return products.stream()
+                .filter(p -> filterByBrand(p, brand))
+                .filter(p -> filterByMinPrice(p, minPrice))
+                .filter(p -> filterByMaxPrice(p, maxPrice))
+                .filter(p -> filterByStock(p, inStock))
+                .toList();
+    }
+
+    private boolean filterByBrand(Product product, String brand) {
+        return brand == null || (product.getBrand() != null && product.getBrand().equalsIgnoreCase(brand));
+    }
+
+    private boolean filterByMinPrice(Product product, BigDecimal minPrice) {
+        return minPrice == null || (product.getPrice() != null && product.getPrice().compareTo(minPrice) >= 0);
+    }
+
+    private boolean filterByMaxPrice(Product product, BigDecimal maxPrice) {
+        return maxPrice == null || (product.getPrice() != null && product.getPrice().compareTo(maxPrice) <= 0);
+    }
+
+    private boolean filterByStock(Product product, Boolean inStock) {
+        return inStock == null || (!inStock || product.getStockQuantity() > 0);
     }
 
     private Product convertToProduct(ProductRequest request) {
@@ -114,19 +176,16 @@ public class ProductController {
                 request.getCategoryId(),
                 request.getBrand(),
                 request.getAttributes(),
-                request.getIsPublished() != null ? request.getIsPublished() : true,
+                Boolean.TRUE.equals(request.getPublished()),
                 request.getRelatedProducts(),
-                null,
-                null
+                null, // createdAt will be set automatically
+                null  // updatedAt will be set automatically
         );
     }
 
     private ProductResponse convertToProductResponse(Product product) {
-        String categoryName = null;
-        if (product.getCategoryId() != null) {
-            Optional<Category> category = categoryService.getCategoryById(product.getCategoryId());
-            categoryName = category.map(Category::getName).orElse(null);
-        }
+        String categoryName = getCategoryName(product.getCategoryId());
+        
         return new ProductResponse(
                 product.getId(),
                 product.getName(),
@@ -146,5 +205,14 @@ public class ProductController {
                 product.getCreatedAt(),
                 product.getUpdatedAt()
         );
+    }
+
+    private String getCategoryName(String categoryId) {
+        if (categoryId == null || categoryId.trim().isEmpty()) {
+            return "Chưa phân loại";
+        }
+        
+        Optional<Category> category = categoryService.getCategoryById(categoryId);
+        return category.map(Category::getName).orElse("Danh mục không tồn tại");
     }
 }

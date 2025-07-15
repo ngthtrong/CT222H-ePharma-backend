@@ -26,7 +26,7 @@ public class ProductResponse {
     private String categoryName;
     private String brand;
     private List<Map<String, Object>> attributes;
-    private boolean isPublished;
+    private boolean published;
     private List<String> relatedProducts;
     private Instant createdAt;
     private Instant updatedAt;

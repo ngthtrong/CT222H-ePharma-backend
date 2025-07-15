@@ -1,8 +1,10 @@
 package ct222h.vegeta.projectbackend.controller;
 
+import ct222h.vegeta.projectbackend.constants.CategoryConstants;
 import ct222h.vegeta.projectbackend.dto.request.CategoryRequest;
 import ct222h.vegeta.projectbackend.dto.response.ApiResponse;
 import ct222h.vegeta.projectbackend.dto.response.CategoryResponse;
+import ct222h.vegeta.projectbackend.exception.CategoryNotFoundException;
 import ct222h.vegeta.projectbackend.model.Category;
 import ct222h.vegeta.projectbackend.service.CategoryService;
 import jakarta.validation.Valid;
@@ -23,9 +25,8 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
-    /**
-     * Lấy tất cả danh mục (dạng list)
-     */
+    // PUBLIC ENDPOINTS
+
     @GetMapping("/categories")
     public ResponseEntity<ApiResponse<List<CategoryResponse>>> getAllCategories() {
         List<Category> categories = categoryService.getAllCategories();
@@ -33,84 +34,37 @@ public class CategoryController {
                 .map(this::convertToCategoryResponse)
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(
-                new ApiResponse<>(true, "Lấy danh sách danh mục thành công", responses)
-        );
+        return ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_GET_CATEGORIES, responses));
     }
 
-    /**
-     * Lấy danh mục theo slug
-     */
+    @GetMapping("/categories/root")
+    public ResponseEntity<ApiResponse<List<CategoryResponse>>> getRootCategories() {
+        List<Category> categories = categoryService.getRootCategories();
+        List<CategoryResponse> responses = categories.stream()
+                .map(this::convertToCategoryResponse)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_GET_CATEGORIES, responses));
+    }
+
+    @GetMapping("/categories/search")
+    public ResponseEntity<ApiResponse<List<CategoryResponse>>> searchCategories(@RequestParam("q") String keyword) {
+        List<Category> categories = categoryService.searchCategories(keyword);
+        List<CategoryResponse> responses = categories.stream()
+                .map(this::convertToCategoryResponse)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(new ApiResponse<>(true, "Tìm kiếm danh mục thành công", responses));
+    }
+
     @GetMapping("/categories/{slug}")
     public ResponseEntity<ApiResponse<CategoryResponse>> getCategoryBySlug(@PathVariable String slug) {
         Optional<Category> category = categoryService.getCategoryBySlug(slug);
         return category
-                .map(c -> ResponseEntity.ok(
-                        new ApiResponse<>(true, "Lấy danh mục thành công", convertToCategoryResponse(c))
-                ))
-                .orElseGet(() -> ResponseEntity.status(404).body(
-                        new ApiResponse<>(false, "Không tìm thấy danh mục", null)
-                ));
+                .map(c -> ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_GET_CATEGORY, convertToCategoryResponse(c))))
+                .orElseGet(() -> ResponseEntity.status(404).body(new ApiResponse<>(false, CategoryConstants.ERROR_CATEGORY_NOT_FOUND, null)));
     }
 
-    /**
-     * Tạo danh mục mới (ADMIN)
-     */
-    @PostMapping("/admin/categories")
-    public ResponseEntity<ApiResponse<CategoryResponse>> createCategory(
-            @Valid @RequestBody CategoryRequest request) {
-
-        Category category = new Category(
-                request.getName(),
-                request.getSlug(),
-                request.getDescription(),
-                request.getParentCategoryId()
-        );
-
-        Category createdCategory = categoryService.createCategory(category);
-
-        return ResponseEntity.status(201).body(
-                new ApiResponse<>(true, "Tạo danh mục thành công", convertToCategoryResponse(createdCategory))
-        );
-    }
-
-    /**
-     * Cập nhật danh mục (ADMIN)
-     */
-    @PutMapping("/admin/categories/{id}")
-    public ResponseEntity<ApiResponse<CategoryResponse>> updateCategory(
-            @PathVariable String id,
-            @Valid @RequestBody CategoryRequest request) {
-
-        Category category = new Category(
-                request.getName(),
-                request.getSlug(),
-                request.getDescription(),
-                request.getParentCategoryId()
-        );
-        category.setId(id);
-
-        Category updatedCategory = categoryService.updateCategory(id, category);
-
-        return ResponseEntity.ok(
-                new ApiResponse<>(true, "Cập nhật danh mục thành công", convertToCategoryResponse(updatedCategory))
-        );
-    }
-
-    /**
-     * Xóa danh mục (ADMIN)
-     */
-    @DeleteMapping("/admin/categories/{id}")
-    public ResponseEntity<ApiResponse<Void>> deleteCategory(@PathVariable String id) {
-        categoryService.deleteCategory(id);
-        return ResponseEntity.ok(
-                new ApiResponse<>(true, "Xóa danh mục thành công", null)
-        );
-    }
-
-    /**
-     * Lấy danh mục con của 1 danh mục
-     */
     @GetMapping("/categories/{id}/children")
     public ResponseEntity<ApiResponse<List<CategoryResponse>>> getCategoryChildren(@PathVariable String id) {
         List<Category> children = categoryService.getCategoryChildren(id);
@@ -118,27 +72,89 @@ public class CategoryController {
                 .map(this::convertToCategoryResponse)
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(
-                new ApiResponse<>(true, "Lấy danh sách danh mục con thành công", responses)
+        return ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_GET_CATEGORY_CHILDREN, responses));
+    }
+
+    // ADMIN ENDPOINTS
+
+    @GetMapping("/admin/categories/{id}")
+    public ResponseEntity<ApiResponse<CategoryResponse>> getCategoryByIdAdmin(@PathVariable String id) {
+        Optional<Category> category = categoryService.getCategoryById(id);
+        return category
+                .map(c -> ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_GET_CATEGORY, convertToCategoryResponse(c))))
+                .orElseGet(() -> ResponseEntity.status(404).body(new ApiResponse<>(false, CategoryConstants.ERROR_CATEGORY_NOT_FOUND, null)));
+    }
+
+    @PostMapping("/admin/categories")
+    public ResponseEntity<ApiResponse<CategoryResponse>> createCategory(@Valid @RequestBody CategoryRequest request) {
+        try {
+            Category category = convertToCategory(request);
+            Category created = categoryService.createCategory(category);
+            return ResponseEntity.status(201).body(new ApiResponse<>(true, CategoryConstants.SUCCESS_CREATE_CATEGORY, convertToCategoryResponse(created)));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(new ApiResponse<>(false, e.getMessage(), null));
+        }
+    }
+
+    @PutMapping("/admin/categories/{id}")
+    public ResponseEntity<ApiResponse<CategoryResponse>> updateCategory(
+            @PathVariable String id,
+            @Valid @RequestBody CategoryRequest request) {
+        try {
+            Category category = convertToCategory(request);
+            Category updated = categoryService.updateCategory(id, category);
+            return ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_UPDATE_CATEGORY, convertToCategoryResponse(updated)));
+        } catch (CategoryNotFoundException e) {
+            return ResponseEntity.status(404).body(new ApiResponse<>(false, e.getMessage(), null));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(new ApiResponse<>(false, e.getMessage(), null));
+        }
+    }
+
+    @DeleteMapping("/admin/categories/{id}")
+    public ResponseEntity<ApiResponse<Void>> deleteCategory(@PathVariable String id) {
+        try {
+            categoryService.deleteCategory(id);
+            return ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_DELETE_CATEGORY, null));
+        } catch (CategoryNotFoundException e) {
+            return ResponseEntity.status(404).body(new ApiResponse<>(false, e.getMessage(), null));
+        } catch (IllegalStateException e) {
+            return ResponseEntity.badRequest().body(new ApiResponse<>(false, e.getMessage(), null));
+        }
+    }
+
+    // HELPER METHODS
+
+    private Category convertToCategory(CategoryRequest request) {
+        return new Category(
+                request.getName(),
+                request.getSlug(),
+                request.getDescription(),
+                request.getParentCategoryId()
         );
     }
 
-    /**
-     * Helper chuyển Category -> CategoryResponse
-     */
     private CategoryResponse convertToCategoryResponse(Category category) {
-        String parentCategoryName = null;
-        if (category.getParentCategoryId() != null) {
-            Optional<Category> parent = categoryService.getCategoryById(category.getParentCategoryId());
-            parentCategoryName = parent.map(Category::getName).orElse(null);
-        }
+        String parentCategoryName = getParentCategoryName(category.getParentCategoryId());
+        
         return new CategoryResponse(
                 category.getId(),
                 category.getName(),
                 category.getSlug(),
                 category.getDescription(),
                 category.getParentCategoryId(),
-                parentCategoryName
+                parentCategoryName,
+                category.getCreatedAt(),
+                category.getUpdatedAt()
         );
+    }
+
+    private String getParentCategoryName(String parentCategoryId) {
+        if (parentCategoryId == null || parentCategoryId.trim().isEmpty()) {
+            return CategoryConstants.DEFAULT_PARENT_CATEGORY_NAME;
+        }
+        
+        Optional<Category> parent = categoryService.getCategoryById(parentCategoryId);
+        return parent.map(Category::getName).orElse("Danh mục cha không tồn tại");
     }
 }

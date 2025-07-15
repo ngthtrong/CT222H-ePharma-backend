@@ -1,31 +1,47 @@
 package ct222h.vegeta.projectbackend.model;
 
+import ct222h.vegeta.projectbackend.constants.OrderConstants;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.index.Indexed;
 
-import java.util.Date;
+import java.time.Instant;
 import java.util.List;
 
 @Document(collection = "orders")
 public class Order {
     @Id
     private String id;
+    
+    @Indexed(unique = true)
     private String orderCode;
+    
+    @Indexed
     private String userId;
+    
     private ShippingAddress shippingAddress;
     private List<OrderItem> items;
     private Double subtotal;
     private Double shippingFee;
     private Double totalAmount;
-    private String status = "PENDING"; // PENDING, PROCESSING, SHIPPED, COMPLETED, CANCELLED
+    
+    @Indexed
+    private String status = OrderConstants.STATUS_PENDING; // PENDING, PROCESSING, SHIPPED, COMPLETED, CANCELLED
+    
     private String paymentMethod; // COD, MOMO, BANK_TRANSFER
-    private String paymentStatus = "UNPAID"; // UNPAID, PAID
+    private String paymentStatus = OrderConstants.PAYMENT_STATUS_UNPAID; // UNPAID, PAID
     private String notes;
-    private Date createdAt = new Date();
-    private Date updatedAt = new Date();
+    private String trackingNumber; // Mã vận đơn
+    private String cancelReason; // Lý do hủy đơn hàng
+    private Instant cancelledAt; // Thời gian hủy đơn hàng
+    
+    @Indexed
+    private Instant createdAt = Instant.now();
+    private Instant updatedAt = Instant.now();
 
     // Nested class for shipping address (copied from user at order time)
     public static class ShippingAddress {
+        private String sourceAddressId; // ID địa chỉ gốc từ user (nếu có)
         private String recipientName;
         private String phoneNumber;
         private String street;
@@ -42,7 +58,19 @@ public class Order {
             this.city = city;
         }
 
+        public ShippingAddress(String sourceAddressId, String recipientName, String phoneNumber, String street, String ward, String city) {
+            this.sourceAddressId = sourceAddressId;
+            this.recipientName = recipientName;
+            this.phoneNumber = phoneNumber;
+            this.street = street;
+            this.ward = ward;
+            this.city = city;
+        }
+
         // Getters and Setters
+        public String getSourceAddressId() { return sourceAddressId; }
+        public void setSourceAddressId(String sourceAddressId) { this.sourceAddressId = sourceAddressId; }
+
         public String getRecipientName() { return recipientName; }
         public void setRecipientName(String recipientName) { this.recipientName = recipientName; }
 
@@ -143,11 +171,20 @@ public class Order {
     public String getNotes() { return notes; }
     public void setNotes(String notes) { this.notes = notes; }
 
-    public Date getCreatedAt() { return createdAt; }
-    public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; }
+    public String getTrackingNumber() { return trackingNumber; }
+    public void setTrackingNumber(String trackingNumber) { this.trackingNumber = trackingNumber; }
 
-    public Date getUpdatedAt() { return updatedAt; }
-    public void setUpdatedAt(Date updatedAt) { this.updatedAt = updatedAt; }
+    public String getCancelReason() { return cancelReason; }
+    public void setCancelReason(String cancelReason) { this.cancelReason = cancelReason; }
+
+    public Instant getCancelledAt() { return cancelledAt; }
+    public void setCancelledAt(Instant cancelledAt) { this.cancelledAt = cancelledAt; }
+
+    public Instant getCreatedAt() { return createdAt; }
+    public void setCreatedAt(Instant createdAt) { this.createdAt = createdAt; }
+
+    public Instant getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(Instant updatedAt) { this.updatedAt = updatedAt; }
 
     // Helper method to calculate totals
     public void calculateTotals() {

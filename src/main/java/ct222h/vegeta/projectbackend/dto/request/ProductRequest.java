@@ -51,7 +51,7 @@ public class ProductRequest {
 
     private List<Map<String, Object>> attributes;
 
-    private Boolean isPublished = true;
+    private Boolean published = true;
 
     private List<String> relatedProducts;
 }
