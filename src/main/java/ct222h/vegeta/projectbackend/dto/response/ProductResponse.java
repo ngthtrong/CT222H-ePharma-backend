@@ -1,12 +1,8 @@
-package ct222h.vegeta.projectbackend.model;
+package ct222h.vegeta.projectbackend.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -16,12 +12,8 @@ import java.util.Map;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "products")
-public class Product {
-
-    @Id
+public class ProductResponse {
     private String id;
-
     private String name;
     private String sku;
     private String slug;
@@ -31,14 +23,11 @@ public class Product {
     private int discountPercent;
     private int stockQuantity;
     private String categoryId;
+    private String categoryName;
     private String brand;
-    private List<Map<String, Object>> attributes; // [{ "key": "color", "value": "red" }, ...]
-    private boolean isPublished = true;
-    private List<String> relatedProducts; // list of product ids
-
-    @CreatedDate
+    private List<Map<String, Object>> attributes;
+    private boolean isPublished;
+    private List<String> relatedProducts;
     private Instant createdAt;
-
-    @LastModifiedDate
     private Instant updatedAt;
 }

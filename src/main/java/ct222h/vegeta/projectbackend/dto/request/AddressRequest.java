@@ -10,38 +10,56 @@ public class AddressRequest {
     private String ward;
     private String city;
 
-    public AddressRequest() {}
+    // Getter và Setter chuẩn cho isDefault
+    public Boolean getIsDefault() {
+        return isDefault;
+    }
 
-    public AddressRequest(Boolean isDefault, String recipientName, String phoneNumber, String street, String ward, String city) {
+    public void setIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
+    }
+
+    // Các getter setter còn lại giữ nguyên
+    public String getRecipientName() {
+        return recipientName;
+    }
+    public void setRecipientName(String recipientName) {
         this.recipientName = recipientName;
+    }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+    public String getStreet() {
+        return street;
+    }
+    public void setStreet(String street) {
         this.street = street;
+    }
+    public String getWard() {
+        return ward;
+    }
+    public void setWard(String ward) {
         this.ward = ward;
+    }
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
         this.city = city;
     }
 
-    // Convert to User.Address
     public User.Address toAddress() {
-        return new User.Address(isDefault, recipientName, phoneNumber, street, ward, city);
+        User.Address addr = new User.Address();
+        addr.setIsDefault(this.isDefault != null && this.isDefault);
+        addr.setRecipientName(this.recipientName);
+        addr.setPhoneNumber(this.phoneNumber);
+        addr.setStreet(this.street);
+        addr.setWard(this.ward);
+        addr.setCity(this.city);
+        // TODO: set id nếu dùng id cho Address
+        return addr;
     }
-
-    // Getters and Setters
-    public Boolean getIsDefault() { return isDefault; }
-    public void setIsDefault(Boolean isDefault) { this.isDefault = isDefault; }
-
-    public String getRecipientName() { return recipientName; }
-    public void setRecipientName(String recipientName) { this.recipientName = recipientName; }
-
-    public String getPhoneNumber() { return phoneNumber; }
-    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
-
-    public String getStreet() { return street; }
-    public void setStreet(String street) { this.street = street; }
-
-    public String getWard() { return ward; }
-    public void setWard(String ward) { this.ward = ward; }
-
-    public String getCity() { return city; }
-    public void setCity(String city) { this.city = city; }
 }
