@@ -1,13 +1,18 @@
 package ct222h.vegeta.projectbackend.dto.request;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Min;
+
 public class CartRequest {
 
     public static class CartItemRequest {
+        @NotBlank(message = "Product ID không được để trống")
         private String productId;
-        private int quantity;
+        
+        @Min(value = 1, message = "Số lượng phải lớn hơn 0")
+        private Integer quantity;
 
         // Getters, setters
-
         public String getProductId() {
             return productId;
         }
@@ -16,25 +21,26 @@ public class CartRequest {
             this.productId = productId;
         }
 
-        public int getQuantity() {
+        public Integer getQuantity() {
             return quantity;
         }
 
-        public void setQuantity(int quantity) {
+        public void setQuantity(Integer quantity) {
             this.quantity = quantity;
         }
     }
 
     public static class CartItemQuantityRequest {
-        private int quantity;
+        @Min(value = 0, message = "Số lượng không được âm")
+        private Integer quantity;
 
         // Getters, setters
 
-        public int getQuantity() {
+        public Integer getQuantity() {
             return quantity;
         }
 
-        public void setQuantity(int quantity) {
+        public void setQuantity(Integer quantity) {
             this.quantity = quantity;
         }
     }

@@ -31,6 +31,33 @@ public class JwtUtil {
                 .getBody()
                 .getSubject();
     }
+    
+    public String extractUserId(String token) {
+        return Jwts.parser()
+                .setSigningKey(jwtConfig.getSecret())
+                .parseClaimsJws(token)
+                .getBody()
+                .get("userId", String.class);
+    }
+    
+    public String extractRole(String token) {
+        return Jwts.parser()
+                .setSigningKey(jwtConfig.getSecret())
+                .parseClaimsJws(token)
+                .getBody()
+                .get("role", String.class);
+    }
+    
+    public boolean isTokenValid(String token) {
+        try {
+            Jwts.parser()
+                .setSigningKey(jwtConfig.getSecret())
+                .parseClaimsJws(token);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
 
 }

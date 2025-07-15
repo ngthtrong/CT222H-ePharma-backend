@@ -1,7 +1,10 @@
 package ct222h.vegeta.projectbackend.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Email;
 
 import java.util.Date;
 import java.util.List;
@@ -10,8 +13,16 @@ import java.util.List;
 public class User {
     @Id
     private String id;
+    
+    @NotBlank(message = "Họ tên không được để trống")
     private String fullName;
+    
+    @Indexed(unique = true)
+    @NotBlank(message = "Email không được để trống")
+    @Email(message = "Email không hợp lệ")
     private String email;
+    
+    @NotBlank(message = "Mật khẩu không được để trống")
     private String password;
     private String phoneNumber;
     private List<Address> addresses;
