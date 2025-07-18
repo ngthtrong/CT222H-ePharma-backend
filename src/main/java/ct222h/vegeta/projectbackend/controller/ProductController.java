@@ -6,9 +6,11 @@ import ct222h.vegeta.projectbackend.dto.response.ApiResponse;
 import ct222h.vegeta.projectbackend.dto.response.ProductResponse;
 import ct222h.vegeta.projectbackend.model.Category;
 import ct222h.vegeta.projectbackend.model.Product;
+import ct222h.vegeta.projectbackend.security.AuthorizationService;
 import ct222h.vegeta.projectbackend.service.CategoryService;
 import ct222h.vegeta.projectbackend.service.ProductService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,13 +25,16 @@ public class ProductController {
 
     private final ProductService productService;
     private final CategoryService categoryService;
+    
+    @Autowired
+    private AuthorizationService authorizationService;
 
     public ProductController(ProductService productService, CategoryService categoryService) {
         this.productService = productService;
         this.categoryService = categoryService;
     }
 
-    // PUBLIC ENDPOINTS
+    // PUBLIC ENDPOINTS - No authentication required
 
     @GetMapping("/products")
     public ResponseEntity<ApiResponse<List<ProductResponse>>> getAllProducts() {
@@ -76,7 +81,7 @@ public class ProductController {
         return ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_GET_RELATED_PRODUCTS, responses));
     }
 
-    // ADMIN ENDPOINTS
+    // ADMIN ENDPOINTS - Require ADMIN role
 
     @GetMapping("/admin/products")
     public ResponseEntity<ApiResponse<List<ProductResponse>>> getAllProductsWithFilters(
@@ -87,6 +92,8 @@ public class ProductController {
             @RequestParam(required = false) Boolean inStock,
             @RequestParam(required = false) Boolean published,
             @RequestParam(required = false) String search) {
+        
+        authorizationService.checkAdminRole(); // Only ADMIN can access
         
         List<Product> products;
         
@@ -108,6 +115,8 @@ public class ProductController {
 
     @GetMapping("/admin/products/{id}")
     public ResponseEntity<ApiResponse<ProductResponse>> getProductByIdAdmin(@PathVariable String id) {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         Optional<Product> product = productService.getProductById(id);
         return product
                 .map(p -> ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_GET_PRODUCT, convertToProductResponse(p))))
@@ -116,6 +125,8 @@ public class ProductController {
 
     @PostMapping("/admin/products")
     public ResponseEntity<ApiResponse<ProductResponse>> createProduct(@Valid @RequestBody ProductRequest request) {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         Product product = convertToProduct(request);
         Product created = productService.createProduct(product);
         return ResponseEntity.status(201).body(new ApiResponse<>(true, ProductConstants.SUCCESS_CREATE_PRODUCT, convertToProductResponse(created)));
@@ -123,6 +134,8 @@ public class ProductController {
 
     @PutMapping("/admin/products/{id}")
     public ResponseEntity<ApiResponse<ProductResponse>> updateProduct(@PathVariable String id, @Valid @RequestBody ProductRequest request) {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         Product product = convertToProduct(request);
         product.setId(id);
         Product updated = productService.updateProduct(id, product);
@@ -131,6 +144,8 @@ public class ProductController {
 
     @DeleteMapping("/admin/products/{id}")
     public ResponseEntity<ApiResponse<Void>> deleteProduct(@PathVariable String id) {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         productService.deleteProduct(id);
         return ResponseEntity.ok(new ApiResponse<>(true, ProductConstants.SUCCESS_DELETE_PRODUCT, null));
     }
