@@ -1,0 +1,6 @@
+copilot:
+  instructions:
+    - language: java
+      file: .github/copilot/backend_architecture.instructions.md
+    - language: java
+      file: .github/copilot/backend_context.instructions.md
