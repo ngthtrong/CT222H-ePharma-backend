@@ -6,8 +6,10 @@ import ct222h.vegeta.projectbackend.dto.response.ApiResponse;
 import ct222h.vegeta.projectbackend.dto.response.CategoryResponse;
 import ct222h.vegeta.projectbackend.exception.CategoryNotFoundException;
 import ct222h.vegeta.projectbackend.model.Category;
+import ct222h.vegeta.projectbackend.security.AuthorizationService;
 import ct222h.vegeta.projectbackend.service.CategoryService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,12 +22,15 @@ import java.util.stream.Collectors;
 public class CategoryController {
 
     private final CategoryService categoryService;
+    
+    @Autowired
+    private AuthorizationService authorizationService;
 
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
 
-    // PUBLIC ENDPOINTS
+    // PUBLIC ENDPOINTS - No authentication required
 
     @GetMapping("/categories")
     public ResponseEntity<ApiResponse<List<CategoryResponse>>> getAllCategories() {
@@ -75,10 +80,12 @@ public class CategoryController {
         return ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_GET_CATEGORY_CHILDREN, responses));
     }
 
-    // ADMIN ENDPOINTS
+    // ADMIN ENDPOINTS - Require ADMIN role
 
     @GetMapping("/admin/categories/{id}")
     public ResponseEntity<ApiResponse<CategoryResponse>> getCategoryByIdAdmin(@PathVariable String id) {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         Optional<Category> category = categoryService.getCategoryById(id);
         return category
                 .map(c -> ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_GET_CATEGORY, convertToCategoryResponse(c))))
@@ -87,6 +94,8 @@ public class CategoryController {
 
     @PostMapping("/admin/categories")
     public ResponseEntity<ApiResponse<CategoryResponse>> createCategory(@Valid @RequestBody CategoryRequest request) {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         try {
             Category category = convertToCategory(request);
             Category created = categoryService.createCategory(category);
@@ -100,6 +109,8 @@ public class CategoryController {
     public ResponseEntity<ApiResponse<CategoryResponse>> updateCategory(
             @PathVariable String id,
             @Valid @RequestBody CategoryRequest request) {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         try {
             Category category = convertToCategory(request);
             Category updated = categoryService.updateCategory(id, category);
@@ -113,6 +124,8 @@ public class CategoryController {
 
     @DeleteMapping("/admin/categories/{id}")
     public ResponseEntity<ApiResponse<Void>> deleteCategory(@PathVariable String id) {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         try {
             categoryService.deleteCategory(id);
             return ResponseEntity.ok(new ApiResponse<>(true, CategoryConstants.SUCCESS_DELETE_CATEGORY, null));

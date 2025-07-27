@@ -7,10 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import java.util.Arrays;
 
 @Configuration
+@EnableWebSecurity
 public class SecurityConfig {
 
     @Autowired
@@ -23,24 +31,42 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable())
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/auth/register", "/api/v1/auth/login",
-                                "/v2/api-docs",
-                                "/v3/api-docs",
-                                "/v3/api-docs/**",
-                                "/swagger-resources",
-                                "/swagger-resources/**",
-                                "/configuration/ui",
-                                "/configuration/security",
+                        // Swagger documentation - PUBLIC
+                        .requestMatchers("/v3/api-docs/**",
                                 "/swagger-ui/**",
-                                "/webjars/**",
                                 "/swagger-ui.html").permitAll()
-                        .requestMatchers("/api/v1/categories/**").permitAll()
-                        .requestMatchers("api/v1/products/**").permitAll()
-                        .requestMatchers("/api/v1/cart/**").permitAll()
+                        
+                        // Actuator endpoints - PUBLIC
+                        .requestMatchers("/actuator/**").permitAll()
+                        
+                        // Authentication endpoints - PUBLIC
+                        .requestMatchers("/api/v1/auth/register", "/api/v1/auth/login").permitAll()
+                        
+                        // Authentication endpoints - USER (authenticated)
                         .requestMatchers("/api/v1/auth/logout").authenticated()
-                        .requestMatchers("/api/v1/users/**").authenticated()
-                        .anyRequest().authenticated()
+                        
+                        // Categories endpoints - PUBLIC
+                        .requestMatchers("/api/v1/categories/**").permitAll()
+                        
+                        // Products endpoints - PUBLIC
+                        .requestMatchers("/api/v1/products/**").permitAll()
+                        
+                        // Cart endpoints - PUBLIC/USER (no authentication required, handled by headers)
+                        .requestMatchers("/api/v1/cart/**").permitAll()
+                        
+                        // User endpoints - USER (authenticated)
+                        .requestMatchers("/api/v1/users/me/**").authenticated()
+                        
+                        // Order endpoints - USER (authenticated)
+                        .requestMatchers("/api/v1/orders/**").authenticated()
+                        
+                        // Admin endpoints - ADMIN (will be checked in controllers)
+                        .requestMatchers("/api/v1/admin/**").authenticated()
+                        
+                        .anyRequest().permitAll()
                 )
                 .addFilterBefore(jwtBlacklistFilter, UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
@@ -48,5 +74,19 @@ public class SecurityConfig {
                 .logout(logout -> logout.disable());
 
         return http.build();
+    }
+
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(Arrays.asList("*"));
+        configuration.setAllowCredentials(true);
+        configuration.setExposedHeaders(Arrays.asList("Authorization"));
+        
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
     }
 }
