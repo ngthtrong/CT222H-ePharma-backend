@@ -1,19 +1,18 @@
 package ct222h.vegeta.projectbackend.controller;
 
 import ct222h.vegeta.projectbackend.dto.request.AddressRequest;
-import ct222h.vegeta.projectbackend.dto.request.CartRequest;
 import ct222h.vegeta.projectbackend.dto.request.UpdateUserRequest;
 import ct222h.vegeta.projectbackend.dto.response.ApiResponse;
 import ct222h.vegeta.projectbackend.dto.response.UserResponse;
 import ct222h.vegeta.projectbackend.model.User;
 import ct222h.vegeta.projectbackend.repository.UserRepository;
+import ct222h.vegeta.projectbackend.security.AuthorizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -22,8 +21,14 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private AuthorizationService authorizationService;
+
+    // USER endpoints - require authentication
     @GetMapping("/users/me")
     public ApiResponse<UserResponse> getMyProfile(Principal principal) {
+        authorizationService.checkUserRole(); // USER or ADMIN can access
+        
         String email = principal.getName();
         User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
 
@@ -43,6 +48,8 @@ public class UserController {
 
     @PutMapping("/users/me")
     public ApiResponse<UserResponse> updateMyProfile(Principal principal, @RequestBody UpdateUserRequest request) {
+        authorizationService.checkUserRole(); // USER or ADMIN can access
+        
         String email = principal.getName();
         User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
 
@@ -68,6 +75,8 @@ public class UserController {
 
     @GetMapping("/users/me/addresses")
     public ApiResponse<List<User.Address>> getMyAddresses(Principal principal) {
+        authorizationService.checkUserRole(); // USER or ADMIN can access
+        
         String email = principal.getName();
         User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
 
@@ -79,6 +88,8 @@ public class UserController {
 
     @PostMapping("/users/me/addresses")
     public ApiResponse<List<User.Address>> addAddress(Principal principal, @RequestBody AddressRequest addressRequest) {
+        authorizationService.checkUserRole(); // USER or ADMIN can access
+        
         String email = principal.getName();
         User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
 
@@ -99,6 +110,8 @@ public class UserController {
 
     @PutMapping("/users/me/addresses/{addressId}")
     public ApiResponse<List<User.Address>> updateAddress(Principal principal, @PathVariable String addressId, @RequestBody AddressRequest addressRequest) {
+        authorizationService.checkUserRole(); // USER or ADMIN can access
+        
         String email = principal.getName();
         User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
 
@@ -138,6 +151,8 @@ public class UserController {
 
     @PatchMapping("/users/me/addresses/{addressId}/default")
     public ApiResponse<List<User.Address>> setDefaultAddress(Principal principal, @PathVariable String addressId) {
+        authorizationService.checkUserRole(); // USER or ADMIN can access
+        
         String email = principal.getName();
         User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
 
@@ -165,6 +180,8 @@ public class UserController {
 
     @DeleteMapping("/users/me/addresses/{addressId}")
     public ApiResponse<List<User.Address>> deleteAddress(Principal principal, @PathVariable String addressId) {
+        authorizationService.checkUserRole(); // USER or ADMIN can access
+        
         String email = principal.getName();
         User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
 
@@ -182,8 +199,11 @@ public class UserController {
         return new ApiResponse<>(true, "Xóa địa chỉ thành công", addresses);
     }
 
+    // ADMIN endpoints - require ADMIN role
     @GetMapping("/admin/users")
     public ApiResponse<List<UserResponse>> getAllUsers() {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         List<User> users = userRepository.findAll();
 
         List<UserResponse> responses = new ArrayList<>();
@@ -206,6 +226,8 @@ public class UserController {
 
     @DeleteMapping("/admin/users/{userId}")
     public ApiResponse<Void> deleteUser(@PathVariable String userId) {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
         if (!userRepository.existsById(userId)) {
             return new ApiResponse<>(false, "Người dùng không tồn tại", null);
         }
