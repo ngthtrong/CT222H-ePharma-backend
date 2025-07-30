@@ -1,0 +1,354 @@
+[
+  {
+    "name": "Omega-3 Fish Oil 1200mg Kirkland",
+    "sku": "OMG-1200-KL-002",
+    "slug": "omega-3-fish-oil-1200mg-kirkland",
+    "description": "Dầu cá Omega-3 1200mg Kirkland cung cấp EPA và DHA thiết yếu cho sức khỏe tim mạch, não bộ và mắt. Hộp 400 viên tiết kiệm từ thương hiệu Kirkland Signature.",
+    "images": [
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg"
+    ],
+    "price": 850000,
+    "discountPercent": 20,
+    "stockQuantity": 80,
+    "categoryId": "688a31ea150db06188a91c30",
+    "brand": "Kirkland Signature",
+    "attributes": [
+      {
+        "key": "Dung tích",
+        "value": "400 viên"
+      },
+      {
+        "key": "Xuất xứ",
+        "value": "Mỹ"
+      },
+      {
+        "key": "EPA",
+        "value": "684mg"
+      },
+      {
+        "key": "DHA",
+        "value": "252mg"
+      },
+      {
+        "key": "Dạng sản phẩm",
+        "value": "Viên nang mềm"
+      }
+    ],
+    "published": true,
+    "relatedProducts": []
+  },
+  {
+    "name": "Collagen Peptides Hydrolyzed Powder",
+    "sku": "COL-HYD-POW-003",
+    "slug": "collagen-peptides-hydrolyzed-powder",
+    "description": "Bột Collagen thủy phân giúp cải thiện độ đàn hồi da, giảm nếp nhăn, tăng cường sức khỏe khớp xương. Dễ hòa tan, không mùi vị, phù hợp cho làm đẹp da.",
+    "images": [
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg"
+    ],
+    "price": 1200000,
+    "discountPercent": 10,
+    "stockQuantity": 60,
+    "categoryId": "688a320f150db06188a91c36",
+    "brand": "Vital Proteins",
+    "attributes": [
+      {
+        "key": "Trọng lượng",
+        "value": "567g"
+      },
+      {
+        "key": "Xuất xứ",
+        "value": "Mỹ"
+      },
+      {
+        "key": "Loại Collagen",
+        "value": "Type I & III"
+      },
+      {
+        "key": "Protein mỗi khẩu phần",
+        "value": "18g"
+      },
+      {
+        "key": "Dạng sản phẩm",
+        "value": "Bột"
+      }
+    ],
+    "published": true,
+    "relatedProducts": []
+  },
+  {
+    "name": "Probiotics 50 Billion CFU Garden of Life",
+    "sku": "PRB-50B-GOL-004",
+    "slug": "probiotics-50-billion-cfu-garden-of-life",
+    "description": "Men vi sinh 50 tỷ CFU với 13 chủng men vi sinh có lợi giúp cân bằng hệ vi sinh đường ruột, tăng cường tiêu hóa và hệ miễn dịch. Sản phẩm chất lượng cao.",
+    "images": [
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg"
+    ],
+    "price": 980000,
+    "discountPercent": 25,
+    "stockQuantity": 45,
+    "categoryId": "688a3203150db06188a91c34",
+    "brand": "Garden of Life",
+    "attributes": [
+      {
+        "key": "Dung tích",
+        "value": "30 viên"
+      },
+      {
+        "key": "Xuất xứ",
+        "value": "Mỹ"
+      },
+      {
+        "key": "CFU",
+        "value": "50 tỷ"
+      },
+      {
+        "key": "Số chủng vi sinh",
+        "value": "13 chủng"
+      },
+      {
+        "key": "Bảo quản",
+        "value": "Không cần tủ lạnh"
+      }
+    ],
+    "published": true,
+    "relatedProducts": []
+  },
+  {
+    "name": "Magnesium Glycinate 400mg Now Foods",
+    "sku": "MAG-GLY-400-NF-005",
+    "slug": "magnesium-glycinate-400mg-now-foods",
+    "description": "Magnesium Glycinate 400mg dạng chelate dễ hấp thụ, hỗ trợ thư giãn cơ bắp, cải thiện giấc ngủ, giảm căng thẳng và hỗ trợ sức khỏe tim mạch.",
+    "images": [
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg"
+    ],
+    "price": 620000,
+    "discountPercent": 12,
+    "stockQuantity": 120,
+    "categoryId": "688a31ea150db06188a91c30",
+    "brand": "Now Foods",
+    "attributes": [
+      {
+        "key": "Dung tích",
+        "value": "180 viên"
+      },
+      {
+        "key": "Xuất xứ",
+        "value": "Mỹ"
+      },
+      {
+        "key": "Dạng Magnesium",
+        "value": "Glycinate (Chelate)"
+      },
+      {
+        "key": "Liều lượng",
+        "value": "400mg elemental magnesium"
+      },
+      {
+        "key": "Dạng sản phẩm",
+        "value": "Viên nang"
+      }
+    ],
+    "published": true,
+    "relatedProducts": []
+  },
+  {
+    "name": "Ginkgo Biloba 120mg Hỗ trợ tuần hoàn máu",
+    "sku": "GKB-120-TC-006",
+    "slug": "ginkgo-biloba-120mg-ho-tro-tuan-hoan-mau",
+    "description": "Ginkgo Biloba 120mg giúp tăng cường tuần hoàn máu não, cải thiện trí nhớ, giảm căng thẳng và hỗ trợ sức khỏe thần kinh não bộ.",
+    "images": [
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg"
+    ],
+    "price": 390000,
+    "discountPercent": 18,
+    "stockQuantity": 95,
+    "categoryId": "688a3209150db06188a91c35",
+    "brand": "Nature's Bounty",
+    "attributes": [
+      {
+        "key": "Dung tích",
+        "value": "120 viên"
+      },
+      {
+        "key": "Xuất xứ",
+        "value": "Mỹ"
+      },
+      {
+        "key": "Hàm lượng hoạt chất",
+        "value": "120mg Ginkgo Biloba"
+      },
+      {
+        "key": "Chuẩn hóa",
+        "value": "24% Flavonoids, 6% Terpenes"
+      },
+      {
+        "key": "Dạng sản phẩm",
+        "value": "Viên nang"
+      }
+    ],
+    "published": true,
+    "relatedProducts": []
+  },
+  {
+    "name": "Maca Root 1000mg Hỗ trợ sinh lý nam",
+    "sku": "MCA-1000-SL-007",
+    "slug": "maca-root-1000mg-ho-tro-sinh-ly-nam",
+    "description": "Maca Root 1000mg từ Peru giúp tăng cường sinh lực, cải thiện sức khỏe sinh lý nam giới, tăng năng lượng và sức bền.",
+    "images": [
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg"
+    ],
+    "price": 720000,
+    "discountPercent": 22,
+    "stockQuantity": 70,
+    "categoryId": "688a31f0150db06188a91c31",
+    "brand": "Nature's Way",
+    "attributes": [
+      {
+        "key": "Dung tích",
+        "value": "100 viên"
+      },
+      {
+        "key": "Xuất xứ",
+        "value": "Peru"
+      },
+      {
+        "key": "Hàm lượng",
+        "value": "1000mg Maca Root"
+      },
+      {
+        "key": "Phần sử dụng",
+        "value": "Rễ Maca hữu cơ"
+      },
+      {
+        "key": "Dạng sản phẩm",
+        "value": "Viên nang"
+      }
+    ],
+    "published": true,
+    "relatedProducts": []
+  },
+  {
+    "name": "Milk Thistle 150mg Hỗ trợ chức năng gan",
+    "sku": "MLT-150-GAN-008",
+    "slug": "milk-thistle-150mg-ho-tro-chuc-nang-gan",
+    "description": "Milk Thistle 150mg (Cây kế sữa) chứa Silymarin hỗ trợ bảo vệ gan, giải độc gan và tăng cường chức năng gan hiệu quả.",
+    "images": [
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg"
+    ],
+    "price": 520000,
+    "discountPercent": 15,
+    "stockQuantity": 85,
+    "categoryId": "688a31f6150db06188a91c32",
+    "brand": "Solgar",
+    "attributes": [
+      {
+        "key": "Dung tích",
+        "value": "90 viên"
+      },
+      {
+        "key": "Xuất xứ",
+        "value": "Mỹ"
+      },
+      {
+        "key": "Hàm lượng Silymarin",
+        "value": "120mg (80% Silymarin)"
+      },
+      {
+        "key": "Chiết xuất từ",
+        "value": "Hạt Milk Thistle"
+      },
+      {
+        "key": "Dạng sản phẩm",
+        "value": "Viên nang"
+      }
+    ],
+    "published": true,
+    "relatedProducts": []
+  },
+  {
+    "name": "Glucosamine & Chondroitin Hỗ trợ xương khớp",
+    "sku": "GLC-CHD-XK-009",
+    "slug": "glucosamine-chondroitin-ho-tro-xuong-khop",
+    "description": "Glucosamine 1500mg & Chondroitin 1200mg hỗ trợ tái tạo sụn khớp, giảm đau khớp, tăng cường linh hoạt và sức khỏe xương khớp.",
+    "images": [
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg"
+    ],
+    "price": 890000,
+    "discountPercent": 20,
+    "stockQuantity": 65,
+    "categoryId": "688a31fd150db06188a91c33",
+    "brand": "Schiff",
+    "attributes": [
+      {
+        "key": "Dung tích",
+        "value": "150 viên"
+      },
+      {
+        "key": "Xuất xứ",
+        "value": "Mỹ"
+      },
+      {
+        "key": "Glucosamine",
+        "value": "1500mg (dạng Sulfate)"
+      },
+      {
+        "key": "Chondroitin",
+        "value": "1200mg (dạng Sulfate)"
+      },
+      {
+        "key": "Dạng sản phẩm",
+        "value": "Viên nang"
+      }
+    ],
+    "published": true,
+    "relatedProducts": []
+  },
+  {
+    "name": "Sữa Abbott Grow Gold 900g",
+    "sku": "ABT-GRW-900-010",
+    "slug": "sua-abbott-grow-gold-900g",
+    "description": "Sữa Abbott Grow Gold 900g dành cho trẻ em từ 1-10 tuổi, bổ sung đầy đủ dinh dưỡng cần thiết cho sự phát triển toàn diện của trẻ.",
+    "images": [
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg",
+      "https://i.pinimg.com/736x/54/08/23/540823cb8ead618351d1c13d387d98be.jpg"
+    ],
+    "price": 520000,
+    "discountPercent": 8,
+    "stockQuantity": 200,
+    "categoryId": "688a34b3150db06188a91c3b",
+    "brand": "Abbott",
+    "attributes": [
+      {
+        "key": "Trọng lượng",
+        "value": "900g"
+      },
+      {
+        "key": "Xuất xứ",
+        "value": "Singapore"
+      },
+      {
+        "key": "Độ tuổi",
+        "value": "1-10 tuổi"
+      },
+      {
+        "key": "Hương vị",
+        "value": "Vanilla"
+      },
+      {
+        "key": "Dạng sản phẩm",
+        "value": "Sữa bột"
+      }
+    ],
+    "published": true,
+    "relatedProducts": []
+  }
+]

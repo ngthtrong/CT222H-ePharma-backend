@@ -1,0 +1,340 @@
+{
+  "mainCategory": {
+    "name": "Thực phẩm chức năng",
+    "slug": "thuc-pham-chuc-nang",
+    "description": "Thực phẩm bảo vệ sức khỏe, thực phẩm chức năng từ các thương hiệu uy tín trên thế giới",
+    "parentCategoryId": null
+  },
+  "subCategories": [
+    {
+      "name": "Vitamin & Khoáng chất",
+      "slug": "vitamin-khoang-chat",
+      "description": "Các sản phẩm vitamin và khoáng chất thiết yếu cho cơ thể",
+      "parentCategoryId": "688a3183150db06188a91c2f",
+      "childCategories": [
+        {
+          "name": "Vitamin C các loại",
+          "slug": "vitamin-c-cac-loai",
+          "description": "Vitamin C dạng viên, bột, nước từ các thương hiệu uy tín",
+          "parentCategoryId": "VITAMIN_KHOANG_CHAT_ID"
+        },
+        {
+          "name": "Vitamin E các loại", 
+          "slug": "vitamin-e-cac-loai",
+          "description": "Vitamin E tự nhiên và tổng hợp, hỗ trợ chống lão hóa",
+          "parentCategoryId": "VITAMIN_KHOANG_CHAT_ID"
+        },
+        {
+          "name": "Bổ sung Kẽm & Magie",
+          "slug": "bo-sung-kem-magie",
+          "description": "Kẽm và Magie hỗ trợ tăng cường miễn dịch và sức khỏe xương khớp",
+          "parentCategoryId": "VITAMIN_KHOANG_CHAT_ID"
+        },
+        {
+          "name": "Bổ sung Canxi & Vitamin D",
+          "slug": "bo-sung-canxi-vitamin-d",
+          "description": "Canxi và Vitamin D cho xương chắc khỏe và phát triển chiều cao",
+          "parentCategoryId": "VITAMIN_KHOANG_CHAT_ID"
+        },
+        {
+          "name": "Vitamin tổng hợp",
+          "slug": "vitamin-tong-hop",
+          "description": "Vitamin tổng hợp đa vi chất dinh dưỡng cho mọi lứa tuổi",
+          "parentCategoryId": "VITAMIN_KHOANG_CHAT_ID"
+        },
+        {
+          "name": "Dầu cá, Omega 3, DHA",
+          "slug": "dau-ca-omega-3-dha",
+          "description": "Dầu cá và Omega 3 hỗ trợ sức khỏe tim mạch và não bộ",
+          "parentCategoryId": "VITAMIN_KHOANG_CHAT_ID"
+        },
+        {
+          "name": "Bổ sung Sắt & Axit Folic",
+          "slug": "bo-sung-sat-axit-folic",
+          "description": "Sắt và Axit Folic hỗ trợ tạo máu và sức khỏe phụ nữ mang thai",
+          "parentCategoryId": "VITAMIN_KHOANG_CHAT_ID"
+        }
+      ]
+    },
+    {
+      "name": "Sinh lý - Nội tiết tố",
+      "slug": "sinh-ly-noi-tiet-to",
+      "description": "Sản phẩm hỗ trợ cân bằng nội tiết tố và cải thiện sinh lý",
+      "parentCategoryId": "688a3183150db06188a91c2f",
+      "childCategories": [
+        {
+          "name": "Sinh lý nam",
+          "slug": "sinh-ly-nam",
+          "description": "Sản phẩm hỗ trợ sức khỏe sinh lý nam giới",
+          "parentCategoryId": "SINH_LY_NOI_TIET_TO_ID"
+        },
+        {
+          "name": "Sinh lý nữ",
+          "slug": "sinh-ly-nu",
+          "description": "Sản phẩm hỗ trợ sức khỏe sinh lý nữ giới",
+          "parentCategoryId": "SINH_LY_NOI_TIET_TO_ID"
+        },
+        {
+          "name": "Sức khoẻ tình dục",
+          "slug": "suc-khoe-tinh-duc",
+          "description": "Sản phẩm hỗ trợ cải thiện sức khỏe tình dục",
+          "parentCategoryId": "SINH_LY_NOI_TIET_TO_ID"
+        },
+        {
+          "name": "Cân bằng nội tiết tố",
+          "slug": "can-bang-noi-tiet-to",
+          "description": "Sản phẩm hỗ trợ cân bằng hormone tự nhiên",
+          "parentCategoryId": "SINH_LY_NOI_TIET_TO_ID"
+        },
+        {
+          "name": "Hỗ trợ mãn kinh",
+          "slug": "ho-tro-man-kinh",
+          "description": "Sản phẩm hỗ trợ phụ nữ thời kỳ mãn kinh",
+          "parentCategoryId": "SINH_LY_NOI_TIET_TO_ID"
+        }
+      ]
+    },
+    {
+      "name": "Cải thiện tăng cường chức năng",
+      "slug": "cai-thien-tang-cuong-chuc-nang",
+      "description": "Sản phẩm hỗ trợ cải thiện và tăng cường các chức năng cơ thể",
+      "parentCategoryId": "688a3183150db06188a91c2f",
+      "childCategories": [
+        {
+          "name": "Chống lão hóa",
+          "slug": "chong-lao-hoa",
+          "description": "Sản phẩm chống oxy hóa và chống lão hóa tự nhiên",
+          "parentCategoryId": "CAI_THIEN_TANG_CUONG_ID"
+        },
+        {
+          "name": "Chức năng gan",
+          "slug": "chuc-nang-gan",
+          "description": "Sản phẩm hỗ trợ bảo vệ và tăng cường chức năng gan",
+          "parentCategoryId": "CAI_THIEN_TANG_CUONG_ID"
+        },
+        {
+          "name": "Tăng sức đề kháng, miễn dịch",
+          "slug": "tang-suc-de-khang-mien-dich",
+          "description": "Sản phẩm tăng cường hệ miễn dịch và sức đề kháng",
+          "parentCategoryId": "CAI_THIEN_TANG_CUONG_ID"
+        },
+        {
+          "name": "Bổ mắt, bảo vệ mắt",
+          "slug": "bo-mat-bao-ve-mat",
+          "description": "Sản phẩm bổ sung dinh dưỡng và bảo vệ mắt",
+          "parentCategoryId": "CAI_THIEN_TANG_CUONG_ID"
+        },
+        {
+          "name": "Hỗ trợ trao đổi chất",
+          "slug": "ho-tro-trao-doi-chat",
+          "description": "Sản phẩm hỗ trợ tăng cường quá trình trao đổi chất",
+          "parentCategoryId": "CAI_THIEN_TANG_CUONG_ID"
+        },
+        {
+          "name": "Giải rượu, cai rượu",
+          "slug": "giai-ruou-cai-ruou",
+          "description": "Sản phẩm hỗ trợ giải độc rượu và cai rượu",
+          "parentCategoryId": "CAI_THIEN_TANG_CUONG_ID"
+        }
+      ]
+    },
+    {
+      "name": "Hỗ trợ điều trị",
+      "slug": "ho-tro-dieu-tri",
+      "description": "Sản phẩm hỗ trợ điều trị các vấn đề sức khỏe",
+      "parentCategoryId": "688a3183150db06188a91c2f",
+      "childCategories": [
+        {
+          "name": "Hỗ trợ điều trị tiểu đường",
+          "slug": "ho-tro-dieu-tri-tieu-duong",
+          "description": "Sản phẩm hỗ trợ kiểm soát đường huyết cho người tiểu đường",
+          "parentCategoryId": "HO_TRO_DIEU_TRI_ID"
+        },
+        {
+          "name": "Hỗ trợ điều trị ung thư",
+          "slug": "ho-tro-dieu-tri-ung-thu",
+          "description": "Sản phẩm hỗ trợ trong quá trình điều trị ung thư",
+          "parentCategoryId": "HO_TRO_DIEU_TRI_ID"
+        },
+        {
+          "name": "Cơ xương khớp",
+          "slug": "co-xuong-khop",
+          "description": "Sản phẩm hỗ trợ sức khỏe cơ xương khớp",
+          "parentCategoryId": "HO_TRO_DIEU_TRI_ID"
+        },
+        {
+          "name": "Hô hấp, ho, xoang",
+          "slug": "ho-hap-ho-xoang",
+          "description": "Sản phẩm hỗ trợ hệ hô hấp, ho và viêm xoang",
+          "parentCategoryId": "HO_TRO_DIEU_TRI_ID"
+        },
+        {
+          "name": "Thận, tiền liệt tuyến",
+          "slug": "than-tien-liet-tuyen",
+          "description": "Sản phẩm hỗ trợ sức khỏe thận và tiền liệt tuyến",
+          "parentCategoryId": "HO_TRO_DIEU_TRI_ID"
+        },
+        {
+          "name": "Hỗ trợ điều trị trĩ",
+          "slug": "ho-tro-dieu-tri-tri",
+          "description": "Sản phẩm hỗ trợ điều trị bệnh trĩ",
+          "parentCategoryId": "HO_TRO_DIEU_TRI_ID"
+        },
+        {
+          "name": "Hỗ trợ điều trị gout",
+          "slug": "ho-tro-dieu-tri-gout",
+          "description": "Sản phẩm hỗ trợ điều trị bệnh gout",
+          "parentCategoryId": "HO_TRO_DIEU_TRI_ID"
+        }
+      ]
+    },
+    {
+      "name": "Hỗ trợ tiêu hóa",
+      "slug": "ho-tro-tieu-hoa",
+      "description": "Sản phẩm hỗ trợ hệ tiêu hóa khỏe mạnh",
+      "parentCategoryId": "688a3183150db06188a91c2f",
+      "childCategories": [
+        {
+          "name": "Dạ dày, tá tràng",
+          "slug": "da-day-ta-trang",
+          "description": "Sản phẩm hỗ trợ điều trị dạ dày, tá tràng",
+          "parentCategoryId": "HO_TRO_TIEU_HOA_ID"
+        },
+        {
+          "name": "Táo bón",
+          "slug": "tao-bon",
+          "description": "Sản phẩm hỗ trợ cải thiện tình trạng táo bón",
+          "parentCategoryId": "HO_TRO_TIEU_HOA_ID"
+        },
+        {
+          "name": "Vi sinh - Probiotic",
+          "slug": "vi-sinh-probiotic",
+          "description": "Men vi sinh và Probiotic cân bằng hệ vi sinh đường ruột",
+          "parentCategoryId": "HO_TRO_TIEU_HOA_ID"
+        },
+        {
+          "name": "Đại tràng",
+          "slug": "dai-trang",
+          "description": "Sản phẩm hỗ trợ sức khỏe đại tràng",
+          "parentCategoryId": "HO_TRO_TIEU_HOA_ID"
+        },
+        {
+          "name": "Khó tiêu",
+          "slug": "kho-tieu",
+          "description": "Sản phẩm hỗ trợ cải thiện tình trạng khó tiêu",
+          "parentCategoryId": "HO_TRO_TIEU_HOA_ID"
+        }
+      ]
+    },
+    {
+      "name": "Thần kinh não",
+      "slug": "than-kinh-nao",
+      "description": "Sản phẩm hỗ trợ sức khỏe thần kinh và não bộ",
+      "parentCategoryId": "688a3183150db06188a91c2f",
+      "childCategories": [
+        {
+          "name": "Bổ não - cải thiện trí nhớ",
+          "slug": "bo-nao-cai-thien-tri-nho",
+          "description": "Sản phẩm bổ não và cải thiện trí nhớ",
+          "parentCategoryId": "THAN_KINH_NAO_ID"
+        },
+        {
+          "name": "Hỗ trợ giấc ngủ ngon",
+          "slug": "ho-tro-giac-ngu-ngon",
+          "description": "Sản phẩm hỗ trợ cải thiện chất lượng giấc ngủ",
+          "parentCategoryId": "THAN_KINH_NAO_ID"
+        },
+        {
+          "name": "Tuần hoàn máu",
+          "slug": "tuan-hoan-mau",
+          "description": "Sản phẩm hỗ trợ cải thiện tuần hoàn máu",
+          "parentCategoryId": "THAN_KINH_NAO_ID"
+        },
+        {
+          "name": "Kiểm soát căng thẳng",
+          "slug": "kiem-soat-cang-thang",
+          "description": "Sản phẩm hỗ trợ giảm căng thẳng và stress",
+          "parentCategoryId": "THAN_KINH_NAO_ID"
+        },
+        {
+          "name": "Hoạt huyết",
+          "slug": "hoat-huyet",
+          "description": "Sản phẩm hỗ trợ hoạt huyết dưỡng não",
+          "parentCategoryId": "THAN_KINH_NAO_ID"
+        }
+      ]
+    },
+    {
+      "name": "Hỗ trợ làm đẹp",
+      "slug": "ho-tro-lam-dep",
+      "description": "Sản phẩm hỗ trợ làm đẹp từ bên trong",
+      "parentCategoryId": "688a3183150db06188a91c2f",
+      "childCategories": [
+        {
+          "name": "Da",
+          "slug": "da",
+          "description": "Sản phẩm chăm sóc và làm đẹp da",
+          "parentCategoryId": "HO_TRO_LAM_DEP_ID"
+        },
+        {
+          "name": "Hỗ trợ giảm cân",
+          "slug": "ho-tro-giam-can",
+          "description": "Sản phẩm hỗ trợ giảm cân an toàn",
+          "parentCategoryId": "HO_TRO_LAM_DEP_ID"
+        },
+        {
+          "name": "Tóc",
+          "slug": "toc",
+          "description": "Sản phẩm chăm sóc và nuôi dưỡng tóc",
+          "parentCategoryId": "HO_TRO_LAM_DEP_ID"
+        }
+      ]
+    },
+    {
+      "name": "Sức khoẻ tim mạch",
+      "slug": "suc-khoe-tim-mach",
+      "description": "Sản phẩm hỗ trợ sức khỏe tim mạch và huyết áp",
+      "parentCategoryId": "688a3183150db06188a91c2f",
+      "childCategories": [
+        {
+          "name": "Giảm Cholesterol",
+          "slug": "giam-cholesterol",
+          "description": "Sản phẩm hỗ trợ giảm cholesterol trong máu",
+          "parentCategoryId": "SUC_KHOE_TIM_MACH_ID"
+        },
+        {
+          "name": "Huyết áp",
+          "slug": "huyet-ap",
+          "description": "Sản phẩm hỗ trợ ổn định huyết áp",
+          "parentCategoryId": "SUC_KHOE_TIM_MACH_ID"
+        },
+        {
+          "name": "Suy giãn tĩnh mạch",
+          "slug": "suy-gian-tinh-mach",
+          "description": "Sản phẩm hỗ trợ điều trị suy giãn tĩnh mạch",
+          "parentCategoryId": "SUC_KHOE_TIM_MACH_ID"
+        }
+      ]
+    },
+    {
+      "name": "Dinh dưỡng",
+      "slug": "dinh-duong",
+      "description": "Sản phẩm dinh dưỡng cho mọi lứa tuổi",
+      "parentCategoryId": "688a3183150db06188a91c2f",
+      "childCategories": [
+        {
+          "name": "Sữa",
+          "slug": "sua",
+          "description": "Sữa dinh dưỡng các loại",
+          "parentCategoryId": "688a321a150db06188a91c38"
+        },
+        {
+          "name": "Dinh dưỡng trẻ em",
+          "slug": "dinh-duong-tre-em",
+          "description": "Sản phẩm dinh dưỡng chuyên biệt cho trẻ em",
+          "parentCategoryId": "688a321a150db06188a91c38"
+        }
+      ]
+    }
+  ]
+}

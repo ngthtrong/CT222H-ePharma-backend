@@ -1,0 +1,350 @@
+[
+  {
+    "id": "order_001",
+    "orderCode": "ORD-20250131-001",
+    "userId": "68760307a64b6350bc5ff09e",
+    "shippingAddress": {
+      "sourceAddressId": "0a7d1f33-0097-4e22-9128-f256a34532f1",
+      "recipientName": "Nguyen Van A",
+      "phoneNumber": "0123456789",
+      "street": "123 ABC",
+      "ward": "Ward 1",
+      "city": "Ho Chi Minh"
+    },
+    "items": [
+      {
+        "productId": "688a3a6a150db06188a91c3d",
+        "productName": "Omega-3 Fish Oil 1200mg Kirkland",
+        "priceAtPurchase": 680000.0,
+        "quantity": 1,
+        "itemTotal": 680000.0
+      },
+      {
+        "productId": "688a3a79150db06188a91c3f",
+        "productName": "Magnesium Glycinate 400mg Now Foods",
+        "priceAtPurchase": 545600.0,
+        "quantity": 1,
+        "itemTotal": 545600.0
+      }
+    ],
+    "subtotal": 1225600.0,
+    "shippingFee": 30000.0,
+    "totalAmount": 1255600.0,
+    "status": "COMPLETED",
+    "paymentMethod": "BANK_TRANSFER",
+    "paymentStatus": "PAID",
+    "notes": "Giao hàng nhanh, đóng gói cẩn thận",
+    "trackingNumber": "VN123456789",
+    "cancelReason": null,
+    "cancelledAt": null,
+    "createdAt": "2025-01-28T10:30:00.000Z",
+    "updatedAt": "2025-01-31T09:15:00.000Z"
+  },
+  {
+    "id": "order_002",
+    "orderCode": "ORD-20250130-002",
+    "userId": "68767ae967890469c16ae91a",
+    "shippingAddress": {
+      "sourceAddressId": "4cd9884a-de53-47e8-b14c-05d4954ac1f2",
+      "recipientName": "Trương Trí Hào",
+      "phoneNumber": "0399348365",
+      "street": "25/132 Đ.3/2",
+      "ward": "Ninh Kiều",
+      "city": "Cần Thơ"
+    },
+    "items": [
+      {
+        "productId": "688a3a72150db06188a91c3e",
+        "productName": "Probiotics 50 Billion CFU Garden of Life",
+        "priceAtPurchase": 735000.0,
+        "quantity": 1,
+        "itemTotal": 735000.0
+      }
+    ],
+    "subtotal": 735000.0,
+    "shippingFee": 25000.0,
+    "totalAmount": 760000.0,
+    "status": "SHIPPED",
+    "paymentMethod": "COD",
+    "paymentStatus": "UNPAID",
+    "notes": "Khách hàng yêu cầu giao vào buổi chiều",
+    "trackingNumber": "VN987654321",
+    "cancelReason": null,
+    "cancelledAt": null,
+    "createdAt": "2025-01-30T15:45:00.000Z",
+    "updatedAt": "2025-01-31T08:30:00.000Z"
+  },
+  {
+    "id": "order_003",
+    "orderCode": "ORD-20250131-003",
+    "userId": "68858d94673cb731d6c7586d",
+    "shippingAddress": {
+      "sourceAddressId": "4592bc54-50d2-4156-a776-f09d425285da",
+      "recipientName": "Trương Trí Hào",
+      "phoneNumber": "0399348365",
+      "street": "25/132 Đ.3/2",
+      "ward": "Ninh Kiều",
+      "city": "Cần Thơ"
+    },
+    "items": [
+      {
+        "productId": "688a3a85150db06188a91c41",
+        "productName": "Maca Root 1000mg Hỗ trợ sinh lý nam",
+        "priceAtPurchase": 561600.0,
+        "quantity": 1,
+        "itemTotal": 561600.0
+      },
+      {
+        "productId": "688a3a8e150db06188a91c43",
+        "productName": "Glucosamine & Chondroitin Hỗ trợ xương khớp",
+        "priceAtPurchase": 712000.0,
+        "quantity": 1,
+        "itemTotal": 712000.0
+      }
+    ],
+    "subtotal": 1273600.0,
+    "shippingFee": 35000.0,
+    "totalAmount": 1308600.0,
+    "status": "PROCESSING",
+    "paymentMethod": "BANK_TRANSFER",
+    "paymentStatus": "PAID",
+    "notes": "Đơn hàng ưu tiên - khách hàng VIP",
+    "trackingNumber": null,
+    "cancelReason": null,
+    "cancelledAt": null,
+    "createdAt": "2025-01-31T12:00:00.000Z",
+    "updatedAt": "2025-01-31T12:00:00.000Z"
+  },
+  {
+    "id": "order_004",
+    "orderCode": "ORD-20250131-004",
+    "userId": "6886e51f774edaaac56a03d6",
+    "shippingAddress": {
+      "sourceAddressId": null,
+      "recipientName": "Nguyễn Thanh Trọng",
+      "phoneNumber": "0932670881",
+      "street": "Địa chỉ tạm thời",
+      "ward": "Phường 1",
+      "city": "TP.HCM"
+    },
+    "items": [
+      {
+        "productId": "688a3a52150db06188a91c3c",
+        "productName": "Collagen Peptides Hydrolyzed Powder",
+        "priceAtPurchase": 1200000.0,
+        "quantity": 1,
+        "itemTotal": 1200000.0
+      },
+      {
+        "productId": "688a3a80150db06188a91c40",
+        "productName": "Ginkgo Biloba 120mg Hỗ trợ tuần hoàn máu",
+        "priceAtPurchase": 319800.0,
+        "quantity": 1,
+        "itemTotal": 319800.0
+      }
+    ],
+    "subtotal": 1519800.0,
+    "shippingFee": 40000.0,
+    "totalAmount": 1559800.0,
+    "status": "PENDING",
+    "paymentMethod": "BANK_TRANSFER",
+    "paymentStatus": "UNPAID",
+    "notes": "Đơn hàng mới - chờ xác nhận thanh toán",
+    "trackingNumber": null,
+    "cancelReason": null,
+    "cancelledAt": null,
+    "createdAt": "2025-01-31T16:20:00.000Z",
+    "updatedAt": "2025-01-31T16:20:00.000Z"
+  },
+  {
+    "id": "order_005",
+    "orderCode": "ORD-20250130-005",
+    "userId": "68760e4ea4ccc0a959fc6ccb",
+    "shippingAddress": {
+      "sourceAddressId": "4d4d5eac-c622-4907-af8d-bebc2498b94f",
+      "recipientName": "Trần Hải Thiên",
+      "phoneNumber": "0901234567",
+      "street": "1B ấp Tân Hưng",
+      "ward": "Phường Tân Hạnh",
+      "city": "Vĩnh Long"
+    },
+    "items": [
+      {
+        "productId": "688a3a8a150db06188a91c42",
+        "productName": "Milk Thistle 150mg Hỗ trợ chức năng gan",
+        "priceAtPurchase": 442000.0,
+        "quantity": 1,
+        "itemTotal": 442000.0
+      },
+      {
+        "productId": "688a3a93150db06188a91c44",
+        "productName": "Sữa Abbott Grow Gold 900g",
+        "priceAtPurchase": 478400.0,
+        "quantity": 1,
+        "itemTotal": 478400.0
+      }
+    ],
+    "subtotal": 920400.0,
+    "shippingFee": 30000.0,
+    "totalAmount": 950400.0,
+    "status": "CANCELLED",
+    "paymentMethod": "COD",
+    "paymentStatus": "UNPAID",
+    "notes": "Khách hàng hủy đơn vì thay đổi nhu cầu",
+    "trackingNumber": null,
+    "cancelReason": "Khách hàng hủy đơn vì thay đổi nhu cầu",
+    "cancelledAt": "2025-01-30T20:30:00.000Z",
+    "createdAt": "2025-01-30T09:15:00.000Z",
+    "updatedAt": "2025-01-30T20:30:00.000Z"
+  },
+  {
+    "id": "order_006",
+    "orderCode": "ORD-20250131-006",
+    "userId": "6886f952774edaaac56a03dd",
+    "shippingAddress": {
+      "sourceAddressId": "bcfbfbc2-179d-4bfd-8562-858b40ce9737",
+      "recipientName": "Trí Hào",
+      "phoneNumber": "0932670881",
+      "street": "`",
+      "ward": "TNĐ",
+      "city": "Đồng Tháp"
+    },
+    "items": [
+      {
+        "productId": "688a313a150db06188a91c2e",
+        "productName": "Vitamin C 1000mg Nature's Plus",
+        "priceAtPurchase": 450000.0,
+        "quantity": 1,
+        "itemTotal": 450000.0
+      }
+    ],
+    "subtotal": 450000.0,
+    "shippingFee": 25000.0,
+    "totalAmount": 475000.0,
+    "status": "COMPLETED",
+    "paymentMethod": "COD",
+    "paymentStatus": "PAID",
+    "notes": "Giao hàng thành công",
+    "trackingNumber": "VN555666777",
+    "cancelReason": null,
+    "cancelledAt": null,
+    "createdAt": "2025-01-29T11:00:00.000Z",
+    "updatedAt": "2025-01-31T14:45:00.000Z"
+  },
+  {
+    "id": "order_007",
+    "orderCode": "ORD-20250131-007",
+    "userId": "6875fe25f90280552fb2ad60",
+    "shippingAddress": {
+      "sourceAddressId": null,
+      "recipientName": "tran hai thien",
+      "phoneNumber": "0901234567",
+      "street": "Địa chỉ tạm thời",
+      "ward": "Phường ABC",
+      "city": "Cần Thơ"
+    },
+    "items": [
+      {
+        "productId": "688a3a6a150db06188a91c3d",
+        "productName": "Omega-3 Fish Oil 1200mg Kirkland",
+        "priceAtPurchase": 680000.0,
+        "quantity": 2,
+        "itemTotal": 1360000.0
+      },
+      {
+        "productId": "688a3a79150db06188a91c3f",
+        "productName": "Magnesium Glycinate 400mg Now Foods",
+        "priceAtPurchase": 545600.0,
+        "quantity": 1,
+        "itemTotal": 545600.0
+      }
+    ],
+    "subtotal": 1905600.0,
+    "shippingFee": 50000.0,
+    "totalAmount": 1955600.0,
+    "status": "PROCESSING",
+    "paymentMethod": "BANK_TRANSFER",
+    "paymentStatus": "PAID",
+    "notes": "Đơn hàng số lượng lớn",
+    "trackingNumber": null,
+    "cancelReason": null,
+    "cancelledAt": null,
+    "createdAt": "2025-01-31T08:30:00.000Z",
+    "updatedAt": "2025-01-31T08:30:00.000Z"
+  },
+  {
+    "id": "order_008",
+    "orderCode": "ORD-20250131-008",
+    "userId": "68858d94673cb731d6c7586d",
+    "shippingAddress": {
+      "sourceAddressId": null,
+      "recipientName": "Trương Trí Hào",
+      "phoneNumber": "0399348365",
+      "street": "Địa chỉ mới",
+      "ward": "Phường mới",
+      "city": "Cần Thơ"
+    },
+    "items": [
+      {
+        "productId": "688a3a80150db06188a91c40",
+        "productName": "Ginkgo Biloba 120mg Hỗ trợ tuần hoàn máu",
+        "priceAtPurchase": 319800.0,
+        "quantity": 1,
+        "itemTotal": 319800.0
+      }
+    ],
+    "subtotal": 319800.0,
+    "shippingFee": 30000.0,
+    "totalAmount": 349800.0,
+    "status": "PENDING",
+    "paymentMethod": "COD",
+    "paymentStatus": "UNPAID",
+    "notes": "Đơn hàng thêm thủ công",
+    "trackingNumber": null,
+    "cancelReason": null,
+    "cancelledAt": null,
+    "createdAt": "2025-01-31T18:00:00.000Z",
+    "updatedAt": "2025-01-31T18:00:00.000Z"
+  },
+  {
+    "id": "order_009",
+    "orderCode": "ORD-20250131-009",
+    "userId": "6886f189774edaaac56a03d8",
+    "shippingAddress": {
+      "sourceAddressId": null,
+      "recipientName": "Nguyễn Thanh Trọng",
+      "phoneNumber": "0932670881",
+      "street": "123 Nguyễn Văn Cừ",
+      "ward": "An Hòa",
+      "city": "Cần Thơ"
+    },
+    "items": [
+      {
+        "productId": "688a3a52150db06188a91c3c",
+        "productName": "Collagen Peptides Hydrolyzed Powder",
+        "priceAtPurchase": 1200000.0,
+        "quantity": 1,
+        "itemTotal": 1200000.0
+      },
+      {
+        "productId": "688a3a8a150db06188a91c42",
+        "productName": "Milk Thistle 150mg Hỗ trợ chức năng gan",
+        "priceAtPurchase": 442000.0,
+        "quantity": 1,
+        "itemTotal": 442000.0
+      }
+    ],
+    "subtotal": 1642000.0,
+    "shippingFee": 35000.0,
+    "totalAmount": 1677000.0,
+    "status": "PENDING",
+    "paymentMethod": "BANK_TRANSFER",
+    "paymentStatus": "UNPAID",
+    "notes": "Đơn hàng combo sức khỏe",
+    "trackingNumber": null,
+    "cancelReason": null,
+    "cancelledAt": null,
+    "createdAt": "2025-01-31T19:30:00.000Z",
+    "updatedAt": "2025-01-31T19:30:00.000Z"
+  }
+]
