@@ -35,7 +35,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         // Swagger documentation - PUBLIC
-                        .requestMatchers("/v3/api-docs/**",
+                        .requestMatchers("/v1/api-docs/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html").permitAll()
                         
@@ -43,7 +43,8 @@ public class SecurityConfig {
                         .requestMatchers("/actuator/**").permitAll()
                         
                         // Authentication endpoints - PUBLIC
-                        .requestMatchers("/api/v1/auth/register", "/api/v1/auth/login").permitAll()
+                        .requestMatchers("/api/v1/auth/register", "/api/v1/auth/login", 
+                                        "/api/v1/auth/forgot-password", "/api/v1/auth/reset-password").permitAll()
                         
                         // Authentication endpoints - USER (authenticated)
                         .requestMatchers("/api/v1/auth/logout").authenticated()
@@ -80,7 +81,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOriginPatterns(Arrays.asList("*"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
         configuration.setExposedHeaders(Arrays.asList("Authorization"));

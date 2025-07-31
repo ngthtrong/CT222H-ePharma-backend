@@ -32,4 +32,16 @@ public class AuthController {
         authService.logout(authHeader);
         return new ApiResponse<>(true, "Đăng xuất thành công", null);
     }
+
+    @PostMapping("/forgot-password")
+    public ApiResponse<ForgotPasswordResponse> forgotPassword(@Valid @RequestBody ForgotPasswordRequest request) {
+        ForgotPasswordResponse response = authService.forgotPassword(request);
+        return new ApiResponse<>(true, "Yêu cầu đặt lại mật khẩu đã được xử lý", response);
+    }
+
+    @PostMapping("/reset-password")
+    public ApiResponse<ResetPasswordResponse> resetPassword(@Valid @RequestBody ResetPasswordRequest request) {
+        ResetPasswordResponse response = authService.resetPassword(request);
+        return new ApiResponse<>(true, "Đặt lại mật khẩu thành công", response);
+    }
 }
