@@ -39,23 +39,40 @@ public class OrderController {
     public ResponseEntity<ApiResponse<List<OrderResponse>>> getUserOrders() {
         authorizationService.checkUserRole(); // USER or ADMIN can access
         
-        // Note: In a real implementation, we would get userId from the authenticated user
-        // For now, keeping the existing method signature but adding authorization check
-        throw new UnsupportedOperationException("This endpoint needs to be updated to get userId from authentication context");
+        // Get current authenticated user's ID
+        String currentUserId = authorizationService.getUserIdFromPrincipal();
+        
+        // Get user's orders
+        List<Order> orders = orderService.getUserOrders(currentUserId);
+        List<OrderResponse> responses = orders.stream()
+                .map(this::convertToOrderResponse)
+                .collect(Collectors.toList());
+        
+        return ResponseEntity.ok(new ApiResponse<>(true, "Lấy danh sách đơn hàng thành công", responses));
     }
 
     @GetMapping("/orders/{orderCode}")
     public ResponseEntity<ApiResponse<OrderResponse>> getUserOrderByCode(@PathVariable String orderCode) {
         authorizationService.checkUserRole(); // USER or ADMIN can access
         
-        // Note: In a real implementation, we would get userId from the authenticated user
-        // For now, keeping the existing method signature but adding authorization check
-        throw new UnsupportedOperationException("This endpoint needs to be updated to get userId from authentication context");
+        // Get current authenticated user's ID
+        String currentUserId = authorizationService.getUserIdFromPrincipal();
+        
+        // Get user's specific order by code
+        Optional<Order> order = orderService.getUserOrderByCode(currentUserId, orderCode);
+        
+        return order
+                .map(o -> ResponseEntity.ok(new ApiResponse<>(true, "Lấy chi tiết đơn hàng thành công", convertToOrderResponse(o))))
+                .orElseGet(() -> ResponseEntity.status(404).body(new ApiResponse<>(false, "Không tìm thấy đơn hàng", null)));
     }
 
     @PostMapping("/orders")
     public ResponseEntity<ApiResponse<OrderResponse>> createOrder(@Valid @RequestBody OrderRequest request) {
         authorizationService.checkUserRole(); // USER or ADMIN can access
+        
+        // Get current authenticated user's ID and override request userId for security
+        String currentUserId = authorizationService.getUserIdFromPrincipal();
+        request.setUserId(currentUserId); // Ensure user can only create orders for themselves
         
         Order order = convertToOrder(request);
         Order created = orderService.createOrder(order);
@@ -69,6 +86,17 @@ public class OrderController {
         authorizationService.checkUserRole(); // USER or ADMIN can access
         
         try {
+            // Get current authenticated user's ID
+            String currentUserId = authorizationService.getUserIdFromPrincipal();
+            
+            // Check if the order belongs to the current user (unless admin)
+            if (!authorizationService.isAdmin()) {
+                Optional<Order> orderToCancel = orderService.getOrderByCode(orderCode);
+                if (orderToCancel.isPresent() && !orderToCancel.get().getUserId().equals(currentUserId)) {
+                    throw new SecurityException("Bạn chỉ có thể hủy đơn hàng của chính mình");
+                }
+            }
+            
             Order cancelled = orderService.cancelOrder(orderCode, request.getReason());
             return ResponseEntity.ok(new ApiResponse<>(true, "Hủy đơn hàng thành công", convertToOrderResponse(cancelled)));
         } catch (IllegalStateException e) {
@@ -160,6 +188,9 @@ public class OrderController {
 
     // Helper methods
     private Order convertToOrder(OrderRequest request) {
+        // Get user ID from authentication
+        String authenticatedUserId = authorizationService.getUserIdFromPrincipal();
+        
         // Resolve shipping address based on request
         Order.ShippingAddress shippingAddress;
         
@@ -177,7 +208,7 @@ public class OrderController {
             // Save as new address if requested
             if (Boolean.TRUE.equals(customAddr.getSaveAsNewAddress())) {
                 orderService.saveNewAddressToUser(
-                        request.getUserId(), 
+                        authenticatedUserId, 
                         shippingAddress, 
                         Boolean.TRUE.equals(customAddr.getSetAsDefault())
                 );
@@ -185,14 +216,14 @@ public class OrderController {
         } else {
             // Use existing address (selected or default)
             shippingAddress = orderService.resolveShippingAddress(
-                    request.getUserId(), 
+                    authenticatedUserId, 
                     request.getSelectedAddressId(), 
                     null
             );
         }
 
         Order order = new Order();
-        order.setUserId(request.getUserId());
+        order.setUserId(authenticatedUserId);
         order.setShippingAddress(shippingAddress);
         order.setPaymentMethod(request.getPaymentMethod());
         order.setNotes(request.getNotes());
