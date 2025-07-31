@@ -82,4 +82,58 @@ public class AuthorizationService {
         
         return user != null ? user.getRole() : null;
     }
+    
+    /**
+     * Get current authenticated user's ID from security context
+     * @return User ID string
+     * @throws SecurityException if user is not authenticated or not found
+     */
+    public String getUserIdFromPrincipal() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        
+        if (authentication == null || !authentication.isAuthenticated()) {
+            throw new SecurityException("Yêu cầu đăng nhập");
+        }
+        
+        String email = authentication.getName();
+        var user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new SecurityException("Người dùng không tồn tại"));
+        
+        return user.getId();
+    }
+    
+    /**
+     * Get current authenticated user's email from security context
+     * @return User email string
+     * @throws SecurityException if user is not authenticated
+     */
+    public String getCurrentUserEmail() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        
+        if (authentication == null || !authentication.isAuthenticated()) {
+            throw new SecurityException("Yêu cầu đăng nhập");
+        }
+        
+        return authentication.getName();
+    }
+    
+    /**
+     * Check if current user has permission to access specific user's data
+     * Admin can access any user's data, regular users can only access their own data
+     * @param targetUserId The user ID to check permission for
+     * @throws SecurityException if access is denied
+     */
+    public void checkUserDataAccess(String targetUserId) {
+        String currentUserId = getUserIdFromPrincipal();
+        
+        // If current user is admin, allow access to any user's data
+        if (isAdmin()) {
+            return;
+        }
+        
+        // Otherwise, only allow access to own data
+        if (!currentUserId.equals(targetUserId)) {
+            throw new SecurityException("Không có quyền truy cập dữ liệu của người dùng khác");
+        }
+    }
 }
