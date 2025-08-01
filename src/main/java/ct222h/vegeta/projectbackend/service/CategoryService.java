@@ -92,6 +92,25 @@ public class CategoryService {
         categoryRepository.deleteById(id);
     }
 
+    /**
+     * Get product count for each category
+     */
+    public List<ct222h.vegeta.projectbackend.dto.response.CategoryProductCountResponse> getCategoriesWithProductCount() {
+        List<Category> categories = categoryRepository.findAll();
+        
+        return categories.stream()
+                .map(category -> {
+                    long productCount = productRepository.countByCategoryId(category.getId());
+                    return new ct222h.vegeta.projectbackend.dto.response.CategoryProductCountResponse(
+                            category.getId(),
+                            category.getName(),
+                            category.getSlug(),
+                            productCount
+                    );
+                })
+                .collect(java.util.stream.Collectors.toList());
+    }
+
     // Private helper methods
     
     private Category getCategoryByIdOrThrow(String id) {
