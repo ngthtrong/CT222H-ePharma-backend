@@ -4,6 +4,7 @@ import ct222h.vegeta.projectbackend.constants.CategoryConstants;
 import ct222h.vegeta.projectbackend.dto.request.CategoryRequest;
 import ct222h.vegeta.projectbackend.dto.response.ApiResponse;
 import ct222h.vegeta.projectbackend.dto.response.CategoryResponse;
+import ct222h.vegeta.projectbackend.dto.response.CategoryProductCountResponse;
 import ct222h.vegeta.projectbackend.exception.CategoryNotFoundException;
 import ct222h.vegeta.projectbackend.model.Category;
 import ct222h.vegeta.projectbackend.security.AuthorizationService;
@@ -133,6 +134,18 @@ public class CategoryController {
             return ResponseEntity.status(404).body(new ApiResponse<>(false, e.getMessage(), null));
         } catch (IllegalStateException e) {
             return ResponseEntity.badRequest().body(new ApiResponse<>(false, e.getMessage(), null));
+        }
+    }
+
+    @GetMapping("/admin/categories/product-counts")
+    public ResponseEntity<ApiResponse<List<CategoryProductCountResponse>>> getCategoriesWithProductCount() {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
+        try {
+            List<CategoryProductCountResponse> categoryCounts = categoryService.getCategoriesWithProductCount();
+            return ResponseEntity.ok(new ApiResponse<>(true, "Lấy số lượng sản phẩm theo danh mục thành công", categoryCounts));
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(new ApiResponse<>(false, "Lỗi khi lấy số lượng sản phẩm theo danh mục", null));
         }
     }
 

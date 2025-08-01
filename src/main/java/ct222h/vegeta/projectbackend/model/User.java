@@ -219,4 +219,13 @@ public class User {
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    // OAuth2 helper methods
+    public boolean isOAuth2User() {
+        return !"local".equals(this.authProvider);
+    }
+
+    public boolean hasPassword() {
+        return this.password != null && !this.password.trim().isEmpty();
+    }
 }

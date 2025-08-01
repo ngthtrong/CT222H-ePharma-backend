@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class OrderRequest {
 
-    @NotBlank(message = "User ID không được để trống")
+    // User ID sẽ được lấy từ JWT token, không cần truyền từ client
     private String userId;
 
     // Có thể để null để sử dụng địa chỉ mặc định, hoặc chọn theo addressId, hoặc nhập mới

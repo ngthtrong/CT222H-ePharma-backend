@@ -2,7 +2,50 @@
 
 ---
 
-# Tài liệu API cho dự án 
+# 🛒 WellVerse E-commerce Backend API
+
+## 🔐 Authentication Options
+Dự án hỗ trợ **3 phương thức đăng nhập**:
+- **Traditional**: Email + Password
+- **Google OAuth2**: Đăng nhập với tài khoản Google  
+- **Facebook OAuth2**: Đăng nhập với tài khoản Facebook
+
+## 🚀 Quick Start
+
+### Chạy ứng dụng với Docker (Khuyến nghị)
+```bash
+# Setup OAuth2 credentials
+cp .env.example .env
+# Edit .env file với Google và Facebook credentials
+
+# Build và start containers
+docker-compose up --build -d
+
+# Check application status
+docker-compose ps
+```
+
+### Chạy ứng dụng trực tiếp
+```bash
+./mvnw spring-boot:run
+```
+
+### Test OAuth2
+```powershell
+# Windows
+./test-oauth2.ps1
+
+# Linux/Mac
+chmod +x test-oauth2.sh
+./test-oauth2.sh
+```
+
+### Setup Guides
+- **Docker + OAuth2**: [DOCKER-OAUTH2-SETUP.md](./DOCKER-OAUTH2-SETUP.md) ⭐ **Khuyến nghị**
+- **OAuth2 Backend**: [OAuth2-Backend-Setup.md](./OAuth2-Backend-Setup.md)
+- **OAuth2 Frontend**: [OAuth2-Frontend-Guide.md](./OAuth2-Frontend-Guide.md)
+
+--- 
 
 ## 1. Quy ước chung
 
@@ -29,13 +72,23 @@
 
 ## 2. API Xác thực (Authentication)
 
-| Giai đoạn | Phương thức | Endpoint | Phân quyền | Mô tả |
-| :--- | :--- | :--- | :--- | :--- |
-| **GĐ 1** | `POST` | `/auth/register` | `PUBLIC` | Đăng ký tài khoản mới bằng email và mật khẩu. |
-| **GĐ 1** | `POST` | `/auth/login` | `PUBLIC` | Đăng nhập bằng email và mật khẩu, trả về `accessToken`. |
-| **GĐ 2** | `GET` | `/auth/oauth2/google` | `PUBLIC` | Bắt đầu luồng đăng nhập với Google. |
-| **GĐ 2** | `GET` | `/auth/oauth2/facebook` | `PUBLIC`| Bắt đầu luồng đăng nhập với Facebook. |
-| **GĐ 2** | `GET` | `/auth/oauth2/callback/*` | `PUBLIC`| Endpoint nhận callback từ Google/Facebook. |
+### Traditional Authentication
+| Phương thức | Endpoint | Phân quyền | Mô tả |
+| :--- | :--- | :--- | :--- |
+| `POST` | `/auth/register` | `PUBLIC` | Đăng ký tài khoản mới bằng email và mật khẩu |
+| `POST` | `/auth/login` | `PUBLIC` | Đăng nhập bằng email và mật khẩu, trả về JWT token |
+| `POST` | `/auth/logout` | `USER` | Đăng xuất và blacklist JWT token |
+| `POST` | `/auth/forgot-password` | `PUBLIC` | Yêu cầu đặt lại mật khẩu |
+| `POST` | `/auth/reset-password` | `PUBLIC` | Đặt lại mật khẩu với token |
+
+### OAuth2 Authentication 🆕
+| Phương thức | Endpoint | Phân quyền | Mô tả |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/auth/oauth2/login/google` | `PUBLIC` | Lấy URL đăng nhập Google OAuth2 |
+| `GET` | `/auth/oauth2/login/facebook` | `PUBLIC` | Lấy URL đăng nhập Facebook OAuth2 |
+| `POST` | `/auth/oauth2/callback/google` | `PUBLIC` | Xử lý callback từ Google, trả về JWT token |
+| `POST` | `/auth/oauth2/callback/facebook` | `PUBLIC` | Xử lý callback từ Facebook, trả về JWT token |
+| `GET` | `/auth/oauth2/status` | `PUBLIC` | Kiểm tra trạng thái cấu hình OAuth2 |
 
 ---
 

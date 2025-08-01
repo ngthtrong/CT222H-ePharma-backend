@@ -4,13 +4,20 @@ import ct222h.vegeta.projectbackend.dto.response.*;
 import ct222h.vegeta.projectbackend.dto.request.*;
 import ct222h.vegeta.projectbackend.exception.DuplicateEmailException;
 import ct222h.vegeta.projectbackend.exception.InvalidCredentialsException;
+import ct222h.vegeta.projectbackend.exception.InvalidTokenException;
+import ct222h.vegeta.projectbackend.exception.UserNotFoundException;
+import ct222h.vegeta.projectbackend.model.PasswordResetToken;
 import ct222h.vegeta.projectbackend.model.User;
+import ct222h.vegeta.projectbackend.repository.PasswordResetTokenRepository;
 import ct222h.vegeta.projectbackend.repository.UserRepository;
 import ct222h.vegeta.projectbackend.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Service
 public class AuthService {
@@ -23,6 +30,9 @@ public class AuthService {
 
     @Autowired
     private TokenBlacklistService tokenBlacklistService;
+
+    @Autowired
+    private PasswordResetTokenRepository passwordResetTokenRepository;
 
     private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
@@ -109,5 +119,50 @@ public class AuthService {
         
         // Thêm token vào blacklist
         tokenBlacklistService.blacklistToken(token);
+    }
+
+    public ForgotPasswordResponse forgotPassword(ForgotPasswordRequest request) {
+        User user = userRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new UserNotFoundException("Không tìm thấy tài khoản với email này."));
+
+        // Xóa token cũ nếu có
+        passwordResetTokenRepository.deleteByUserId(user.getId());
+
+        // Tạo token mới
+        String token = UUID.randomUUID().toString();
+        LocalDateTime expiryDate = LocalDateTime.now().plusHours(1); // Token có hiệu lực 1 giờ
+        
+        PasswordResetToken resetToken = new PasswordResetToken(user.getId(), token, expiryDate);
+        passwordResetTokenRepository.save(resetToken);
+
+        // TODO: Gửi email chứa token đến user
+        // Ở đây chỉ trả về token trong response (trong thực tế nên gửi qua email)
+        
+        return new ForgotPasswordResponse(
+            "Mã đặt lại mật khẩu đã được tạo. Token: " + token + " (Có hiệu lực trong 1 giờ)", 
+            true
+        );
+    }
+
+    public ResetPasswordResponse resetPassword(ResetPasswordRequest request) {
+        PasswordResetToken resetToken = passwordResetTokenRepository.findByToken(request.getToken())
+                .orElseThrow(() -> new InvalidTokenException("Token không hợp lệ."));
+
+        if (!resetToken.isValid()) {
+            throw new InvalidTokenException("Token đã hết hạn hoặc đã được sử dụng.");
+        }
+
+        User user = userRepository.findById(resetToken.getUserId())
+                .orElseThrow(() -> new UserNotFoundException("Không tìm thấy người dùng."));
+
+        // Cập nhật mật khẩu mới
+        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+        userRepository.save(user);
+
+        // Đánh dấu token đã được sử dụng
+        resetToken.setUsed(true);
+        passwordResetTokenRepository.save(resetToken);
+
+        return new ResetPasswordResponse("Mật khẩu đã được đặt lại thành công.", true);
     }
 }

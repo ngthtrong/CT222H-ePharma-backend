@@ -48,4 +48,7 @@ public interface ProductRepository extends MongoRepository<Product, String> {
     
     // Combined queries
     List<Product> findByCategoryIdAndPublishedAndStockQuantityGreaterThan(String categoryId, boolean published, int minStock);
+    
+    // Count queries
+    long countByCategoryId(String categoryId);
 }

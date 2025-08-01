@@ -35,15 +35,22 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         // Swagger documentation - PUBLIC
-                        .requestMatchers("/v3/api-docs/**",
+                        .requestMatchers("/v1/api-docs/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html").permitAll()
                         
                         // Actuator endpoints - PUBLIC
                         .requestMatchers("/actuator/**").permitAll()
                         
+                        // WebSocket endpoints - PUBLIC
+                        .requestMatchers("/ws-analytics/**").permitAll()
+                        
                         // Authentication endpoints - PUBLIC
-                        .requestMatchers("/api/v1/auth/register", "/api/v1/auth/login").permitAll()
+                        .requestMatchers("/api/v1/auth/register", "/api/v1/auth/login", 
+                                        "/api/v1/auth/forgot-password", "/api/v1/auth/reset-password").permitAll()
+                        
+                        // OAuth2 endpoints - PUBLIC
+                        .requestMatchers("/api/v1/auth/oauth2/**").permitAll()
                         
                         // Authentication endpoints - USER (authenticated)
                         .requestMatchers("/api/v1/auth/logout").authenticated()
@@ -79,8 +86,9 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        // Allow specific origins including localhost:5173 for development
+        configuration.setAllowedOriginPatterns(Arrays.asList("http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:*", "*"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
         configuration.setExposedHeaders(Arrays.asList("Authorization"));

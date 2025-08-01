@@ -92,6 +92,41 @@ public class CategoryService {
         categoryRepository.deleteById(id);
     }
 
+    /**
+     * Get product count for each category (including products in subcategories)
+     */
+    public List<ct222h.vegeta.projectbackend.dto.response.CategoryProductCountResponse> getCategoriesWithProductCount() {
+        List<Category> categories = categoryRepository.findAll();
+        
+        return categories.stream()
+                .map(category -> {
+                    long productCount = getTotalProductCountForCategory(category.getId());
+                    return new ct222h.vegeta.projectbackend.dto.response.CategoryProductCountResponse(
+                            category.getId(),
+                            category.getName(),
+                            category.getSlug(),
+                            productCount
+                    );
+                })
+                .collect(java.util.stream.Collectors.toList());
+    }
+
+    /**
+     * Get total product count for a category including all subcategories
+     */
+    private long getTotalProductCountForCategory(String categoryId) {
+        // Count products directly in this category
+        long directProductCount = productRepository.countByCategoryId(categoryId);
+        
+        // Get all subcategories and count their products recursively
+        List<Category> subcategories = categoryRepository.findByParentCategoryId(categoryId);
+        long subcategoryProductCount = subcategories.stream()
+                .mapToLong(subcategory -> getTotalProductCountForCategory(subcategory.getId()))
+                .sum();
+        
+        return directProductCount + subcategoryProductCount;
+    }
+
     // Private helper methods
     
     private Category getCategoryByIdOrThrow(String id) {
