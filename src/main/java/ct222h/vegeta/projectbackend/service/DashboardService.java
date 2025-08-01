@@ -1,6 +1,5 @@
 package ct222h.vegeta.projectbackend.service;
 
-import ct222h.vegeta.projectbackend.constants.OrderConstants;
 import ct222h.vegeta.projectbackend.dto.response.DashboardResponse;
 import ct222h.vegeta.projectbackend.model.Order;
 import ct222h.vegeta.projectbackend.repository.OrderRepository;
@@ -98,7 +97,7 @@ public class DashboardService {
 
     private double calculateTotalRevenue(List<Order> orders) {
         return orders.stream()
-            .filter(order -> OrderConstants.STATUS_COMPLETED.equals(order.getStatus()))
+            .filter(order -> "completed".equals(order.getStatus()))
             .mapToDouble(Order::getTotalAmount)
             .sum();
     }
@@ -134,7 +133,7 @@ public class DashboardService {
         Map<String, Integer> categoryCount = new HashMap<>();
 
         orders.stream()
-            .filter(order -> OrderConstants.STATUS_COMPLETED.equals(order.getStatus()))
+            .filter(order -> "completed".equals(order.getStatus()))
             .forEach(order -> {
                 order.getItems().forEach(item -> {
                     try {
@@ -194,7 +193,7 @@ public class DashboardService {
         Map<String, String> productNames = new HashMap<>();
 
         orders.stream()
-            .filter(order -> OrderConstants.STATUS_COMPLETED.equals(order.getStatus()))
+            .filter(order -> "completed".equals(order.getStatus()))
             .forEach(order -> {
                 order.getItems().forEach(item -> {
                     String productId = item.getProductId();
@@ -227,9 +226,7 @@ public class DashboardService {
                 .stream()
                 .map(order -> {
                     try {
-                        String customerName = userRepository.findById(order.getUserId())
-                            .map(user -> user.getFullName())
-                            .orElse("Unknown Customer");
+                        String customerName = "Unknown Customer"; // Simplified for now
                         
                         return new DashboardResponse.RecentOrderResponse(
                             order.getId(),

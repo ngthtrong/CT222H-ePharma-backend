@@ -33,7 +33,7 @@ public class OAuth2AuthenticationController {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @Value("${oauth2.frontend.base-url:http://localhost:5173}")
+    @Value("${oauth2.frontend.base-url:https://project-front-end-nine.vercel.app/}")
     private String frontendBaseUrl;
 
     @Value("${oauth2.frontend.callback-path:/auth/oauth2/success}")
