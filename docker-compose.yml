@@ -13,7 +13,7 @@ services:
       - SPRING_DATA_MONGODB_URI=mongodb+srv://ngthtrong204:ngthtrong204@vegeta.3rwwtvh.mongodb.net/?retryWrites=true&w=majority&appName=Vegeta
       - SPRING_DATA_MONGODB_DATABASE=Vegeta
       - JWT_SECRET=Zqb+Z4udJMRRC1+Y+pxHRyawLoxs1IgJMV/9PoHDrTpf65dfcRK8pmFHRNZUYhol
-      - JWT_EXPIRATION=3600000
+      - JWT_EXPIRATION=86400000
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8081/actuator/health"]

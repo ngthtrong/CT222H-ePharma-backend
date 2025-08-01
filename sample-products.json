@@ -1,1129 +1,1271 @@
 {
-  "products": [
-    {
-      "id": "prod_001",
-      "name": "Vitamin C 1000mg Blackmores",
-      "sku": "VIT-C-BLK-1000",
-      "slug": "vitamin-c-1000mg-blackmores",
-      "description": "Viên uống Vitamin C 1000mg Blackmores hỗ trợ tăng cường sức đề kháng, chống oxy hóa và bảo vệ sức khỏe tim mạch",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/blackmores_vitamin_c_1000mg_60v_3004_6159_large_9ab2cd3e4f.jpg",
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/blackmores_vitamin_c_back_8f3b5a2c19.jpg"
-      ],
-      "price": 485000.0,
-      "discountPercent": 15,
-      "stockQuantity": 150,
-      "categoryId": "688c51448e867f518abe183b",
-      "categoryName": "Vitamin C các loại",
-      "brand": "Blackmores",
-      "attributes": [
+    "products": [
         {
-          "name": "Xuất xứ",
-          "value": "Australia"
+            "id": "prod_001",
+            "name": "Vitamin C 1000mg Blackmores",
+            "sku": "VIT-C-BLK-1000",
+            "slug": "vitamin-c-1000mg-blackmores",
+            "description": "Viên uống Vitamin C 1000mg Blackmores hỗ trợ tăng cường sức đề kháng, chống oxy hóa và bảo vệ sức khỏe tim mạch",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/blackmores_vitamin_c_1000mg_60v_3004_6159_large_9ab2cd3e4f.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/blackmores_vitamin_c_back_8f3b5a2c19.jpg"
+            ],
+            "price": 485000.0,
+            "discountPercent": 15,
+            "stockQuantity": 150,
+            "categoryId": "688c51448e867f518abe183b",
+            "categoryName": "Vitamin C các loại",
+            "brand": "Blackmores",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Australia"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 60 viên"
+                },
+                {
+                    "name": "Dạng bào chế",
+                    "value": "Viên nén"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_002",
+                "prod_003"
+            ],
+            "createdAt": "2025-01-31T10:00:00Z",
+            "updatedAt": "2025-01-31T10:30:00Z"
         },
         {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
+            "id": "688c71fd8e867f518abe1856",
+            "name": "Nature's Way Vitamin C 500mg",
+            "sku": "VIT-C-NW-500",
+            "slug": "natures-way-vitamin-c-500mg",
+            "description": "Vitamin C Nature's Way 500mg bổ sung vitamin C thiết yếu, tăng cường miễn dịch và hỗ trợ hấp thụ sắt",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/natures_way_vitamin_c_500mg_100_vien_6589_62cc_large_bf91d69bb3.jpg"
+            ],
+            "price": 320000.0,
+            "discountPercent": 10,
+            "stockQuantity": 89,
+            "categoryId": "688c51448e867f518abe183b",
+            "categoryName": "Vitamin C các loại",
+            "brand": "Nature's Way",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 100 viên"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_001",
+                "prod_003"
+            ],
+            "createdAt": "2025-01-31T11:00:00Z",
+            "updatedAt": "2025-01-31T11:15:00Z"
         },
         {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 60 viên"
+            "id": "688c72538e867f518abe1857",
+            "name": "DHC Vitamin C Hard Capsule",
+            "sku": "VIT-C-DHC-CAP",
+            "slug": "dhc-vitamin-c-hard-capsule",
+            "description": "Viên uống DHC Vitamin C 1000mg dạng viên cứng, bổ sung vitamin C chất lượng cao từ Nhật Bản",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/dhc_vitamin_c_hard_capsule_90_vien_7052_64c6_large_25bd8af5ab.jpg"
+            ],
+            "price": 275000.0,
+            "discountPercent": 5,
+            "stockQuantity": 65,
+            "categoryId": "688c51448e867f518abe183b",
+            "categoryName": "Vitamin C các loại",
+            "brand": "DHC",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Nhật Bản"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 90 viên"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_001",
+                "prod_002"
+            ],
+            "createdAt": "2025-01-31T12:00:00Z",
+            "updatedAt": "2025-01-31T12:10:00Z"
         },
         {
-          "name": "Dạng bào chế",
-          "value": "Viên nén"
+            "id": "688c7f6c8e867f518abe1859",
+            "name": "Blackmores Vitamin E 500IU",
+            "sku": "VIT-E-BLK-500",
+            "slug": "blackmores-vitamin-e-500iu",
+            "description": "Vitamin E Blackmores 500IU hỗ trợ chống oxy hóa mạnh mẽ, bảo vệ tế bào khỏi gốc tự do và làm chậm quá trình lão hóa",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/636x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00002782_enat_400_8660_5afb_large_4c0e194f97.JPG",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/636x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00002782_enat_400_2779_5afb_large_8fb72b99b8.JPG"
+            ],
+            "price": 420000.0,
+            "discountPercent": 12,
+            "stockQuantity": 75,
+            "categoryId": "688c50f68e867f518abe1835",
+            "categoryName": "Vitamin E các loại",
+            "brand": "Blackmores",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Australia"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 50 viên"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_005",
+                "prod_006"
+            ],
+            "createdAt": "2025-01-31T13:00:00Z",
+            "updatedAt": "2025-01-31T13:20:00Z"
+        },
+        {
+            "id": "688c7f7e8e867f518abe185a",
+            "name": "Nature Made Vitamin E 400IU",
+            "sku": "VIT-E-NM-400",
+            "slug": "nature-made-vitamin-e-400iu",
+            "description": "Nature Made Vitamin E 400IU dạng viên mềm, cung cấp vitamin E tự nhiên để bảo vệ da và tim mạch",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345398_vitamin_e_400_iu_9312_600f_large_6c24c8f747.JPG",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345398_vitamin_e_400_iu_5953_600f_large_f1fec5d4f6.JPG"
+            ],
+            "price": 385000.0,
+            "discountPercent": 8,
+            "stockQuantity": 92,
+            "categoryId": "688c50f68e867f518abe1835",
+            "categoryName": "Vitamin E các loại",
+            "brand": "Nature Made",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 100 viên"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_004",
+                "prod_006"
+            ],
+            "createdAt": "2025-01-31T14:00:00Z",
+            "updatedAt": "2025-01-31T14:15:00Z"
+        },
+        {
+            "id": "688c7f8a8e867f518abe185b",
+            "name": "Blackmores Omega-3 Fish Oil 1000mg",
+            "sku": "OMG-3-BLK-1000",
+            "slug": "blackmores-omega-3-fish-oil-1000mg",
+            "description": "Dầu cá Omega-3 Blackmores 1000mg cung cấp EPA và DHA thiết yếu, hỗ trợ sức khỏe tim mạch và não bộ",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00502389_blackmores_omega_double_high_strength_fish_oil_90v_4583_634e_large_affd28dcdc.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00502389_blackmores_omega_double_high_strength_fish_oil_90v_2888_634c_large_d88a7e49ec.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00502389_blackmores_omega_double_high_strength_fish_oil_90v_9637_634c_large_8f50168cac.jpg"
+            ],
+            "price": 675000.0,
+            "discountPercent": 18,
+            "stockQuantity": 120,
+            "categoryId": "688c513c8e867f518abe183a",
+            "categoryName": "Dầu cá, Omega 3, DHA",
+            "brand": "Blackmores",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Australia"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 200 viên"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "EPA 300mg, DHA 200mg"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_007",
+                "prod_008"
+            ],
+            "createdAt": "2025-01-31T15:00:00Z",
+            "updatedAt": "2025-01-31T15:30:00Z"
+        },
+        {
+            "id": "688c7fa08e867f518abe185c",
+            "name": "Nordic Naturals Ultimate Omega",
+            "sku": "OMG-3-NN-ULT",
+            "slug": "nordic-naturals-ultimate-omega",
+            "description": "Nordic Naturals Ultimate Omega cung cấp EPA và DHA nồng độ cao, hỗ trợ tối ưu cho tim mạch và não bộ",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09006_a1b4671cf5.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09011_d7d91ae99e.jpg"
+            ],
+            "price": 850000.0,
+            "discountPercent": 20,
+            "stockQuantity": 45,
+            "categoryId": "688c513c8e867f518abe183a",
+            "categoryName": "Dầu cá, Omega 3, DHA",
+            "brand": "Nordic Naturals",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 60 viên"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "EPA 650mg, DHA 450mg"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_006",
+                "prod_008"
+            ],
+            "createdAt": "2025-01-31T16:00:00Z",
+            "updatedAt": "2025-01-31T16:10:00Z"
+        },
+        {
+            "id": "688c7fad8e867f518abe185d",
+            "name": "Kirkland Signature Fish Oil 1000mg",
+            "sku": "OMG-3-KS-1000",
+            "slug": "kirkland-signature-fish-oil-1000mg",
+            "description": "Dầu cá Kirkland Signature 1000mg chất lượng cao, bổ sung Omega-3 thiết yếu với giá cả hợp lý",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09197_610196c48f.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09198_75b624161d.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09186_317eda39cb.jpg"
+            ],
+            "price": 550000.0,
+            "discountPercent": 10,
+            "stockQuantity": 200,
+            "categoryId": "688c513c8e867f518abe183a",
+            "categoryName": "Dầu cá, Omega 3, DHA",
+            "brand": "Kirkland Signature",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 400 viên"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "EPA 300mg, DHA 200mg"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_006",
+                "prod_007"
+            ],
+            "createdAt": "2025-01-31T17:00:00Z",
+            "updatedAt": "2025-01-31T17:20:00Z"
+        },
+        {
+            "id": "688c7fb78e867f518abe185e",
+            "name": "Calci-D Imexpharm",
+            "sku": "CAL-D-IMX-500",
+            "slug": "calci-d-imexpharm",
+            "description": "Calci-D Imexpharm bổ sung Canxi và Vitamin D3, hỗ trợ phát triển xương và răng chắc khỏe",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00022043_calcid_soft_usa_nic_pharma_10x10_4283_62ad_large_63c17ef507.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00022043_calcid_soft_usa_nic_pharma_10x10_1627292785_629488fb67.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00022043_calcid_soft_usa_nic_pharma_10x10_2015_62ad_large_b2cc295058.jpg"
+            ],
+            "price": 185000.0,
+            "discountPercent": 5,
+            "stockQuantity": 250,
+            "categoryId": "688c51148e867f518abe1837",
+            "categoryName": "Bổ sung Canxi & Vitamin D",
+            "brand": "Imexpharm",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Việt Nam"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 30 gói"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "Canxi 500mg, Vitamin D3 400IU"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_010",
+                "prod_011"
+            ],
+            "createdAt": "2025-01-31T18:00:00Z",
+            "updatedAt": "2025-01-31T18:15:00Z"
+        },
+        {
+            "id": "688c7fc28e867f518abe185f",
+            "name": "Centrum Silver 50+",
+            "sku": "CEN-SIL-50P",
+            "slug": "centrum-silver-50-plus",
+            "description": "Centrum Silver 50+ vitamin tổng hợp dành cho người trên 50 tuổi, bổ sung đầy đủ vitamin và khoáng chất thiết yếu",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00502309_chai_xit_dac_tri_bong_vet_thuong_ho_loet_ti_de_hyalo4_silver_spray_50ml_5459_633e_large_ae9320520a.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00502309_chai_xit_dac_tri_bong_vet_thuong_ho_loet_ti_de_hyalo4_silver_spray_50ml_7115_633e_large_f97f5d9f31.jpg"
+            ],
+            "price": 720000.0,
+            "discountPercent": 15,
+            "stockQuantity": 85,
+            "categoryId": "688c51248e867f518abe1838",
+            "categoryName": "Vitamin tổng hợp",
+            "brand": "Centrum",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 100 viên"
+                },
+                {
+                    "name": "Đối tượng",
+                    "value": "Người trên 50 tuổi"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_011",
+                "prod_012"
+            ],
+            "createdAt": "2025-01-31T19:00:00Z",
+            "updatedAt": "2025-01-31T19:25:00Z"
+        },
+        {
+            "id": "688c7fcd8e867f518abe1860",
+            "name": "Feroglobin B12 Vitabiotics",
+            "sku": "FER-B12-VIT",
+            "slug": "feroglobin-b12-vitabiotics",
+            "description": "Feroglobin B12 bổ sung sắt, vitamin B12 và axit folic, hỗ trợ điều trị và phòng ngừa thiếu máu",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_00573_5a11c40ed0.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_00565_cf31e7781c.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_00566_4533ca58cb.jpg"
+            ],
+            "price": 295000.0,
+            "discountPercent": 8,
+            "stockQuantity": 140,
+            "categoryId": "688c514d8e867f518abe183c",
+            "categoryName": "Bổ sung Sắt & Axit Folic",
+            "brand": "Vitabiotics",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Anh"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 30 viên"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "Sắt 17mg, B12 10μg, Axit Folic 400μg"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_009",
+                "prod_010"
+            ],
+            "createdAt": "2025-01-31T20:00:00Z",
+            "updatedAt": "2025-01-31T20:10:00Z"
+        },
+        {
+            "id": "688c7fdb8e867f518abe1861",
+            "name": "Viên uống Kẽm DHC",
+            "sku": "ZIN-DHC-15MG",
+            "slug": "vien-uong-kem-dhc",
+            "description": "Viên uống Kẽm DHC 15mg bổ sung kẽm thiết yếu, hỗ trợ tăng cường miễn dịch và cải thiện da",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00501635_dhc_zinc_30v_5817_62fb_large_7d724d9b77.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00501635_dhc_zinc_30v_1985_62fb_large_c5f09114e3.jpg"
+            ],
+            "price": 165000.0,
+            "discountPercent": 6,
+            "stockQuantity": 180,
+            "categoryId": "688c51068e867f518abe1836",
+            "categoryName": "Bổ sung Kẽm & Magie",
+            "brand": "DHC",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Nhật Bản"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 60 viên"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "Kẽm 15mg"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_013",
+                "prod_014"
+            ],
+            "createdAt": "2025-01-31T21:00:00Z",
+            "updatedAt": "2025-01-31T21:15:00Z"
+        },
+        {
+            "id": "688c7fea8e867f518abe1862",
+            "name": "Eunova Duomaxx",
+            "sku": "EUN-DUO-MAX",
+            "slug": "eunova-duomaxx",
+            "description": "Eunova Duomaxx viên uống hỗ trợ tăng cường sinh lý nam giới, cải thiện sức khỏe tình dục",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00002285_davita_bone_tuyp_5575_5b7b_large_e2a2719673.JPG",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00002285_davita_bone_tuyp_3340_5b7b_large_3bba3946aa.JPG"
+            ],
+            "price": 485000.0,
+            "discountPercent": 12,
+            "stockQuantity": 95,
+            "categoryId": "688c51748e867f518abe183d",
+            "categoryName": "Sinh lý nam",
+            "brand": "Eunova",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Đức"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 30 viên"
+                },
+                {
+                    "name": "Đối tượng",
+                    "value": "Nam giới trưởng thành"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_014",
+                "prod_015"
+            ],
+            "createdAt": "2025-01-31T22:00:00Z",
+            "updatedAt": "2025-01-31T22:30:00Z"
+        },
+        {
+            "id": "688c7ff88e867f518abe1863'",
+            "name": "Thuốc Nam An Thái",
+            "sku": "NAM-AT-TCM",
+            "slug": "thuoc-nam-an-thai",
+            "description": "Thuốc Nam An Thái từ thảo dược thiên nhiên, hỗ trợ cải thiện sinh lý nam giới theo phương pháp y học cổ truyền",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00000770_thao_duoc_an_thao_dac_tri_nhiet_mieng_7970_5b1e_large_a543f25fea.JPG",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/636x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00000770_thao_duoc_an_thao_dac_tri_nhiet_mieng_5210_5b1e_large_403f2d0f0c.JPG",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/636x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00000770_thao_duoc_an_thao_dac_tri_nhiet_mieng_2119_5b1e_large_74bb5ce9f7.JPG"
+            ],
+            "price": 320000.0,
+            "discountPercent": 8,
+            "stockQuantity": 125,
+            "categoryId": "688c51748e867f518abe183d",
+            "categoryName": "Sinh lý nam",
+            "brand": "Traphaco",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Việt Nam"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 60 viên"
+                },
+                {
+                    "name": "Thành phần",
+                    "value": "Thảo dược thiên nhiên"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_013",
+                "prod_015"
+            ],
+            "createdAt": "2025-01-31T23:00:00Z",
+            "updatedAt": "2025-01-31T23:15:00Z"
+        },
+        {
+            "id": "688c80118e867f518abe1864",
+            "name": "Cranberry Kirkland Signature",
+            "sku": "CRA-KS-500MG",
+            "slug": "cranberry-kirkland-signature",
+            "description": "Cranberry Kirkland Signature 500mg hỗ trợ sức khỏe đường tiết niệu, đặc biệt tốt cho phụ nữ",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345419_gasso_max_thao_duoc_ho_tro_tieu_hoa_9444_6328_large_1a28a201ca.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345419_gasso_max_thao_duoc_ho_tro_tieu_hoa_8199_6328_large_344b5d5df4.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345419_gasso_max_thao_duoc_ho_tro_tieu_hoa_7741_6328_large_c5fedc3fe6.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345419_gasso_max_thao_duoc_ho_tro_tieu_hoa_5760_6328_large_654f0605ba.jpg"
+            ],
+            "price": 425000.0,
+            "discountPercent": 15,
+            "stockQuantity": 110,
+            "categoryId": "688c51978e867f518abe1840",
+            "categoryName": "Sinh lý nữ",
+            "brand": "Kirkland Signature",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 300 viên"
+                },
+                {
+                    "name": "Đối tượng",
+                    "value": "Phụ nữ"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_013",
+                "prod_014"
+            ],
+            "createdAt": "2025-02-01T00:00:00Z",
+            "updatedAt": "2025-02-01T00:10:00Z"
+        },
+        {
+            "id": "688c802c8e867f518abe1865",
+            "name": "Essentiale Forte N",
+            "sku": "ESS-FOR-N-300",
+            "slug": "essentiale-forte-n",
+            "description": "Essentiale Forte N 300mg hỗ trợ bảo vệ và phục hồi chức năng gan, cải thiện chuyển hóa mỡ",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00002880_essentiale_forte_300mg_2006_5b09_large_88281e3fae.JPG",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00002880_essentiale_forte_300mg_9293_5b09_large_bb5bb5a0e6.JPG",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00002880_essentiale_forte_300mg_6532_5b09_large_e129ef1303.JPG"
+            ],
+            "price": 385000.0,
+            "discountPercent": 10,
+            "stockQuantity": 150,
+            "categoryId": "688c51bf8e867f518abe1843",
+            "categoryName": "Chức năng gan",
+            "brand": "Sanofi",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Đức"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 30 viên"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "Phospholipid thiết yếu 300mg"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_017",
+                "prod_018"
+            ],
+            "createdAt": "2025-02-01T01:00:00Z",
+            "updatedAt": "2025-02-01T01:20:00Z"
+        },
+        {
+            "id": "688c80408e867f518abe1866",
+            "name": "Hepamax-800",
+            "sku": "HEP-MAX-800",
+            "slug": "hepamax-800",
+            "description": "Hepamax-800 bổ gan từ thảo dược thiên nhiên, hỗ trợ giải độc gan và cải thiện chức năng gan",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00016784_pracetam_800_6x15_stada_5510_61d8_large_d13b66262c.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00016784_pracetam_800_6x15_stada_4027_61d8_large_49c2a75b37.jpg"
+            ],
+            "price": 265000.0,
+            "discountPercent": 5,
+            "stockQuantity": 200,
+            "categoryId": "688c51bf8e867f518abe1843",
+            "categoryName": "Chức năng gan",
+            "brand": "OPC",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Việt Nam"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 30 viên"
+                },
+                {
+                    "name": "Thành phần",
+                    "value": "Cây gai dầu, Cà gai leo"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_016",
+                "prod_018"
+            ],
+            "createdAt": "2025-02-01T02:00:00Z",
+            "updatedAt": "2025-02-01T02:15:00Z"
+        },
+        {
+            "id": "688c814c8e867f518abe1867",
+            "name": "Immunace Vitabiotics",
+            "sku": "IMM-VIT-ACE",
+            "slug": "immunace-vitabiotics",
+            "description": "Immunace Vitabiotics công thức đặc biệt tăng cường hệ miễn dịch với 25 vitamin và khoáng chất thiết yếu",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_00481_7d75df71b4.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_00483_4df04703b4.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_00484_afedc72465.jpg"
+            ],
+            "price": 445000.0,
+            "discountPercent": 18,
+            "stockQuantity": 85,
+            "categoryId": "688c51c68e867f518abe1844",
+            "categoryName": "Tăng sức đề kháng, miễn dịch",
+            "brand": "Vitabiotics",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Anh"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 30 viên"
+                },
+                {
+                    "name": "Thành phần",
+                    "value": "25 vitamin và khoáng chất"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_019",
+                "prod_020"
+            ],
+            "createdAt": "2025-02-01T03:00:00Z",
+            "updatedAt": "2025-02-01T03:30:00Z"
+        },
+        {
+            "id": "688c816c8e867f518abe1868",
+            "name": "Lutein Tsubaki",
+            "sku": "LUT-TSU-20MG",
+            "slug": "lutein-tsubaki",
+            "description": "Lutein Tsubaki 20mg từ Nhật Bản, bổ mắt với thành phần Lutein và Zeaxanthin bảo vệ võng mạc",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345423_lutein_vien_uong_bo_mat_cua_my_1869_62af_large_647c6c3d64.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345423_9e5a6a5cbe.png",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345423_lutein_vien_uong_bo_mat_cua_my_2623_62af_large_39ea30bd71.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345423_lutein_vien_uong_bo_mat_cua_my_8964_62af_large_4de56c41dd.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00345423_lutein_vien_uong_bo_mat_cua_my_2274_62af_large_ca1e914930.jpg"
+            ],
+            "price": 685000.0,
+            "discountPercent": 15,
+            "stockQuantity": 70,
+            "categoryId": "688c51d18e867f518abe1845",
+            "categoryName": "Bổ mắt, bảo vệ mắt",
+            "brand": "Tsubaki",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Nhật Bản"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 60 viên"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "Lutein 20mg, Zeaxanthin 4mg"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_020",
+                "prod_021"
+            ],
+            "createdAt": "2025-02-01T04:00:00Z",
+            "updatedAt": "2025-02-01T04:20:00Z"
+        },
+        {
+            "id": "688c81818e867f518abe1869",
+            "name": "Ocuvite Bausch & Lomb",
+            "sku": "OCU-BL-LUT",
+            "slug": "ocuvite-bausch-lomb",
+            "description": "Ocuvite Bausch & Lomb bổ mắt với Lutein, Zeaxanthin và Omega-3, hỗ trợ bảo vệ thị lực toàn diện",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00005468_ocuvite_vitamin_bo_mat_cua_my_4233_62b1_large_619ecef744.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00005468_ocuvite_vitamin_bo_mat_cua_my_1575866343_68f46dec10.JPG",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00005468_ocuvite_vitamin_bo_mat_cua_my_1549_62b1_large_0714854621.jpg"
+            ],
+            "price": 525000.0,
+            "discountPercent": 12,
+            "stockQuantity": 95,
+            "categoryId": "688c51d18e867f518abe1845",
+            "categoryName": "Bổ mắt, bảo vệ mắt",
+            "brand": "Bausch & Lomb",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 60 viên"
+                },
+                {
+                    "name": "Thành phần",
+                    "value": "Lutein, Zeaxanthin, Omega-3"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_019",
+                "prod_021"
+            ],
+            "createdAt": "2025-02-01T05:00:00Z",
+            "updatedAt": "2025-02-01T05:15:00Z"
+        },
+        {
+            "id": "688c86888e867f518abe186a",
+            "name": "Diabecon Himalaya",
+            "sku": "DIA-HIM-CON",
+            "slug": "diabecon-himalaya",
+            "description": "Diabecon Himalaya từ thảo dược Ấn Độ, hỗ trợ kiểm soát đường huyết cho người tiểu đường",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00028280_keo_chanh_muoi_himalaya_vi_bac_ha_hop_12_goi_x_15g_9756_62b2_large_9655bd5115.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00028280_keo_chanh_muoi_himalaya_vi_bac_ha_hop_12_goi_x_15g_1655886475_f430f92cae.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00028280_keo_chanh_muoi_himalaya_vi_bac_ha_hop_12_goi_x_15g_1278_62b2_large_bd3754654f.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00028280_keo_chanh_muoi_himalaya_vi_bac_ha_hop_12_goi_x_15g_1237_62b2_large_31a58f9fa6.jpg"
+            ],
+            "price": 295000.0,
+            "discountPercent": 8,
+            "stockQuantity": 165,
+            "categoryId": "688c51f58e867f518abe1848",
+            "categoryName": "Hỗ trợ điều trị tiểu đường",
+            "brand": "Himalaya",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Ấn Độ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 60 viên"
+                },
+                {
+                    "name": "Thành phần",
+                    "value": "Thảo dược Ayurveda"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_022",
+                "prod_023"
+            ],
+            "createdAt": "2025-02-01T06:00:00Z",
+            "updatedAt": "2025-02-01T06:30:00Z"
+        },
+        {
+            "id": "688c86a28e867f518abe186b",
+            "name": "Glucosamine 1500 One-A-Day",
+            "sku": "GLU-OAD-1500",
+            "slug": "glucosamine-1500-one-a-day",
+            "description": "Glucosamine 1500 One-A-Day hỗ trợ sức khỏe khớp xương, giảm đau nhức và tăng tính linh hoạt",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00502520_vien_xuong_khop_triple_strength_glucosamine_1500mg_pharmekal_60v_4042_6356_large_467c9dcdf8.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00502520_vien_xuong_khop_triple_strength_glucosamine_1500mg_pharmekal_60v_1666597994_3bcdec10c1.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00502520_vien_xuong_khop_triple_strength_glucosamine_1500mg_pharmekal_60v_8602_6356_large_9879b82c5c.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00502520_vien_xuong_khop_triple_strength_glucosamine_1500mg_pharmekal_60v_6129_6356_large_4cafa80593.jpg"
+            ],
+            "price": 485000.0,
+            "discountPercent": 10,
+            "stockQuantity": 120,
+            "categoryId": "688c52108e867f518abe184a",
+            "categoryName": "Cơ xương khớp",
+            "brand": "One-A-Day",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 60 viên"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "Glucosamine HCl 1500mg"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_023",
+                "prod_024"
+            ],
+            "createdAt": "2025-02-01T07:00:00Z",
+            "updatedAt": "2025-02-01T07:20:00Z"
+        },
+        {
+            "id": "688c86b98e867f518abe186c",
+            "name": "Osteo Bi-Flex",
+            "sku": "OST-BIF-GLU",
+            "slug": "osteo-bi-flex",
+            "description": "Osteo Bi-Flex Triple Strength với Glucosamine, Chondroitin và MSM, hỗ trợ toàn diện cho khớp xương",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/Osteocare_Tabs_F1_MR_3f805e94c4.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_00065_b51bda2529.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_00060_73027c0011.jpg"
+            ],
+            "price": 650000.0,
+            "discountPercent": 15,
+            "stockQuantity": 75,
+            "categoryId": "688c52108e867f518abe184a",
+            "categoryName": "Cơ xương khớp",
+            "brand": "Osteo Bi-Flex",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 80 viên"
+                },
+                {
+                    "name": "Thành phần",
+                    "value": "Glucosamine, Chondroitin, MSM"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_022",
+                "prod_024"
+            ],
+            "createdAt": "2025-02-01T08:00:00Z",
+            "updatedAt": "2025-02-01T08:15:00Z"
+        },
+        {
+            "id": "688c86d38e867f518abe186d",
+            "name": "Siro ho Prospan",
+            "sku": "PRO-SIR-HO",
+            "slug": "siro-ho-prospan",
+            "description": "Siro ho Prospan từ lá thường xuân, làm long đờm, giảm ho và viêm đường hô hấp",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00006137_prospan_100ml_9655_5c68_large_ad5603e714.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00006137_prospan_100ml_1619531083_e0aea759a0.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00006137_prospan_100ml_9862_5c68_large_97f4f0e5af.jpg"
+            ],
+            "price": 185000.0,
+            "discountPercent": 5,
+            "stockQuantity": 200,
+            "categoryId": "688c52188e867f518abe184b",
+            "categoryName": "Hô hấp, ho, xoang",
+            "brand": "Engelhard",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Đức"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Chai 100ml"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "Cao lá thường xuân"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_025",
+                "prod_026"
+            ],
+            "createdAt": "2025-02-01T09:00:00Z",
+            "updatedAt": "2025-02-01T09:30:00Z"
+        },
+        {
+            "id": "688c86e88e867f518abe186e",
+            "name": "Lactacyd Daily Intimate",
+            "sku": "LAC-DAI-INT",
+            "slug": "lactacyd-daily-intimate",
+            "description": "Dung dịch vệ sinh phụ nữ Lactacyd Daily với pH cân bằng, bảo vệ vùng kín khỏi vi khuẩn có hại",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/smalls/IMG_3852_31f0a406fa.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/IMG_3856_dd10adb6e9.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/smalls/IMG_3854_b908ade956.jpg"
+            ],
+            "price": 125000.0,
+            "discountPercent": 8,
+            "stockQuantity": 300,
+            "categoryId": "688c50c28e867f518abe1833",
+            "categoryName": "Chăm sóc cá nhân",
+            "brand": "Lactacyd",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Bỉ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Chai 200ml"
+                },
+                {
+                    "name": "Đối tượng",
+                    "value": "Phụ nữ"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_026",
+                "prod_027"
+            ],
+            "createdAt": "2025-02-01T10:00:00Z",
+            "updatedAt": "2025-02-01T10:20:00Z"
+        },
+        {
+            "id": "688c86fc8e867f518abe186f",
+            "name": "Bio-Oil Specialist Skincare",
+            "sku": "BIO-OIL-200",
+            "slug": "bio-oil-specialist-skincare",
+            "description": "Bio-Oil Specialist Skincare dầu dưỡng da chuyên biệt, giúp mờ sẹo và vết rạn da",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_08859_a322396383.png",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_08848_2e15bfca22.png",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_08851_1fdc0c67f8.png"
+            ],
+            "price": 485000.0,
+            "discountPercent": 12,
+            "stockQuantity": 85,
+            "categoryId": "688c509d8e867f518abe1830",
+            "categoryName": "Dược mỹ phẩm",
+            "brand": "Bio-Oil",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Nam Phi"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Chai 200ml"
+                },
+                {
+                    "name": "Công dụng",
+                    "value": "Mờ sẹo, vết rạn da"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_025",
+                "prod_027"
+            ],
+            "createdAt": "2025-02-01T11:00:00Z",
+            "updatedAt": "2025-02-01T11:15:00Z"
+        },
+        {
+            "id": "688c870e8e867f518abe1870",
+            "name": "La Roche Posay Effaclar Duo+",
+            "sku": "LRP-EFF-DUO",
+            "slug": "la-roche-posay-effaclar-duo-plus",
+            "description": "La Roche Posay Effaclar Duo+ gel dưỡng da mụn, giảm viêm và ngăn ngừa sẹo thâm",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00013450_nuoc_tay_trang_laroche_posay_200ml_m9054100_4181_5c90_large_7081472ef4.jpg"
+
+            ],
+            "price": 385000.0,
+            "discountPercent": 10,
+            "stockQuantity": 125,
+            "categoryId": "688c509d8e867f518abe1830",
+            "categoryName": "Dược mỹ phẩm",
+            "brand": "La Roche Posay",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Pháp"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Tuýp 40ml"
+                },
+                {
+                    "name": "Công dụng",
+                    "value": "Điều trị da mụn"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_025",
+                "prod_026"
+            ],
+            "createdAt": "2025-02-01T12:00:00Z",
+            "updatedAt": "2025-02-01T12:30:00Z"
+        },
+        {
+            "id": "688c872e8e867f518abe1871",
+            "name": "Probiotics Bio-25 Schiff",
+            "sku": "PRO-BIO-25-SCH",
+            "slug": "probiotics-bio-25-schiff",
+            "description": "Probiotics Bio-25 Schiff chứa 25 tỷ vi khuẩn có lợi, cải thiện hệ tiêu hóa và tăng cường miễn dịch",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_07827_1c76321228.png",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_07823_c9f80e679b.png",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_07836_2df838c7f3.png"
+            ],
+            "price": 585000.0,
+            "discountPercent": 15,
+            "stockQuantity": 95,
+            "categoryId": "688c52648e867f518abe1851",
+            "categoryName": "Vi sinh - Probiotic",
+            "brand": "Schiff",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Mỹ"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "24 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 60 viên"
+                },
+                {
+                    "name": "Thành phần",
+                    "value": "25 tỷ CFU vi khuẩn có lợi"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_029",
+                "prod_030"
+            ],
+            "createdAt": "2025-02-01T13:00:00Z",
+            "updatedAt": "2025-02-01T13:20:00Z"
+        },
+        {
+            "id": "688c873a8e867f518abe1872",
+            "name": "Smecta hương cam",
+            "sku": "SME-CAM-3G",
+            "slug": "smecta-huong-cam",
+            "description": "Smecta hương cam điều trị tiêu chảy cấp và mãn tính, đặc biệt an toàn cho trẻ em",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09972_98633478a4.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09979_05b4d89966.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09975_b82e961c49.jpg"
+            ],
+            "price": 165000.0,
+            "discountPercent": 5,
+            "stockQuantity": 250,
+            "categoryId": "688c506e8e867f518abe182b",
+            "categoryName": "Hỗ trợ tiêu hóa",
+            "brand": "Ipsen",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Pháp"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 30 gói"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "Diosmectite 3g"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_028",
+                "prod_030"
+            ],
+            "createdAt": "2025-02-01T14:00:00Z",
+            "updatedAt": "2025-02-01T14:15:00Z"
+        },
+        {
+            "id": "688c87478e867f518abe1873",
+            "name": "Omeprazole Stada 20mg",
+            "sku": "OME-STA-20MG",
+            "slug": "omeprazole-stada-20mg",
+            "description": "Omeprazole Stada 20mg điều trị loét dạ dày tá tràng, trào ngược dạ dày thực quản",
+            "images": [
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/IMG_1874_d7a893c364.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/IMG_1878_a450809cc1.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/IMG_1877_6545da0d72.jpg",
+                "https://cdn.nhathuoclongchau.com.vn/unsafe/768x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/IMG_1879_b6810364e7.jpg"
+            ],
+            "price": 125000.0,
+            "discountPercent": 3,
+            "stockQuantity": 180,
+            "categoryId": "688c52528e867f518abe184f",
+            "categoryName": "Dạ dày, tá tràng",
+            "brand": "Stada",
+            "attributes": [
+                {
+                    "name": "Xuất xứ",
+                    "value": "Đức"
+                },
+                {
+                    "name": "Hạn sử dụng",
+                    "value": "36 tháng"
+                },
+                {
+                    "name": "Quy cách đóng gói",
+                    "value": "Hộp 28 viên"
+                },
+                {
+                    "name": "Thành phần chính",
+                    "value": "Omeprazole 20mg"
+                }
+            ],
+            "published": true,
+            "relatedProducts": [
+                "prod_028",
+                "prod_029"
+            ],
+            "createdAt": "2025-02-01T15:00:00Z",
+            "updatedAt": "2025-02-01T15:30:00Z"
         }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_002", "prod_003"],
-      "createdAt": "2025-01-31T10:00:00Z",
-      "updatedAt": "2025-01-31T10:30:00Z"
-    },
-    {
-      "id": "688c71fd8e867f518abe1856",
-      "name": "Nature's Way Vitamin C 500mg",
-      "sku": "VIT-C-NW-500",
-      "slug": "natures-way-vitamin-c-500mg",
-      "description": "Vitamin C Nature's Way 500mg bổ sung vitamin C thiết yếu, tăng cường miễn dịch và hỗ trợ hấp thụ sắt",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/natures_way_vitamin_c_500mg_100_vien_6589_62cc_large_bf91d69bb3.jpg"
-      ],
-      "price": 320000.0,
-      "discountPercent": 10,
-      "stockQuantity": 89,
-      "categoryId": "688c51448e867f518abe183b",
-      "categoryName": "Vitamin C các loại",
-      "brand": "Nature's Way",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 100 viên"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_001", "prod_003"],
-      "createdAt": "2025-01-31T11:00:00Z",
-      "updatedAt": "2025-01-31T11:15:00Z"
-    },
-    {
-      "id": "688c72538e867f518abe1857",
-      "name": "DHC Vitamin C Hard Capsule",
-      "sku": "VIT-C-DHC-CAP",
-      "slug": "dhc-vitamin-c-hard-capsule",
-      "description": "Viên uống DHC Vitamin C 1000mg dạng viên cứng, bổ sung vitamin C chất lượng cao từ Nhật Bản",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/dhc_vitamin_c_hard_capsule_90_vien_7052_64c6_large_25bd8af5ab.jpg"
-      ],
-      "price": 275000.0,
-      "discountPercent": 5,
-      "stockQuantity": 65,
-      "categoryId": "688c51448e867f518abe183b",
-      "categoryName": "Vitamin C các loại",
-      "brand": "DHC",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Nhật Bản"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 90 viên"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_001", "prod_002"],
-      "createdAt": "2025-01-31T12:00:00Z",
-      "updatedAt": "2025-01-31T12:10:00Z"
-    },
-    {
-      "id": "prod_004",
-      "name": "Blackmores Vitamin E 500IU",
-      "sku": "VIT-E-BLK-500",
-      "slug": "blackmores-vitamin-e-500iu",
-      "description": "Vitamin E Blackmores 500IU hỗ trợ chống oxy hóa mạnh mẽ, bảo vệ tế bào khỏi gốc tự do và làm chậm quá trình lão hóa",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/blackmores_vitamin_e_500iu_50_vien_3041_6298_large_2f9b7c8e89.jpg"
-      ],
-      "price": 420000.0,
-      "discountPercent": 12,
-      "stockQuantity": 75,
-      "categoryId": "688c50f68e867f518abe1835",
-      "categoryName": "Vitamin E các loại",
-      "brand": "Blackmores",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Australia"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 50 viên"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_005", "prod_006"],
-      "createdAt": "2025-01-31T13:00:00Z",
-      "updatedAt": "2025-01-31T13:20:00Z"
-    },
-    {
-      "id": "prod_005",
-      "name": "Nature Made Vitamin E 400IU",
-      "sku": "VIT-E-NM-400",
-      "slug": "nature-made-vitamin-e-400iu",
-      "description": "Nature Made Vitamin E 400IU dạng viên mềm, cung cấp vitamin E tự nhiên để bảo vệ da và tim mạch",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/nature_made_vitamin_e_400iu_100_vien_5847_6243_large_b4d7f5c8a2.jpg"
-      ],
-      "price": 385000.0,
-      "discountPercent": 8,
-      "stockQuantity": 92,
-      "categoryId": "688c50f68e867f518abe1835",
-      "categoryName": "Vitamin E các loại",
-      "brand": "Nature Made",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 100 viên"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_004", "prod_006"],
-      "createdAt": "2025-01-31T14:00:00Z",
-      "updatedAt": "2025-01-31T14:15:00Z"
-    },
-    {
-      "id": "prod_006",
-      "name": "Blackmores Omega-3 Fish Oil 1000mg",
-      "sku": "OMG-3-BLK-1000",
-      "slug": "blackmores-omega-3-fish-oil-1000mg",
-      "description": "Dầu cá Omega-3 Blackmores 1000mg cung cấp EPA và DHA thiết yếu, hỗ trợ sức khỏe tim mạch và não bộ",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/blackmores_odourless_fish_oil_1000mg_200_vien_3949_6294_large_7a3c8d5b2f.jpg"
-      ],
-      "price": 675000.0,
-      "discountPercent": 18,
-      "stockQuantity": 120,
-      "categoryId": "688c513c8e867f518abe183a",
-      "categoryName": "Dầu cá, Omega 3, DHA",
-      "brand": "Blackmores",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Australia"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 200 viên"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "EPA 300mg, DHA 200mg"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_007", "prod_008"],
-      "createdAt": "2025-01-31T15:00:00Z",
-      "updatedAt": "2025-01-31T15:30:00Z"
-    },
-    {
-      "id": "prod_007",
-      "name": "Nordic Naturals Ultimate Omega",
-      "sku": "OMG-3-NN-ULT",
-      "slug": "nordic-naturals-ultimate-omega",
-      "description": "Nordic Naturals Ultimate Omega cung cấp EPA và DHA nồng độ cao, hỗ trợ tối ưu cho tim mạch và não bộ",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/nordic_naturals_ultimate_omega_60_vien_6784_6251_large_d9e2f1c8b4.jpg"
-      ],
-      "price": 850000.0,
-      "discountPercent": 20,
-      "stockQuantity": 45,
-      "categoryId": "688c513c8e867f518abe183a",
-      "categoryName": "Dầu cá, Omega 3, DHA",
-      "brand": "Nordic Naturals",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 60 viên"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "EPA 650mg, DHA 450mg"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_006", "prod_008"],
-      "createdAt": "2025-01-31T16:00:00Z",
-      "updatedAt": "2025-01-31T16:10:00Z"
-    },
-    {
-      "id": "prod_008",
-      "name": "Kirkland Signature Fish Oil 1000mg",
-      "sku": "OMG-3-KS-1000",
-      "slug": "kirkland-signature-fish-oil-1000mg",
-      "description": "Dầu cá Kirkland Signature 1000mg chất lượng cao, bổ sung Omega-3 thiết yếu với giá cả hợp lý",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/kirkland_fish_oil_1000mg_400_vien_7129_6287_large_a8b5c9d2e3.jpg"
-      ],
-      "price": 550000.0,
-      "discountPercent": 10,
-      "stockQuantity": 200,
-      "categoryId": "688c513c8e867f518abe183a",
-      "categoryName": "Dầu cá, Omega 3, DHA",
-      "brand": "Kirkland Signature",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 400 viên"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "EPA 300mg, DHA 200mg"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_006", "prod_007"],
-      "createdAt": "2025-01-31T17:00:00Z",
-      "updatedAt": "2025-01-31T17:20:00Z"
-    },
-    {
-      "id": "prod_009",
-      "name": "Calci-D Imexpharm",
-      "sku": "CAL-D-IMX-500",
-      "slug": "calci-d-imexpharm",
-      "description": "Calci-D Imexpharm bổ sung Canxi và Vitamin D3, hỗ trợ phát triển xương và răng chắc khỏe",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/calci_d_imexpharm_hop_30_goi_8965_6159_large_c4f7a8d3e2.jpg"
-      ],
-      "price": 185000.0,
-      "discountPercent": 5,
-      "stockQuantity": 250,
-      "categoryId": "688c51148e867f518abe1837",
-      "categoryName": "Bổ sung Canxi & Vitamin D",
-      "brand": "Imexpharm",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Việt Nam"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 30 gói"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "Canxi 500mg, Vitamin D3 400IU"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_010", "prod_011"],
-      "createdAt": "2025-01-31T18:00:00Z",
-      "updatedAt": "2025-01-31T18:15:00Z"
-    },
-    {
-      "id": "prod_010",
-      "name": "Centrum Silver 50+",
-      "sku": "CEN-SIL-50P",
-      "slug": "centrum-silver-50-plus",
-      "description": "Centrum Silver 50+ vitamin tổng hợp dành cho người trên 50 tuổi, bổ sung đầy đủ vitamin và khoáng chất thiết yếu",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/centrum_silver_50_100_vien_9234_6298_large_b7e3f5c9a4.jpg"
-      ],
-      "price": 720000.0,
-      "discountPercent": 15,
-      "stockQuantity": 85,
-      "categoryId": "688c51248e867f518abe1838",
-      "categoryName": "Vitamin tổng hợp",
-      "brand": "Centrum",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 100 viên"
-        },
-        {
-          "name": "Đối tượng",
-          "value": "Người trên 50 tuổi"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_011", "prod_012"],
-      "createdAt": "2025-01-31T19:00:00Z",
-      "updatedAt": "2025-01-31T19:25:00Z"
-    },
-    {
-      "id": "prod_011",
-      "name": "Feroglobin B12 Vitabiotics",
-      "sku": "FER-B12-VIT",
-      "slug": "feroglobin-b12-vitabiotics",
-      "description": "Feroglobin B12 bổ sung sắt, vitamin B12 và axit folic, hỗ trợ điều trị và phòng ngừa thiếu máu",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/feroglobin_b12_30_vien_8756_6234_large_d2a8f4c7b9.jpg"
-      ],
-      "price": 295000.0,
-      "discountPercent": 8,
-      "stockQuantity": 140,
-      "categoryId": "688c514d8e867f518abe183c",
-      "categoryName": "Bổ sung Sắt & Axit Folic",
-      "brand": "Vitabiotics",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Anh"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 30 viên"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "Sắt 17mg, B12 10μg, Axit Folic 400μg"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_009", "prod_010"],
-      "createdAt": "2025-01-31T20:00:00Z",
-      "updatedAt": "2025-01-31T20:10:00Z"
-    },
-    {
-      "id": "prod_012",
-      "name": "Viên uống Kẽm DHC",
-      "sku": "ZIN-DHC-15MG",
-      "slug": "vien-uong-kem-dhc",
-      "description": "Viên uống Kẽm DHC 15mg bổ sung kẽm thiết yếu, hỗ trợ tăng cường miễn dịch và cải thiện da",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/dhc_zinc_60_vien_7458_6287_large_e8c3f9a5b7.jpg"
-      ],
-      "price": 165000.0,
-      "discountPercent": 6,
-      "stockQuantity": 180,
-      "categoryId": "688c51068e867f518abe1836",
-      "categoryName": "Bổ sung Kẽm & Magie",
-      "brand": "DHC",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Nhật Bản"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 60 viên"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "Kẽm 15mg"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_013", "prod_014"],
-      "createdAt": "2025-01-31T21:00:00Z",
-      "updatedAt": "2025-01-31T21:15:00Z"
-    },
-    {
-      "id": "prod_013",
-      "name": "Eunova Duomaxx",
-      "sku": "EUN-DUO-MAX",
-      "slug": "eunova-duomaxx",
-      "description": "Eunova Duomaxx viên uống hỗ trợ tăng cường sinh lý nam giới, cải thiện sức khỏe tình dục",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/eunova_duomaxx_hop_30_vien_6748_6159_large_a4c7d8f2b5.jpg"
-      ],
-      "price": 485000.0,
-      "discountPercent": 12,
-      "stockQuantity": 95,
-      "categoryId": "688c51748e867f518abe183d",
-      "categoryName": "Sinh lý nam",
-      "brand": "Eunova",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Đức"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 30 viên"
-        },
-        {
-          "name": "Đối tượng",
-          "value": "Nam giới trưởng thành"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_014", "prod_015"],
-      "createdAt": "2025-01-31T22:00:00Z",
-      "updatedAt": "2025-01-31T22:30:00Z"
-    },
-    {
-      "id": "prod_014",
-      "name": "Thuốc Nam An Thái",
-      "sku": "NAM-AT-TCM",
-      "slug": "thuoc-nam-an-thai",
-      "description": "Thuốc Nam An Thái từ thảo dược thiên nhiên, hỗ trợ cải thiện sinh lý nam giới theo phương pháp y học cổ truyền",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/nam_an_thai_hop_60_vien_5827_6234_large_d8f3c2a9b7.jpg"
-      ],
-      "price": 320000.0,
-      "discountPercent": 8,
-      "stockQuantity": 125,
-      "categoryId": "688c51748e867f518abe183d",
-      "categoryName": "Sinh lý nam",
-      "brand": "Traphaco",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Việt Nam"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 60 viên"
-        },
-        {
-          "name": "Thành phần",
-          "value": "Thảo dược thiên nhiên"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_013", "prod_015"],
-      "createdAt": "2025-01-31T23:00:00Z",
-      "updatedAt": "2025-01-31T23:15:00Z"
-    },
-    {
-      "id": "prod_015",
-      "name": "Cranberry Kirkland Signature",
-      "sku": "CRA-KS-500MG",
-      "slug": "cranberry-kirkland-signature",
-      "description": "Cranberry Kirkland Signature 500mg hỗ trợ sức khỏe đường tiết niệu, đặc biệt tốt cho phụ nữ",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/kirkland_cranberry_500mg_300_vien_7845_6298_large_a9f2c8d3b7.jpg"
-      ],
-      "price": 425000.0,
-      "discountPercent": 15,
-      "stockQuantity": 110,
-      "categoryId": "688c51978e867f518abe1840",
-      "categoryName": "Sinh lý nữ",
-      "brand": "Kirkland Signature",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 300 viên"
-        },
-        {
-          "name": "Đối tượng",
-          "value": "Phụ nữ"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_013", "prod_014"],
-      "createdAt": "2025-02-01T00:00:00Z",
-      "updatedAt": "2025-02-01T00:10:00Z"
-    },
-    {
-      "id": "prod_016",
-      "name": "Essentiale Forte N",
-      "sku": "ESS-FOR-N-300",
-      "slug": "essentiale-forte-n",
-      "description": "Essentiale Forte N 300mg hỗ trợ bảo vệ và phục hồi chức năng gan, cải thiện chuyển hóa mỡ",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/essentiale_forte_n_300mg_30_vien_4567_6289_large_c7f3a8b9d2.jpg"
-      ],
-      "price": 385000.0,
-      "discountPercent": 10,
-      "stockQuantity": 150,
-      "categoryId": "688c51bf8e867f518abe1843",
-      "categoryName": "Chức năng gan",
-      "brand": "Sanofi",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Đức"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 30 viên"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "Phospholipid thiết yếu 300mg"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_017", "prod_018"],
-      "createdAt": "2025-02-01T01:00:00Z",
-      "updatedAt": "2025-02-01T01:20:00Z"
-    },
-    {
-      "id": "prod_017",
-      "name": "Hepamax-800",
-      "sku": "HEP-MAX-800",
-      "slug": "hepamax-800",
-      "description": "Hepamax-800 bổ gan từ thảo dược thiên nhiên, hỗ trợ giải độc gan và cải thiện chức năng gan",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/375x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/hepamax_800_hop_30_vien_5734_6187_large_a3f9b4c8d7.jpg"
-      ],
-      "price": 265000.0,
-      "discountPercent": 5,
-      "stockQuantity": 200,
-      "categoryId": "688c51bf8e867f518abe1843",
-      "categoryName": "Chức năng gan",
-      "brand": "OPC",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Việt Nam"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 30 viên"
-        },
-        {
-          "name": "Thành phần",
-          "value": "Cây gai dầu, Cà gai leo"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_016", "prod_018"],
-      "createdAt": "2025-02-01T02:00:00Z",
-      "updatedAt": "2025-02-01T02:15:00Z"
-    },
-    {
-      "id": "prod_018",
-      "name": "Immunace Vitabiotics",
-      "sku": "IMM-VIT-ACE",
-      "slug": "immunace-vitabiotics",
-      "description": "Immunace Vitabiotics công thức đặc biệt tăng cường hệ miễn dịch với 25 vitamin và khoáng chất thiết yếu",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/immunace_30_vien_8945_6276_large_d8e2f5a9c3.jpg"
-      ],
-      "price": 445000.0,
-      "discountPercent": 18,
-      "stockQuantity": 85,
-      "categoryId": "688c51c68e867f518abe1844",
-      "categoryName": "Tăng sức đề kháng, miễn dịch",
-      "brand": "Vitabiotics",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Anh"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 30 viên"
-        },
-        {
-          "name": "Thành phần",
-          "value": "25 vitamin và khoáng chất"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_019", "prod_020"],
-      "createdAt": "2025-02-01T03:00:00Z",
-      "updatedAt": "2025-02-01T03:30:00Z"
-    },
-    {
-      "id": "prod_019",
-      "name": "Lutein Tsubaki",
-      "sku": "LUT-TSU-20MG",
-      "slug": "lutein-tsubaki",
-      "description": "Lutein Tsubaki 20mg từ Nhật Bản, bổ mắt với thành phần Lutein và Zeaxanthin bảo vệ võng mạc",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/lutein_tsubaki_60_vien_7623_6254_large_f2b7c8d3a9.jpg"
-      ],
-      "price": 685000.0,
-      "discountPercent": 15,
-      "stockQuantity": 70,
-      "categoryId": "688c51d18e867f518abe1845",
-      "categoryName": "Bổ mắt, bảo vệ mắt",
-      "brand": "Tsubaki",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Nhật Bản"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 60 viên"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "Lutein 20mg, Zeaxanthin 4mg"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_020", "prod_021"],
-      "createdAt": "2025-02-01T04:00:00Z",
-      "updatedAt": "2025-02-01T04:20:00Z"
-    },
-    {
-      "id": "prod_020",
-      "name": "Ocuvite Bausch & Lomb",
-      "sku": "OCU-BL-LUT",
-      "slug": "ocuvite-bausch-lomb",
-      "description": "Ocuvite Bausch & Lomb bổ mắt với Lutein, Zeaxanthin và Omega-3, hỗ trợ bảo vệ thị lực toàn diện",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/ocuvite_60_vien_8834_6187_large_e3a9f4b7c2.jpg"
-      ],
-      "price": 525000.0,
-      "discountPercent": 12,
-      "stockQuantity": 95,
-      "categoryId": "688c51d18e867f518abe1845",
-      "categoryName": "Bổ mắt, bảo vệ mắt",
-      "brand": "Bausch & Lomb",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 60 viên"
-        },
-        {
-          "name": "Thành phần",
-          "value": "Lutein, Zeaxanthin, Omega-3"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_019", "prod_021"],
-      "createdAt": "2025-02-01T05:00:00Z",
-      "updatedAt": "2025-02-01T05:15:00Z"
-    },
-    {
-      "id": "prod_021",
-      "name": "Diabecon Himalaya",
-      "sku": "DIA-HIM-CON",
-      "slug": "diabecon-himalaya",
-      "description": "Diabecon Himalaya từ thảo dược Ấn Độ, hỗ trợ kiểm soát đường huyết cho người tiểu đường",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/diabecon_himalaya_60_vien_6789_6234_large_c5f8a3b9d7.jpg"
-      ],
-      "price": 295000.0,
-      "discountPercent": 8,
-      "stockQuantity": 165,
-      "categoryId": "688c51f58e867f518abe1848",
-      "categoryName": "Hỗ trợ điều trị tiểu đường",
-      "brand": "Himalaya",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Ấn Độ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 60 viên"
-        },
-        {
-          "name": "Thành phần",
-          "value": "Thảo dược Ayurveda"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_022", "prod_023"],
-      "createdAt": "2025-02-01T06:00:00Z",
-      "updatedAt": "2025-02-01T06:30:00Z"
-    },
-    {
-      "id": "prod_022",
-      "name": "Glucosamine 1500 One-A-Day",
-      "sku": "GLU-OAD-1500",
-      "slug": "glucosamine-1500-one-a-day",
-      "description": "Glucosamine 1500 One-A-Day hỗ trợ sức khỏe khớp xương, giảm đau nhức và tăng tính linh hoạt",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/glucosamine_1500_one_a_day_60_vien_7456_6198_large_a7d2f8c4b9.jpg"
-      ],
-      "price": 485000.0,
-      "discountPercent": 10,
-      "stockQuantity": 120,
-      "categoryId": "688c52108e867f518abe184a",
-      "categoryName": "Cơ xương khớp",
-      "brand": "One-A-Day",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 60 viên"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "Glucosamine HCl 1500mg"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_023", "prod_024"],
-      "createdAt": "2025-02-01T07:00:00Z",
-      "updatedAt": "2025-02-01T07:20:00Z"
-    },
-    {
-      "id": "prod_023",
-      "name": "Osteo Bi-Flex",
-      "sku": "OST-BIF-GLU",
-      "slug": "osteo-bi-flex",
-      "description": "Osteo Bi-Flex Triple Strength với Glucosamine, Chondroitin và MSM, hỗ trợ toàn diện cho khớp xương",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/osteo_bi_flex_80_vien_8723_6267_large_f3b8c7a2d9.jpg"
-      ],
-      "price": 650000.0,
-      "discountPercent": 15,
-      "stockQuantity": 75,
-      "categoryId": "688c52108e867f518abe184a",
-      "categoryName": "Cơ xương khớp",
-      "brand": "Osteo Bi-Flex",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 80 viên"
-        },
-        {
-          "name": "Thành phần",
-          "value": "Glucosamine, Chondroitin, MSM"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_022", "prod_024"],
-      "createdAt": "2025-02-01T08:00:00Z",
-      "updatedAt": "2025-02-01T08:15:00Z"
-    },
-    {
-      "id": "prod_024",
-      "name": "Siro ho Prospan",
-      "sku": "PRO-SIR-HO",
-      "slug": "siro-ho-prospan",
-      "description": "Siro ho Prospan từ lá thường xuân, làm long đờm, giảm ho và viêm đường hô hấp",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/prospan_100ml_8456_6289_large_b9c4f7a3d8.jpg"
-      ],
-      "price": 185000.0,
-      "discountPercent": 5,
-      "stockQuantity": 200,
-      "categoryId": "688c52188e867f518abe184b",
-      "categoryName": "Hô hấp, ho, xoang",
-      "brand": "Engelhard",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Đức"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Chai 100ml"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "Cao lá thường xuân"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_025", "prod_026"],
-      "createdAt": "2025-02-01T09:00:00Z",
-      "updatedAt": "2025-02-01T09:30:00Z"
-    },
-    {
-      "id": "prod_025",
-      "name": "Lactacyd Daily Intimate",
-      "sku": "LAC-DAI-INT",
-      "slug": "lactacyd-daily-intimate",
-      "description": "Dung dịch vệ sinh phụ nữ Lactacyd Daily với pH cân bằng, bảo vệ vùng kín khỏi vi khuẩn có hại",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/lactacyd_daily_200ml_9234_6156_large_c7a3f8d2b9.jpg"
-      ],
-      "price": 125000.0,
-      "discountPercent": 8,
-      "stockQuantity": 300,
-      "categoryId": "688c50c28e867f518abe1833",
-      "categoryName": "Chăm sóc cá nhân",
-      "brand": "Lactacyd",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Bỉ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Chai 200ml"
-        },
-        {
-          "name": "Đối tượng",
-          "value": "Phụ nữ"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_026", "prod_027"],
-      "createdAt": "2025-02-01T10:00:00Z",
-      "updatedAt": "2025-02-01T10:20:00Z"
-    },
-    {
-      "id": "prod_026",
-      "name": "Bio-Oil Specialist Skincare",
-      "sku": "BIO-OIL-200",
-      "slug": "bio-oil-specialist-skincare",
-      "description": "Bio-Oil Specialist Skincare dầu dưỡng da chuyên biệt, giúp mờ sẹo và vết rạn da",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/bio_oil_200ml_7845_6234_large_a8f3c9b2d7.jpg"
-      ],
-      "price": 485000.0,
-      "discountPercent": 12,
-      "stockQuantity": 85,
-      "categoryId": "688c509d8e867f518abe1830",
-      "categoryName": "Dược mỹ phẩm",
-      "brand": "Bio-Oil",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Nam Phi"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Chai 200ml"
-        },
-        {
-          "name": "Công dụng",
-          "value": "Mờ sẹo, vết rạn da"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_025", "prod_027"],
-      "createdAt": "2025-02-01T11:00:00Z",
-      "updatedAt": "2025-02-01T11:15:00Z"
-    },
-    {
-      "id": "prod_027",
-      "name": "La Roche Posay Effaclar Duo+",
-      "sku": "LRP-EFF-DUO",
-      "slug": "la-roche-posay-effaclar-duo-plus",
-      "description": "La Roche Posay Effaclar Duo+ gel dưỡng da mụn, giảm viêm và ngăn ngừa sẹo thâm",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/la_roche_posay_effaclar_duo_40ml_8967_6198_large_f2b7d8c3a9.jpg"
-      ],
-      "price": 385000.0,
-      "discountPercent": 10,
-      "stockQuantity": 125,
-      "categoryId": "688c509d8e867f518abe1830",
-      "categoryName": "Dược mỹ phẩm",
-      "brand": "La Roche Posay",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Pháp"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Tuýp 40ml"
-        },
-        {
-          "name": "Công dụng",
-          "value": "Điều trị da mụn"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_025", "prod_026"],
-      "createdAt": "2025-02-01T12:00:00Z",
-      "updatedAt": "2025-02-01T12:30:00Z"
-    },
-    {
-      "id": "prod_028",
-      "name": "Probiotics Bio-25 Schiff",
-      "sku": "PRO-BIO-25-SCH",
-      "slug": "probiotics-bio-25-schiff",
-      "description": "Probiotics Bio-25 Schiff chứa 25 tỷ vi khuẩn có lợi, cải thiện hệ tiêu hóa và tăng cường miễn dịch",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/schiff_digestive_advantage_probiotics_60_vien_7623_6289_large_c4f9a7b2d8.jpg"
-      ],
-      "price": 585000.0,
-      "discountPercent": 15,
-      "stockQuantity": 95,
-      "categoryId": "688c52648e867f518abe1851",
-      "categoryName": "Vi sinh - Probiotic",
-      "brand": "Schiff",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Mỹ"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "24 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 60 viên"
-        },
-        {
-          "name": "Thành phần",
-          "value": "25 tỷ CFU vi khuẩn có lợi"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_029", "prod_030"],
-      "createdAt": "2025-02-01T13:00:00Z",
-      "updatedAt": "2025-02-01T13:20:00Z"
-    },
-    {
-      "id": "prod_029",
-      "name": "Smecta hương cam",
-      "sku": "SME-CAM-3G",
-      "slug": "smecta-huong-cam",
-      "description": "Smecta hương cam điều trị tiêu chảy cấp và mãn tính, đặc biệt an toàn cho trẻ em",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/smecta_cam_hop_30_goi_5634_6187_large_a9f3c8d7b2.jpg"
-      ],
-      "price": 165000.0,
-      "discountPercent": 5,
-      "stockQuantity": 250,
-      "categoryId": "688c506e8e867f518abe182b",
-      "categoryName": "Hỗ trợ tiêu hóa",
-      "brand": "Ipsen",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Pháp"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 30 gói"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "Diosmectite 3g"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_028", "prod_030"],
-      "createdAt": "2025-02-01T14:00:00Z",
-      "updatedAt": "2025-02-01T14:15:00Z"
-    },
-    {
-      "id": "prod_030",
-      "name": "Omeprazole Stada 20mg",
-      "sku": "OME-STA-20MG",
-      "slug": "omeprazole-stada-20mg",
-      "description": "Omeprazole Stada 20mg điều trị loét dạ dày tá tràng, trào ngược dạ dày thực quản",
-      "images": [
-        "https://cdn.nhathuoclongchau.com.vn/unsafe/256x256/https://cms-prod.s3-sgn09.fptcloud.com/omeprazole_stada_20mg_28_vien_6789_6234_large_f7c2a8d9b3.jpg"
-      ],
-      "price": 125000.0,
-      "discountPercent": 3,
-      "stockQuantity": 180,
-      "categoryId": "688c52528e867f518abe184f",
-      "categoryName": "Dạ dày, tá tràng",
-      "brand": "Stada",
-      "attributes": [
-        {
-          "name": "Xuất xứ",
-          "value": "Đức"
-        },
-        {
-          "name": "Hạn sử dụng",
-          "value": "36 tháng"
-        },
-        {
-          "name": "Quy cách đóng gói",
-          "value": "Hộp 28 viên"
-        },
-        {
-          "name": "Thành phần chính",
-          "value": "Omeprazole 20mg"
-        }
-      ],
-      "published": true,
-      "relatedProducts": ["prod_028", "prod_029"],
-      "createdAt": "2025-02-01T15:00:00Z",
-      "updatedAt": "2025-02-01T15:30:00Z"
-    }
-  ]
+    ]
 }
