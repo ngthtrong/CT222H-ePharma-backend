@@ -33,17 +33,14 @@ public class DashboardController {
         return ResponseEntity.ok(new ApiResponse<>(true, "Dashboard service is running", "OK"));
     }
 
-    // WebSocket info endpoint
-    @GetMapping("/websocket/info")
-    public ResponseEntity<ApiResponse<Map<String, Object>>> getWebSocketInfo() {
+    // Dashboard last updated endpoint
+    @GetMapping("/dashboard/last-updated")
+    public ResponseEntity<ApiResponse<Map<String, Object>>> getLastUpdated() {
         Map<String, Object> info = Map.of(
-            "websocket_endpoints", Map.of(
-                "native_websocket", "ws://localhost:8081/ws/analytics?token=YOUR_JWT_TOKEN",
-                "server_status", "Running"
-            ),
-            "timestamp", System.currentTimeMillis()
+            "lastUpdated", System.currentTimeMillis(),
+            "message", "Dashboard data được cập nhật mỗi khi có yêu cầu mới"
         );
-        return ResponseEntity.ok(new ApiResponse<>(true, "WebSocket endpoints info", info));
+        return ResponseEntity.ok(new ApiResponse<>(true, "Dashboard last updated info", info));
     }
 
     // ADMIN ENDPOINTS - Require ADMIN role
@@ -67,13 +64,12 @@ public class DashboardController {
     }
 
     @GetMapping("/admin/dashboard/recent-orders")
-    public ResponseEntity<ApiResponse<List<DashboardResponse.RecentOrderResponse>>> getRecentOrders(
-            @RequestParam(required = false, defaultValue = "10") int limit) {
+    public ResponseEntity<ApiResponse<List<DashboardResponse.RecentOrderResponse>>> getRecentOrders() {
         
         authorizationService.checkAdminRole(); // Only ADMIN can access
         
         try {
-            List<DashboardResponse.RecentOrderResponse> recentOrders = dashboardService.getRecentOrders(limit);
+            List<DashboardResponse.RecentOrderResponse> recentOrders = dashboardService.getRecentOrders();
             return ResponseEntity.ok(new ApiResponse<>(true, "Lấy danh sách đơn hàng gần đây thành công", recentOrders));
         } catch (Exception e) {
             return ResponseEntity.status(500).body(new ApiResponse<>(false, "Lỗi khi lấy danh sách đơn hàng gần đây", null));
@@ -81,16 +77,29 @@ public class DashboardController {
     }
 
     @GetMapping("/admin/dashboard/top-products")
-    public ResponseEntity<ApiResponse<List<DashboardResponse.TopProductResponse>>> getTopSellingProducts(
-            @RequestParam(required = false, defaultValue = "10") int limit) {
+    public ResponseEntity<ApiResponse<List<DashboardResponse.TopProductResponse>>> getTopProducts() {
         
         authorizationService.checkAdminRole(); // Only ADMIN can access
         
         try {
-            List<DashboardResponse.TopProductResponse> topProducts = dashboardService.getTopSellingProducts(limit);
-            return ResponseEntity.ok(new ApiResponse<>(true, "Lấy danh sách sản phẩm bán chạy thành công", topProducts));
+            // Get top products from main stats
+            DashboardResponse.DashboardStatsResponse stats = dashboardService.getDashboardStats();
+            return ResponseEntity.ok(new ApiResponse<>(true, "Lấy danh sách sản phẩm bán chạy thành công", stats.getTopProducts()));
         } catch (Exception e) {
             return ResponseEntity.status(500).body(new ApiResponse<>(false, "Lỗi khi lấy danh sách sản phẩm bán chạy", null));
+        }
+    }
+
+    @PostMapping("/admin/dashboard/refresh")
+    public ResponseEntity<ApiResponse<DashboardResponse.DashboardStatsResponse>> refreshDashboard() {
+        authorizationService.checkAdminRole(); // Only ADMIN can access
+        
+        try {
+            DashboardResponse.DashboardStatsResponse stats = dashboardService.getDashboardStats();
+            return ResponseEntity.ok(new ApiResponse<>(true, "Dashboard được làm mới thành công", stats));
+        } catch (Exception e) {
+            logger.error("Dashboard refresh error: {}", e.getMessage(), e);
+            return ResponseEntity.status(500).body(new ApiResponse<>(false, "Lỗi khi làm mới dashboard: " + e.getMessage(), null));
         }
     }
 }

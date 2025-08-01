@@ -78,4 +78,7 @@ public interface OrderRepository extends MongoRepository<Order, String> {
     // Search by recipient name (for admin search)
     @Query("{'shippingAddress.recipientName': {$regex: ?0, $options: 'i'}}")
     List<Order> findByRecipientNameContainingIgnoreCase(String recipientName);
+    
+    // Recent orders for dashboard
+    List<Order> findTop10ByOrderByCreatedAtDesc();
 }

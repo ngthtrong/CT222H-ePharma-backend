@@ -115,12 +115,6 @@
             <version>5.2.4</version>
         </dependency>
         
-        <!-- Spring Boot WebSocket for real-time analytics -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-websocket</artifactId>
-        </dependency>
-        
         <!-- Micrometer for metrics collection -->
         <dependency>
             <groupId>io.micrometer</groupId>
