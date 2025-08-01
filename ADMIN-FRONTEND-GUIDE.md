@@ -850,6 +850,100 @@ const ReportManager = {
 };
 ```
 
+### 📊 Advanced Analytics Dashboard
+
+**Endpoint**: `GET /admin/analytics/dashboard`
+
+**Query Parameters**:
+- `startDate` (required): Ngày bắt đầu (yyyy-MM-dd)
+- `endDate` (required): Ngày kết thúc (yyyy-MM-dd)
+
+**Response Example**:
+
+```json
+{
+  "success": true,
+  "message": "Advanced dashboard metrics retrieved successfully",
+  "data": {
+    "totalRevenue": 680000.0,
+    "totalOrders": 1,
+    "averageOrderValue": 680000.0,
+    "revenueGrowthRate": 100.0,
+    "conversionRate": 3.2,
+    "activeCustomers": 1,
+    "topCategories": [
+      {
+        "categoryName": "Vitamin & Khoáng chất",
+        "totalSold": 1,
+        "revenue": 680000.0
+      },
+      {
+        "categoryName": "Thực phẩm chức năng",
+        "totalSold": 5,
+        "revenue": 1250000.0
+      }
+    ],
+    "customerSegments": {
+      "highValueCustomers": 1,
+      "mediumValueCustomers": 0,
+      "lowValueCustomers": 0
+    },
+    "generatedAt": "2025-08-01T05:30:00Z"
+  }
+}
+```
+
+**⚠️ Lưu ý quan trọng về Category Performance**:
+- Từ version 1.4 (2025-08-01), `topCategories` sử dụng **dữ liệu thực tế** từ database
+- Hiển thị tên category bằng tiếng Việt chính xác (ví dụ: "Vitamin & Khoáng chất")
+- Thống kê chính xác số lượng và doanh thu theo từng danh mục sản phẩm
+
+**Frontend Implementation**:
+
+```javascript
+async function loadAdvancedAnalytics(startDate, endDate) {
+  try {
+    const response = await fetch(
+      `/api/v1/admin/analytics/dashboard?startDate=${startDate}&endDate=${endDate}`,
+      { headers: { 'Authorization': `Bearer ${token}` } }
+    );
+    
+    const result = await response.json();
+    
+    if (result.success) {
+      updateDashboardMetrics(result.data);
+      renderCategoryChart(result.data.topCategories);
+    }
+  } catch (error) {
+    console.error('Error loading analytics:', error);
+  }
+}
+
+// Hiển thị category performance chart
+function renderCategoryChart(categories) {
+  const ctx = document.getElementById('categoryChart').getContext('2d');
+  
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: categories.map(cat => cat.categoryName),
+      datasets: [{
+        data: categories.map(cat => cat.revenue),
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }
+  });
+}
+```
+
 ---
 
 ## 12. Cấu trúc Response chung

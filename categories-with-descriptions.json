@@ -1,0 +1,183 @@
+{
+  "categories": [
+    {
+      "id": "688c50228e867f518abe1827",
+      "name": "Vitamin & Khoáng chất",
+      "description": "Các sản phẩm bổ sung vitamin và khoáng chất thiết yếu cho cơ thể",
+      "subcategories": [
+        {"id": "688c50f68e867f518abe1835", "name": "Vitamin E các loại", "description": "Các sản phẩm chứa vitamin E với nhiều dạng khác nhau"},
+        {"id": "688c51068e867f518abe1836", "name": "Bổ sung Kẽm & Magie", "description": "Sản phẩm bổ sung kẽm và magie cho cơ thể"},
+        {"id": "688c51148e867f518abe1837", "name": "Bổ sung Canxi & Vitamin D", "description": "Sản phẩm bổ sung canxi và vitamin D cho xương khỏe"},
+        {"id": "688c51248e867f518abe1838", "name": "Vitamin tổng hợp", "description": "Các sản phẩm vitamin tổng hợp đa năng"},
+        {"id": "688c513c8e867f518abe183a", "name": "Dầu cá, Omega 3, DHA", "description": "Sản phẩm dầu cá và omega 3 tốt cho tim mạch và não bộ"},
+        {"id": "688c51448e867f518abe183b", "name": "Vitamin C các loại", "description": "Các sản phẩm chứa vitamin C tăng cường miễn dịch"},
+        {"id": "688c514d8e867f518abe183c", "name": "Bổ sung Sắt & Axit Folic", "description": "Sản phẩm bổ sung sắt và axit folic phòng chống thiếu máu"}
+      ]
+    },
+    {
+      "id": "688c50398e867f518abe1828",
+      "name": "Sinh lý - Nội tiết tố",
+      "description": "Sản phẩm hỗ trợ cải thiện sinh lý và cân bằng nội tiết tố",
+      "subcategories": [
+        {"id": "688c51748e867f518abe183d", "name": "Sinh lý nam", "description": "Sản phẩm hỗ trợ cải thiện sinh lý nam giới"},
+        {"id": "688c51888e867f518abe183e", "name": "Sức khoẻ tình dục", "description": "Sản phẩm hỗ trợ sức khỏe tình dục và sinh sản"},
+        {"id": "688c518f8e867f518abe183f", "name": "Cân bằng nội tiết tố", "description": "Sản phẩm giúp cân bằng hormone nội tiết"},
+        {"id": "688c51978e867f518abe1840", "name": "Sinh lý nữ", "description": "Sản phẩm hỗ trợ sức khỏe sinh lý nữ giới"},
+        {"id": "688c51a08e867f518abe1841", "name": "Hỗ trợ mãn kinh", "description": "Sản phẩm giúp giảm triệu chứng mãn kinh"}
+      ]
+    },
+    {
+      "id": "688c504f8e867f518abe1829",
+      "name": "Cải thiện tăng cường chức năng",
+      "description": "Sản phẩm giúp cải thiện và tăng cường các chức năng cơ thể",
+      "subcategories": [
+        {"id": "688c51b78e867f518abe1842", "name": "Chống lão hóa", "description": "Sản phẩm chống lão hóa và làm chậm quá trình già"},
+        {"id": "688c51bf8e867f518abe1843", "name": "Chức năng gan", "description": "Sản phẩm hỗ trợ bảo vệ và tăng cường chức năng gan"},
+        {"id": "688c51c68e867f518abe1844", "name": "Tăng sức đề kháng, miễn dịch", "description": "Sản phẩm tăng cường hệ miễn dịch và sức đề kháng"},
+        {"id": "688c51d18e867f518abe1845", "name": "Bổ mắt, bảo vệ mắt", "description": "Sản phẩm bổ mắt và bảo vệ thị lực"},
+        {"id": "688c51dd8e867f518abe1846", "name": "Hỗ trợ trao đổi chất", "description": "Sản phẩm hỗ trợ quá trình trao đổi chất"},
+        {"id": "688c51e48e867f518abe1847", "name": "Giải rượu, cai rượu", "description": "Sản phẩm giải độc rượu và hỗ trợ cai rượu"}
+      ]
+    },
+    {
+      "id": "688c50608e867f518abe182a",
+      "name": "Hỗ trợ điều trị",
+      "description": "Sản phẩm hỗ trợ điều trị các bệnh lý thường gặp",
+      "subcategories": [
+        {"id": "688c51f58e867f518abe1848", "name": "Hỗ trợ điều trị tiểu đường", "description": "Sản phẩm hỗ trợ kiểm soát đường huyết cho người tiểu đường"},
+        {"id": "688c51fd8e867f518abe1849", "name": "Hỗ trợ điều trị ung thư", "description": "Sản phẩm hỗ trợ trong quá trình điều trị ung thư"},
+        {"id": "688c52108e867f518abe184a", "name": "Cơ xương khớp", "description": "Sản phẩm hỗ trợ điều trị các bệnh về cơ xương khớp"},
+        {"id": "688c52188e867f518abe184b", "name": "Hô hấp, ho, xoang", "description": "Sản phẩm hỗ trợ điều trị các bệnh về đường hô hấp"},
+        {"id": "688c52218e867f518abe184c", "name": "Thận, tiền liệt tuyến", "description": "Sản phẩm hỗ trợ sức khỏe thận và tiền liệt tuyến"},
+        {"id": "688c52368e867f518abe184d", "name": "Hỗ trợ điều trị trĩ", "description": "Sản phẩm hỗ trợ điều trị bệnh trĩ"},
+        {"id": "688c52408e867f518abe184e", "name": "Hỗ trợ điều trị gout", "description": "Sản phẩm hỗ trợ điều trị bệnh gout"}
+      ]
+    },
+    {
+      "id": "688c506e8e867f518abe182b",
+      "name": "Hỗ trợ tiêu hóa",
+      "description": "Sản phẩm hỗ trợ cải thiện hệ tiêu hóa và dạ dày",
+      "subcategories": [
+        {"id": "688c52528e867f518abe184f", "name": "Dạ dày, tá tràng", "description": "Sản phẩm hỗ trợ điều trị các bệnh về dạ dày, tá tràng"},
+        {"id": "688c525b8e867f518abe1850", "name": "Táo bón", "description": "Sản phẩm hỗ trợ điều trị táo bón"},
+        {"id": "688c52648e867f518abe1851", "name": "Vi sinh - Probiotic", "description": "Sản phẩm chứa vi sinh có lợi cho đường ruột"},
+        {"id": "688c526d8e867f518abe1852", "name": "Đại tràng", "description": "Sản phẩm hỗ trợ sức khỏe đại tràng"},
+        {"id": "688c528c8e867f518abe1853", "name": "Khó tiêu", "description": "Sản phẩm hỗ trợ cải thiện tình trạng khó tiêu"}
+      ]
+    },
+    {
+      "id": "688c50778e867f518abe182c",
+      "name": "Thần kinh não",
+      "description": "Sản phẩm hỗ trợ sức khỏe thần kinh và não bộ",
+      "subcategories": [
+        {"name": "Bổ não - cải thiện trí nhớ", "description": "Sản phẩm bổ não và cải thiện trí nhớ"},
+        {"name": "Hỗ trợ giấc ngủ ngon", "description": "Sản phẩm hỗ trợ cải thiện giấc ngủ"},
+        {"name": "Tuần hoàn máu", "description": "Sản phẩm cải thiện tuần hoàn máu não"},
+        {"name": "Kiểm soát căng thẳng", "description": "Sản phẩm giúp giảm stress và căng thẳng"},
+        {"name": "Hoạt huyết", "description": "Sản phẩm hoạt huyết dưỡng não"}
+      ]
+    },
+    {
+      "id": "688c50808e867f518abe182d",
+      "name": "Hỗ trợ làm đẹp",
+      "description": "Sản phẩm hỗ trợ làm đẹp từ bên trong",
+      "subcategories": [
+        {"name": "Da", "description": "Sản phẩm làm đẹp da từ bên trong"},
+        {"name": "Hỗ trợ giảm cân", "description": "Sản phẩm hỗ trợ giảm cân an toàn"},
+        {"name": "Tóc", "description": "Sản phẩm chăm sóc tóc từ bên trong"}
+      ]
+    },
+    {
+      "id": "688c508b8e867f518abe182e",
+      "name": "Sức khoẻ tim mạch",
+      "description": "Sản phẩm hỗ trợ sức khỏe tim mạch và huyết áp",
+      "subcategories": [
+        {"name": "Giảm Cholesterol", "description": "Sản phẩm giúp giảm cholesterol trong máu"},
+        {"name": "Huyết áp", "description": "Sản phẩm hỗ trợ điều hòa huyết áp"},
+        {"name": "Suy giãn tĩnh mạch", "description": "Sản phẩm hỗ trợ điều trị suy giãn tĩnh mạch"}
+      ]
+    },
+    {
+      "id": "688c50958e867f518abe182f",
+      "name": "Dinh dưỡng",
+      "description": "Sản phẩm dinh dưỡng cho mọi lứa tuổi",
+      "subcategories": [
+        {"name": "Sữa", "description": "Các loại sữa dinh dưỡng"},
+        {"name": "Dinh dưỡng trẻ em", "description": "Sản phẩm dinh dưỡng chuyên biệt cho trẻ em"}
+      ]
+    },
+    {
+      "id": "688c509d8e867f518abe1830",
+      "name": "Dược mỹ phẩm",
+      "description": "Sản phẩm mỹ phẩm và chăm sóc da chuyên nghiệp",
+      "subcategories": [
+        {"name": "Chăm sóc da mặt", "description": "Sản phẩm chăm sóc da mặt chuyên sâu"},
+        {"name": "Chăm sóc cơ thể", "description": "Sản phẩm chăm sóc toàn thân"},
+        {"name": "Giải pháp làn da", "description": "Giải pháp điều trị các vấn đề da liễu"},
+        {"name": "Chăm sóc tóc - da đầu", "description": "Sản phẩm chăm sóc tóc và da đầu"},
+        {"name": "Mỹ phẩm trang điểm", "description": "Sản phẩm trang điểm cao cấp"},
+        {"name": "Chăm sóc da vùng mắt", "description": "Sản phẩm chăm sóc vùng mắt chuyên biệt"}
+      ]
+    },
+    {
+      "id": "688c50a88e867f518abe1831",
+      "name": "Sản phẩm từ thiên nhiên",
+      "description": "Sản phẩm được chiết xuất từ thiên nhiên",
+      "subcategories": [
+        {"name": "Tinh dầu", "description": "Các loại tinh dầu tự nhiên"},
+        {"name": "Dầu dừa", "description": "Sản phẩm từ dầu dừa nguyên chất"}
+      ]
+    },
+    {
+      "id": "688c50b28e867f518abe1832",
+      "name": "Thuốc theo nhóm trị liệu",
+      "description": "Các loại thuốc được phân chia theo nhóm trị liệu",
+      "subcategories": [
+        {"name": "Thuốc dị ứng", "description": "Thuốc điều trị các phản ứng dị ứng"},
+        {"name": "Thuốc giải độc, khử độc và hỗ trợ cai nghiện", "description": "Thuốc giải độc và hỗ trợ cai nghiện"},
+        {"name": "Thuốc da liễu", "description": "Thuốc điều trị các bệnh da liễu"},
+        {"name": "Miếng dán, cao xoa, dầu", "description": "Các sản phẩm dạng miếng dán và cao xoa"},
+        {"name": "Cơ - xương - khớp", "description": "Thuốc điều trị bệnh cơ xương khớp"},
+        {"name": "Thuốc bổ & vitamin", "description": "Các loại thuốc bổ và vitamin"},
+        {"name": "Thuốc ung thư", "description": "Thuốc điều trị và hỗ trợ ung thư"},
+        {"name": "Thuốc giảm đau, hạ sốt, kháng viêm", "description": "Thuốc giảm đau và kháng viêm"},
+        {"name": "Thuốc hô hấp", "description": "Thuốc điều trị các bệnh đường hô hấp"},
+        {"name": "Thuốc kháng sinh, kháng nấm", "description": "Các loại thuốc kháng sinh và kháng nấm"},
+        {"name": "Thuốc Mắt, Tai, Mũi, Họng", "description": "Thuốc chuyên khoa Tai Mũi Họng"},
+        {"name": "Thuốc hệ thần kinh", "description": "Thuốc điều trị các bệnh thần kinh"},
+        {"name": "Thuốc tiêm chích & dịch truyền", "description": "Thuốc dạng tiêm và dịch truyền"},
+        {"name": "Thuốc tiêu hoá & gan mật", "description": "Thuốc điều trị tiêu hóa và gan mật"},
+        {"name": "Thuốc tim mạch & máu", "description": "Thuốc điều trị tim mạch và huyết học"},
+        {"name": "Thuốc tiết niệu - sinh dục", "description": "Thuốc điều trị tiết niệu và sinh dục"},
+        {"name": "Thuốc tê bôi", "description": "Các loại thuốc tê tại chỗ"},
+        {"name": "Thuốc trị tiểu đường", "description": "Thuốc điều trị bệnh tiểu đường"}
+      ]
+    },
+    {
+      "id": "688c50c28e867f518abe1833",
+      "name": "Chăm sóc cá nhân",
+      "description": "Sản phẩm chăm sóc cá nhân hàng ngày",
+      "subcategories": [
+        {"name": "Hỗ trợ tình dục", "description": "Sản phẩm hỗ trợ đời sống tình dục"},
+        {"name": "Thực phẩm - Đồ uống", "description": "Thực phẩm và đồ uống chức năng"},
+        {"name": "Vệ sinh cá nhân", "description": "Sản phẩm vệ sinh cá nhân"},
+        {"name": "Chăm sóc răng miệng", "description": "Sản phẩm chăm sóc răng miệng"},
+        {"name": "Đồ dùng gia đình", "description": "Đồ dùng thiết yếu cho gia đình"},
+        {"name": "Hàng tổng hợp", "description": "Các sản phẩm tiện ích tổng hợp"},
+        {"name": "Tinh dầu các loại", "description": "Tinh dầu cho mục đích chăm sóc sức khỏe"},
+        {"name": "Thiết bị làm đẹp", "description": "Thiết bị hỗ trợ làm đẹp tại nhà"}
+      ]
+    },
+    {
+      "id": "688c50cb8e867f518abe1834",
+      "name": "Thiết bị y tế",
+      "description": "Thiết bị và dụng cụ y tế chuyên dụng",
+      "subcategories": [
+        {"name": "Dụng cụ y tế", "description": "Các dụng cụ y tế cần thiết"},
+        {"name": "Dụng cụ theo dõi", "description": "Thiết bị theo dõi sức khỏe"},
+        {"name": "Dụng cụ sơ cứu", "description": "Dụng cụ và vật tư sơ cứu"},
+        {"name": "Khẩu trang", "description": "Các loại khẩu trang y tế"}
+      ]
+    }
+  ]
+}

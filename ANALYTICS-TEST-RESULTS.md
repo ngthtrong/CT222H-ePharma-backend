@@ -33,6 +33,7 @@
   - Total Orders: 1
   - Revenue Growth Rate: 100.0%
   - Daily revenue data: Complete (212 days)
+  - **✅ Enhanced topCategories:** Now shows real category data (e.g., "Vitamin & Khoáng chất")
 
 ### ❌ Failed APIs (1/4)
 

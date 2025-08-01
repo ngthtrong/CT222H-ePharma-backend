@@ -30,9 +30,14 @@ GET /api/v1/admin/analytics/dashboard
     "activeCustomers": 45,
     "topCategories": [
       {
-        "categoryName": "Electronics",
-        "totalSold": 150,
-        "revenue": 8500.00
+        "categoryName": "Vitamin & Khoáng chất",
+        "totalSold": 1,
+        "revenue": 680000.00
+      },
+      {
+        "categoryName": "Thực phẩm chức năng", 
+        "totalSold": 5,
+        "revenue": 1250000.00
       }
     ],
     "dailyRevenue": [
@@ -271,7 +276,7 @@ Common error codes:
 ### ✅ Advanced Dashboard Metrics
 - Revenue growth rate calculation
 - Customer conversion rates
-- Category performance analysis
+- **Real Category performance analysis** (uses actual Product and Category data from database)
 - Daily revenue trends
 - Customer segmentation
 - Inventory turnover metrics
@@ -306,3 +311,16 @@ Common error codes:
 3. **Export**: Large exports may take time, consider adding loading indicators
 4. **Real-time**: Implement debouncing for frequent updates to avoid UI performance issues
 5. **Error Handling**: Always implement proper error handling for all API calls
+
+## Recent Updates
+
+### 🔄 Category Performance Enhancement (2025-08-01)
+- **Improved Data Accuracy**: `topCategories` now uses **real database data** instead of mock logic
+- **Data Flow**: OrderItem → Product → Category → Real Category Names (e.g., "Vitamin & Khoáng chất", "Thực phẩm chức năng")
+- **Previous Limitation**: Used mock categories based on product name keywords
+- **Current Implementation**: Direct database lookup for accurate category performance metrics
+- **Benefits**: 
+  - Accurate category names in Vietnamese
+  - Real sales data per category
+  - Correct revenue calculations by category
+  - Better business insights for decision making

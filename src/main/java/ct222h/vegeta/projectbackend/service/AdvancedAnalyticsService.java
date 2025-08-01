@@ -2,9 +2,12 @@ package ct222h.vegeta.projectbackend.service;
 
 import ct222h.vegeta.projectbackend.dto.response.DashboardResponse;
 import ct222h.vegeta.projectbackend.model.Order;
+import ct222h.vegeta.projectbackend.model.Product;
+import ct222h.vegeta.projectbackend.model.Category;
 import ct222h.vegeta.projectbackend.repository.OrderRepository;
 import ct222h.vegeta.projectbackend.repository.UserRepository;
 import ct222h.vegeta.projectbackend.repository.ProductRepository;
+import ct222h.vegeta.projectbackend.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +25,9 @@ public class AdvancedAnalyticsService {
     
     @Autowired
     private ProductRepository productRepository;
+    
+    @Autowired
+    private CategoryService categoryService;
 
     public DashboardResponse.AdvancedDashboardMetrics getAdvancedDashboardMetrics(Date startDate, Date endDate) {
         // Get orders in date range
@@ -61,20 +67,20 @@ public class AdvancedAnalyticsService {
         
         Double conversionRate = totalUsers > 0 ? (activeCustomers.size() * 100.0) / totalUsers : 0.0;
 
-        // Calculate top categories performance - using mock category since OrderItem doesn't have category
+        // Calculate top categories performance - using real Product and Category data
         Map<String, CategoryPerformance> categoryPerformanceMap = new HashMap<>();
         
         for (Order order : completedOrders) {
             for (Order.OrderItem item : order.getItems()) {
-                // Since OrderItem doesn't have category, we'll use product name prefix as mock category
-                String category = getCategoryFromProductName(item.getProductName());
-                CategoryPerformance performance = categoryPerformanceMap.getOrDefault(category,
-                        new CategoryPerformance(category, 0, 0.0));
+                // Get real category name from product
+                String categoryName = getCategoryNameFromProductId(item.getProductId());
+                CategoryPerformance performance = categoryPerformanceMap.getOrDefault(categoryName,
+                        new CategoryPerformance(categoryName, 0, 0.0));
                 
                 performance.totalSold += item.getQuantity();
                 performance.revenue += item.getItemTotal();
                 
-                categoryPerformanceMap.put(category, performance);
+                categoryPerformanceMap.put(categoryName, performance);
             }
         }
 
@@ -258,23 +264,27 @@ public class AdvancedAnalyticsService {
         return new Random().nextInt(50) + 10; // Random between 10-60
     }
 
-    private String getCategoryFromProductName(String productName) {
-        // Mock category extraction from product name - in real scenario would use Product entity
-        if (productName == null) return "Uncategorized";
-        
-        String lowerName = productName.toLowerCase();
-        if (lowerName.contains("laptop") || lowerName.contains("computer") || lowerName.contains("desktop")) {
-            return "Electronics";
-        } else if (lowerName.contains("phone") || lowerName.contains("mobile") || lowerName.contains("smartphone")) {
-            return "Mobile Devices";
-        } else if (lowerName.contains("shirt") || lowerName.contains("dress") || lowerName.contains("clothes")) {
-            return "Clothing";
-        } else if (lowerName.contains("book") || lowerName.contains("novel") || lowerName.contains("magazine")) {
-            return "Books";
-        } else if (lowerName.contains("food") || lowerName.contains("snack") || lowerName.contains("drink")) {
-            return "Food & Beverages";
-        } else {
-            return "General";
+    private String getCategoryNameFromProductId(String productId) {
+        try {
+            // Get product by ID
+            Optional<Product> productOpt = productRepository.findById(productId);
+            if (!productOpt.isPresent()) {
+                return "Uncategorized";
+            }
+            
+            Product product = productOpt.get();
+            String categoryId = product.getCategoryId();
+            
+            if (categoryId == null || categoryId.isEmpty()) {
+                return "Uncategorized";
+            }
+            
+            // Get category name
+            Optional<Category> categoryOpt = categoryService.getCategoryById(categoryId);
+            return categoryOpt.map(Category::getName).orElse("Uncategorized");
+            
+        } catch (Exception e) {
+            return "Uncategorized";
         }
     }
 

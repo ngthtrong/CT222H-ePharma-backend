@@ -10,7 +10,7 @@ Dashboard cung cấp các tính năng analytics và báo cáo toàn diện cho h
 - **Revenue Growth**: Tăng trưởng doanh thu theo thời gian
 - **Conversion Rate**: Tỷ lệ chuyển đổi từ visitor thành customer
 - **Customer Segmentation**: Phân khúc khách hàng theo giá trị
-- **Category Performance**: Hiệu suất theo danh mục sản phẩm
+- **Category Performance**: Hiệu suất theo danh mục sản phẩm **thực tế** (sử dụng dữ liệu Product và Category từ database)
 - **Top Products**: Sản phẩm bán chạy nhất
 
 ### 2. Real-time Analytics
@@ -59,10 +59,16 @@ GET /api/reports/advanced-dashboard?startDate=2024-01-01&endDate=2024-12-31
   },
   "categoryPerformance": [
     {
-      "categoryName": "Electronics",
-      "revenue": 650000.0,
-      "orders": 180,
+      "categoryName": "Vitamin & Khoáng chất",
+      "revenue": 680000.0,
+      "orders": 1,
       "conversionRate": 15.2
+    },
+    {
+      "categoryName": "Thực phẩm chức năng",
+      "revenue": 1250000.0,
+      "orders": 5,
+      "conversionRate": 18.5
     }
   ],
   "topProducts": [
@@ -501,9 +507,14 @@ curl -X GET "http://localhost:8081/api/reports/export/revenue-excel?startDate=20
 - **v1.1**: Added real-time WebSocket analytics
 - **v1.2**: Enhanced Excel export with charts
 - **v1.3**: Added customer segmentation and category performance
+- **v1.4**: **Enhanced Category Performance with Real Data** (2025-08-01)
+  - Replaced mock category logic with actual database lookups
+  - Now displays real Vietnamese category names (e.g., "Vitamin & Khoáng chất")
+  - Accurate category-based revenue and sales metrics
+  - Improved data integrity for business analytics
 
 ---
 
-**Last Updated**: December 28, 2024  
+**Last Updated**: August 1, 2025  
 **Author**: Development Team  
-**Version**: 1.3
+**Version**: 1.4
