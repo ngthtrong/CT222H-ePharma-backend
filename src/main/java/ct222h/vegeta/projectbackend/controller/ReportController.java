@@ -164,13 +164,9 @@ public class ReportController {
                 return ResponseEntity.badRequest().build();
             }
             
-            System.out.println("DEBUG: Getting revenue report for dates: " + startDate + " to " + endDate);
             ReportResponse.RevenueReportResponse report = reportService.getRevenueReport(startDate, endDate, reportType);
-            System.out.println("DEBUG: Report generated successfully, total revenue: " + report.getTotalRevenue());
             
-            System.out.println("DEBUG: Starting Excel export...");
             byte[] excelData = excelExportService.exportRevenueReportToExcel(report);
-            System.out.println("DEBUG: Excel export completed, size: " + excelData.length + " bytes");
             
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
@@ -180,11 +176,9 @@ public class ReportController {
                     .headers(headers)
                     .body(excelData);
         } catch (IOException e) {
-            System.err.println("ERROR: IOException in Excel export: " + e.getMessage());
             e.printStackTrace();
             return ResponseEntity.status(500).build();
         } catch (Exception e) {
-            System.err.println("ERROR: Exception in Excel export: " + e.getMessage());
             e.printStackTrace();
             return ResponseEntity.status(500).build();
         }

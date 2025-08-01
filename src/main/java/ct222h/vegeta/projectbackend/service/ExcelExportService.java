@@ -17,19 +17,14 @@ public class ExcelExportService {
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     public byte[] exportRevenueReportToExcel(ReportResponse.RevenueReportResponse report) throws IOException {
-        System.out.println("DEBUG: Starting Excel export for report: " + report.getReportType());
-        
         try (Workbook workbook = new XSSFWorkbook()) {
-            System.out.println("DEBUG: Created XSSFWorkbook");
             Sheet sheet = workbook.createSheet("Revenue Report");
-            System.out.println("DEBUG: Created sheet");
 
             // Create header style
             CellStyle headerStyle = createHeaderStyle(workbook);
             
             // Create data style
             CellStyle dataStyle = createDataStyle(workbook);
-            System.out.println("DEBUG: Created styles");
 
             int rowNum = 0;
 
@@ -39,7 +34,6 @@ public class ExcelExportService {
             titleCell.setCellValue("Revenue Report - " + report.getReportType());
             titleCell.setCellStyle(headerStyle);
             sheet.addMergedRegion(new org.apache.poi.ss.util.CellRangeAddress(0, 0, 0, 5));
-            System.out.println("DEBUG: Added title row");
 
             rowNum++; // Empty row
 
@@ -49,7 +43,6 @@ public class ExcelExportService {
             createInfoRow(sheet, rowNum++, "Total Revenue:", String.format("$%.2f", report.getTotalRevenue()), headerStyle, dataStyle);
             createInfoRow(sheet, rowNum++, "Total Orders:", report.getTotalOrders().toString(), headerStyle, dataStyle);
             createInfoRow(sheet, rowNum++, "Generated At:", report.getGeneratedAt() != null ? DATE_FORMAT.format(report.getGeneratedAt()) : "N/A", headerStyle, dataStyle);
-            System.out.println("DEBUG: Added info rows");
 
             rowNum++; // Empty row
 

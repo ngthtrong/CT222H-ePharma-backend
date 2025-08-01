@@ -4,16 +4,20 @@ import ct222h.vegeta.projectbackend.dto.response.ApiResponse;
 import ct222h.vegeta.projectbackend.dto.response.DashboardResponse;
 import ct222h.vegeta.projectbackend.security.AuthorizationService;
 import ct222h.vegeta.projectbackend.service.DashboardService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1")
 public class DashboardController {
 
+    private static final Logger logger = LoggerFactory.getLogger(DashboardController.class);
     private final DashboardService dashboardService;
     
     @Autowired
@@ -23,17 +27,42 @@ public class DashboardController {
         this.dashboardService = dashboardService;
     }
 
+    // PUBLIC ENDPOINT for health check
+    @GetMapping("/dashboard/health")
+    public ResponseEntity<ApiResponse<String>> healthCheck() {
+        return ResponseEntity.ok(new ApiResponse<>(true, "Dashboard service is running", "OK"));
+    }
+
+    // WebSocket info endpoint
+    @GetMapping("/websocket/info")
+    public ResponseEntity<ApiResponse<Map<String, Object>>> getWebSocketInfo() {
+        Map<String, Object> info = Map.of(
+            "websocket_endpoints", Map.of(
+                "native_websocket", "ws://localhost:8081/ws/analytics?token=YOUR_JWT_TOKEN",
+                "server_status", "Running"
+            ),
+            "timestamp", System.currentTimeMillis()
+        );
+        return ResponseEntity.ok(new ApiResponse<>(true, "WebSocket endpoints info", info));
+    }
+
     // ADMIN ENDPOINTS - Require ADMIN role
 
     @GetMapping("/admin/dashboard/stats")
     public ResponseEntity<ApiResponse<DashboardResponse.DashboardStatsResponse>> getDashboardStats() {
-        authorizationService.checkAdminRole(); // Only ADMIN can access
+        try {
+            authorizationService.checkAdminRole(); // Only ADMIN can access
+        } catch (Exception authError) {
+            logger.warn("Authorization error in dashboard stats: {}", authError.getMessage());
+            return ResponseEntity.status(403).body(new ApiResponse<>(false, "Không có quyền truy cập", null));
+        }
         
         try {
             DashboardResponse.DashboardStatsResponse stats = dashboardService.getDashboardStats();
             return ResponseEntity.ok(new ApiResponse<>(true, "Lấy thống kê dashboard thành công", stats));
         } catch (Exception e) {
-            return ResponseEntity.status(500).body(new ApiResponse<>(false, "Lỗi khi lấy thống kê dashboard", null));
+            logger.error("Dashboard stats error: {}", e.getMessage(), e);
+            return ResponseEntity.status(500).body(new ApiResponse<>(false, "Lỗi khi lấy thống kê dashboard: " + e.getMessage(), null));
         }
     }
 
