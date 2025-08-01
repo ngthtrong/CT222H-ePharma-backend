@@ -49,6 +49,9 @@ public class SecurityConfig {
                         .requestMatchers("/api/v1/auth/register", "/api/v1/auth/login", 
                                         "/api/v1/auth/forgot-password", "/api/v1/auth/reset-password").permitAll()
                         
+                        // OAuth2 endpoints - PUBLIC
+                        .requestMatchers("/api/v1/auth/oauth2/**").permitAll()
+                        
                         // Authentication endpoints - USER (authenticated)
                         .requestMatchers("/api/v1/auth/logout").authenticated()
                         
