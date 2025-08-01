@@ -6,51 +6,71 @@ import java.util.List;
 public class DashboardResponse {
     
     public static class DashboardStatsResponse {
-        private Integer totalOrders;
-        private Integer pendingOrders;
-        private Integer totalProducts;
-        private Integer totalUsers;
         private Double totalRevenue;
-        private Double todayRevenue;
-        private Double monthlyRevenue;
+        private Double revenueGrowthRate;
+        private Integer totalOrders;
+        private Double averageOrderValue;
+        private Double conversionRate;
+        private List<DailyRevenueResponse> revenueMetrics;
+        private List<CategoryPerformanceResponse> categoryPerformance;
+        private CustomerSegmentResponse customerSegments;
+        private List<TopProductResponse> topProducts;
+        private List<RecentOrderResponse> recentOrders;
         private Date lastUpdated;
         
         public DashboardStatsResponse() {}
         
-        public DashboardStatsResponse(Integer totalOrders, Integer pendingOrders, Integer totalProducts,
-                                     Integer totalUsers, Double totalRevenue, Double todayRevenue,
-                                     Double monthlyRevenue, Date lastUpdated) {
-            this.totalOrders = totalOrders;
-            this.pendingOrders = pendingOrders;
-            this.totalProducts = totalProducts;
-            this.totalUsers = totalUsers;
+        public DashboardStatsResponse(Double totalRevenue, Double revenueGrowthRate, Integer totalOrders,
+                                     Double averageOrderValue, Double conversionRate, 
+                                     List<DailyRevenueResponse> revenueMetrics,
+                                     List<CategoryPerformanceResponse> categoryPerformance,
+                                     CustomerSegmentResponse customerSegments,
+                                     List<TopProductResponse> topProducts,
+                                     List<RecentOrderResponse> recentOrders,
+                                     Date lastUpdated) {
             this.totalRevenue = totalRevenue;
-            this.todayRevenue = todayRevenue;
-            this.monthlyRevenue = monthlyRevenue;
+            this.revenueGrowthRate = revenueGrowthRate;
+            this.totalOrders = totalOrders;
+            this.averageOrderValue = averageOrderValue;
+            this.conversionRate = conversionRate;
+            this.revenueMetrics = revenueMetrics;
+            this.categoryPerformance = categoryPerformance;
+            this.customerSegments = customerSegments;
+            this.topProducts = topProducts;
+            this.recentOrders = recentOrders;
             this.lastUpdated = lastUpdated;
         }
         
         // Getters and Setters
-        public Integer getTotalOrders() { return totalOrders; }
-        public void setTotalOrders(Integer totalOrders) { this.totalOrders = totalOrders; }
-        
-        public Integer getPendingOrders() { return pendingOrders; }
-        public void setPendingOrders(Integer pendingOrders) { this.pendingOrders = pendingOrders; }
-        
-        public Integer getTotalProducts() { return totalProducts; }
-        public void setTotalProducts(Integer totalProducts) { this.totalProducts = totalProducts; }
-        
-        public Integer getTotalUsers() { return totalUsers; }
-        public void setTotalUsers(Integer totalUsers) { this.totalUsers = totalUsers; }
-        
         public Double getTotalRevenue() { return totalRevenue; }
         public void setTotalRevenue(Double totalRevenue) { this.totalRevenue = totalRevenue; }
         
-        public Double getTodayRevenue() { return todayRevenue; }
-        public void setTodayRevenue(Double todayRevenue) { this.todayRevenue = todayRevenue; }
+        public Double getRevenueGrowthRate() { return revenueGrowthRate; }
+        public void setRevenueGrowthRate(Double revenueGrowthRate) { this.revenueGrowthRate = revenueGrowthRate; }
         
-        public Double getMonthlyRevenue() { return monthlyRevenue; }
-        public void setMonthlyRevenue(Double monthlyRevenue) { this.monthlyRevenue = monthlyRevenue; }
+        public Integer getTotalOrders() { return totalOrders; }
+        public void setTotalOrders(Integer totalOrders) { this.totalOrders = totalOrders; }
+        
+        public Double getAverageOrderValue() { return averageOrderValue; }
+        public void setAverageOrderValue(Double averageOrderValue) { this.averageOrderValue = averageOrderValue; }
+        
+        public Double getConversionRate() { return conversionRate; }
+        public void setConversionRate(Double conversionRate) { this.conversionRate = conversionRate; }
+        
+        public List<DailyRevenueResponse> getRevenueMetrics() { return revenueMetrics; }
+        public void setRevenueMetrics(List<DailyRevenueResponse> revenueMetrics) { this.revenueMetrics = revenueMetrics; }
+        
+        public List<CategoryPerformanceResponse> getCategoryPerformance() { return categoryPerformance; }
+        public void setCategoryPerformance(List<CategoryPerformanceResponse> categoryPerformance) { this.categoryPerformance = categoryPerformance; }
+        
+        public CustomerSegmentResponse getCustomerSegments() { return customerSegments; }
+        public void setCustomerSegments(CustomerSegmentResponse customerSegments) { this.customerSegments = customerSegments; }
+        
+        public List<TopProductResponse> getTopProducts() { return topProducts; }
+        public void setTopProducts(List<TopProductResponse> topProducts) { this.topProducts = topProducts; }
+        
+        public List<RecentOrderResponse> getRecentOrders() { return recentOrders; }
+        public void setRecentOrders(List<RecentOrderResponse> recentOrders) { this.recentOrders = recentOrders; }
         
         public Date getLastUpdated() { return lastUpdated; }
         public void setLastUpdated(Date lastUpdated) { this.lastUpdated = lastUpdated; }

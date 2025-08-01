@@ -137,18 +137,6 @@ public class ReportController {
         }
     }
 
-    @GetMapping("/admin/analytics/realtime")
-    public ResponseEntity<ApiResponse<DashboardResponse.RealTimeMetrics>> getRealTimeMetrics() {
-        authorizationService.checkAdminRole();
-        
-        try {
-            DashboardResponse.RealTimeMetrics metrics = advancedAnalyticsService.getRealTimeMetrics();
-            return ResponseEntity.ok(new ApiResponse<>(true, "Real-time metrics retrieved successfully", metrics));
-        } catch (Exception e) {
-            return ResponseEntity.status(500).body(new ApiResponse<>(false, "Failed to get real-time metrics", null));
-        }
-    }
-
     // EXCEL EXPORT ENDPOINTS
 
     @GetMapping("/admin/reports/revenue/export/excel")
